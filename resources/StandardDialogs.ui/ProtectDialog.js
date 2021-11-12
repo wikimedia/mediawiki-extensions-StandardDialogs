@@ -200,7 +200,7 @@ StandardDialogs.ui.ProtectDialog.prototype.getStandardExpiryDates = function () 
 	var expiryDates = mw.message( 'protect-expiry-options' ).plain();
 	var optionsEdit = [], optionsMove = [];
 	expiryDates = expiryDates.split(',');
-	expiryDates.forEach( item => {
+	expiryDates.forEach( ( item ) => {
 		optionsEdit.push( new OO.ui.MenuOptionWidget({ label: item.split(':')[0], data: item.split(':')[1] }) );
 		optionsMove.push( new OO.ui.MenuOptionWidget({ label: item.split(':')[0], data: item.split(':')[1] }) );
 	});
@@ -214,7 +214,7 @@ StandardDialogs.ui.ProtectDialog.prototype.getStandardReasons = function () {
 
 	otherReason = mw.message( 'protect-otherreason-op' ).plain();
 	optionsReason.push( new OO.ui.MenuOptionWidget({ label: otherReason, data: otherReason }) );
-	protectReasons.forEach( reason => {
+	protectReasons.forEach( ( reason ) => {
 		if ( reason.startsWith('** ') ) {
 			reason = reason.replace("** ", '');
 			optionsReason.push( new OO.ui.MenuOptionWidget({ label: reason, data: reason }) );

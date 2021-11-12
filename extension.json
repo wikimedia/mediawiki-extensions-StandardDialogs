@@ -14,8 +14,10 @@
 		"StandardDialogs": "i18n"
 	},
 	"AutoloadNamespaces": {
-		"MediaWiki\\Extension\\StandardDialogs\\": "src/",
-		"MediaWiki\\Extension\\StandardDialogs\\Tests\\": "tests/phpunit"
+		"MediaWiki\\Extension\\StandardDialogs\\": "src/"
+	},
+	"TestAutoloadNamespaces": {
+		"MediaWiki\\Extension\\StandardDialogs\\Tests\\": "tests/phpunit/"
 	},
 	"ResourceModules": {
 		"ext.standardDialogs": {
