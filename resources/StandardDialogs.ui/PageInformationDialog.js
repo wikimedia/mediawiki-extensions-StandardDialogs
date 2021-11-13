@@ -32,11 +32,11 @@ StandardDialogs.ui.PageInformationDialog.prototype.getSetupProcess = function ( 
 	this.bookletLayout.addPages(
 		this.pages
 	);
-	this.bookletLayout.on( 'set', function( page ) {
+	this.bookletLayout.on( 'set', function ( page ) {
 		if ( page.onInfoPanelSelect ) {
 			page.onInfoPanelSelect();
 		}
-	})
+	} );
 
 	return StandardDialogs.ui.PageInformationDialog.super.prototype.getSetupProcess.call( this, data );
 };

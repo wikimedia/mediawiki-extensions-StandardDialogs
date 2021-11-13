@@ -39,7 +39,7 @@ StandardDialogs.ui.NewPageDialog.prototype.getFormItems = function () {
 
 StandardDialogs.ui.NewPageDialog.prototype.makeDoneActionProcess = function () {
 	this.newTitle = mw.Title.newFromText( this.targetTitle.getValue() );
-	return new OO.ui.Process( function() {}, this );
+	return new OO.ui.Process( function () {}, this );
 };
 StandardDialogs.ui.NewPageDialog.prototype.getActionCompletedEventArgs = function ( action ) {
 	return [ this.newTitle ];
