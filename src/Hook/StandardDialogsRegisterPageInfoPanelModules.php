@@ -14,6 +14,8 @@ interface StandardDialogsRegisterPageInfoPanelModules {
 	 * @param Config $config
 	 * @return void
 	 */
-	public function onStandardDialogsRegisterPageInfoPanelModules( &$modules, ResourceLoaderContext $context, Config $config ): void;
+	public function onStandardDialogsRegisterPageInfoPanelModules(
+		&$modules, ResourceLoaderContext $context, Config $config
+	): void;
 
 }
