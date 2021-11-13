@@ -2,7 +2,7 @@ StandardDialogs = StandardDialogs || {};
 StandardDialogs.ui = StandardDialogs.ui || {};
 
 StandardDialogs.ui.ProtectDialog = function StandardDialogsUiProtectDialog( config ) {
-	config.id = "standarddialogs-dlg-protect";
+	config.id = 'standarddialogs-dlg-protect';
 	StandardDialogs.ui.ProtectDialog.super.call( this, config );
 };
 OO.inheritClass( StandardDialogs.ui.ProtectDialog, StandardDialogs.ui.BaseDialog );
@@ -18,24 +18,24 @@ StandardDialogs.ui.ProtectDialog.prototype.makeSetupProcessData = function () {
 StandardDialogs.ui.ProtectDialog.prototype.getFormItems = function () {
 	var options = this.getStandardExpiryDates();
 	var optionsReason = this.getStandardReasons();
-	var optionsEdit = options[0];
-	var optionsMove = options[1];
+	var optionsEdit = options[ 0 ];
+	var optionsMove = options[ 1 ];
 	this.mainInput = this.editProtect = new OO.ui.ComboBoxInputWidget( {
 		id: this.elementId + '-cbx-edit-level',
-		value: mw.message( 'protect-default').plain(),
+		value: mw.message( 'protect-default' ).plain(),
 		options: [
-			{ data: mw.message( 'protect-default').plain() },
-			{ data: mw.message( 'protect-level-editor').plain() },
-			{ data: mw.message( 'protect-level-sysop').plain() }
+			{ data: mw.message( 'protect-default' ).plain() },
+			{ data: mw.message( 'protect-level-editor' ).plain() },
+			{ data: mw.message( 'protect-level-sysop' ).plain() }
 		]
 	} );
 	this.moveProtect = new OO.ui.ComboBoxInputWidget( {
 		id: this.elementId + '-cbx-move-level',
-		value: mw.message( 'protect-default').plain(),
+		value: mw.message( 'protect-default' ).plain(),
 		options: [
 			{ data: mw.message( 'protect-default' ).plain() },
 			{ data: mw.message( 'protect-level-editor' ).plain() },
-			{ data: mw.message( 'protect-level-sysop').plain() }
+			{ data: mw.message( 'protect-level-sysop' ).plain() }
 		],
 		disabled: true
 	} );
@@ -50,7 +50,7 @@ StandardDialogs.ui.ProtectDialog.prototype.getFormItems = function () {
 		disabled: true
 	} );
 	this.protectExpiryOther = new OO.ui.TextInputWidget( {
-		id: this.elementId + '-tf-expiry-edit-other',
+		id: this.elementId + '-tf-expiry-edit-other'
 	} );
 	this.protectExpiryOtherMove = new OO.ui.TextInputWidget( {
 		id: this.elementId + '-tf-expiry-move-other',
@@ -63,7 +63,7 @@ StandardDialogs.ui.ProtectDialog.prototype.getFormItems = function () {
 	} );
 
 	this.protectPermissions.connect( this, {
-		change: function( value ) {
+		change: function ( value ) {
 			if ( value === true ) {
 				this.moveProtect.setDisabled( false );
 				this.protectExpiryMove.setDisabled( false );
@@ -74,7 +74,7 @@ StandardDialogs.ui.ProtectDialog.prototype.getFormItems = function () {
 				this.protectExpiryOtherMove.setDisabled( true );
 			}
 		}
-	});
+	} );
 
 	this.protectWatchCheckbox = new OO.ui.CheckboxInputWidget( {
 		id: this.elementId + '-cb-protect-watch',
@@ -84,9 +84,9 @@ StandardDialogs.ui.ProtectDialog.prototype.getFormItems = function () {
 	this.protectReason = new OO.ui.DropdownWidget( {
 		id: this.elementId + '-dd-protect-reason',
 		menu: { items: optionsReason }
-	});
+	} );
 	this.protectReasonOther = new OO.ui.TextInputWidget( {
-		id: this.elementId + '-tf-protect-reason-other',
+		id: this.elementId + '-tf-protect-reason-other'
 	} );
 
 	return [
@@ -109,7 +109,7 @@ StandardDialogs.ui.ProtectDialog.prototype.getFormItems = function () {
 					align: 'inline'
 				} )
 			]
-		}),
+		} ),
 		new OO.ui.FieldsetLayout( {
 			items: [
 				new OO.ui.FieldLayout( this.moveProtect, {
@@ -125,7 +125,7 @@ StandardDialogs.ui.ProtectDialog.prototype.getFormItems = function () {
 					align: 'inline'
 				} )
 			]
-		}),
+		} ),
 		new OO.ui.FieldsetLayout( {
 			items: [
 				new OO.ui.FieldLayout( this.protectReason, {
@@ -148,20 +148,20 @@ StandardDialogs.ui.ProtectDialog.prototype.getFormItems = function () {
 StandardDialogs.ui.ProtectDialog.prototype.makeDoneActionProcess = function () {
 	var me = this;
 	var protections = 'edit=';
-	if ( me.editProtect.getValue() === mw.message( 'protect-level-sysop').plain()) {
+	if ( me.editProtect.getValue() === mw.message( 'protect-level-sysop' ).plain() ) {
 		protections += 'sysop';
 	} else if ( me.editProtect.getValue() === mw.message( 'protect-level-editor' ).plain() ) {
 		protections += 'editor';
 	} else {
 		protections += 'all';
 	}
-	var expiries = "infinite";
-	if ( me.protectExpiry.getMenu().findSelectedItem() !== null) {
+	var expiries = 'infinite';
+	if ( me.protectExpiry.getMenu().findSelectedItem() !== null ) {
 		expiries = me.protectExpiry.getMenu().findSelectedItem().data;
 	}
 	if ( me.moveProtect != '' && me.moveProtect.isDisabled() === false ) {
 		protections += '|move=';
-		if ( me.moveProtect.getValue() === mw.message( 'protect-level-sysop').plain()) {
+		if ( me.moveProtect.getValue() === mw.message( 'protect-level-sysop' ).plain() ) {
 			protections += 'sysop';
 		} else if ( me.moveProtect.getValue() === mw.message( 'protect-level-editor' ).plain() ) {
 			protections += 'editor';
@@ -169,13 +169,13 @@ StandardDialogs.ui.ProtectDialog.prototype.makeDoneActionProcess = function () {
 			protections += 'all';
 		}
 
-		if ( me.protectExpiryMove.getMenu().findSelectedItem() !== null ){
+		if ( me.protectExpiryMove.getMenu().findSelectedItem() !== null ) {
 			expiries += '| ' + me.protectExpiryMove.getMenu().findSelectedItem().data;
 		}
 	}
 
 	var dfd = new $.Deferred();
-	mw.loader.using( 'mediawiki.api' ).done( function() {
+	mw.loader.using( 'mediawiki.api' ).done( function () {
 		var mwApi = new mw.Api();
 		mwApi.postWithToken( 'csrf', {
 			action: 'protect',
@@ -183,13 +183,13 @@ StandardDialogs.ui.ProtectDialog.prototype.makeDoneActionProcess = function () {
 			reason: me.protectReason.getMenu().findSelectedItem() + me.protectReasonOther.getValue(),
 			protections: protections,
 			expiry: expiries
-		} ).done( function() {
+		} ).done( function () {
 
 			dfd.resolve.apply( me, arguments );
-		}).fail( function() {
-			dfd.reject.apply( me, [ new OO.ui.Error(  arguments[0] ) ] );
+		} ).fail( function () {
+			dfd.reject.apply( me, [ new OO.ui.Error( arguments[ 0 ] ) ] );
 		} );
-	} ).fail( function() {
+	} ).fail( function () {
 		dfd.reject.apply( me, arguments );
 	} );
 
@@ -199,27 +199,27 @@ StandardDialogs.ui.ProtectDialog.prototype.makeDoneActionProcess = function () {
 StandardDialogs.ui.ProtectDialog.prototype.getStandardExpiryDates = function () {
 	var expiryDates = mw.message( 'protect-expiry-options' ).plain();
 	var optionsEdit = [], optionsMove = [];
-	expiryDates = expiryDates.split(',');
+	expiryDates = expiryDates.split( ',' );
 	expiryDates.forEach( ( item ) => {
-		optionsEdit.push( new OO.ui.MenuOptionWidget({ label: item.split(':')[0], data: item.split(':')[1] }) );
-		optionsMove.push( new OO.ui.MenuOptionWidget({ label: item.split(':')[0], data: item.split(':')[1] }) );
-	});
-	return [optionsEdit, optionsMove];
+		optionsEdit.push( new OO.ui.MenuOptionWidget( { label: item.split( ':' )[ 0 ], data: item.split( ':' )[ 1 ] } ) );
+		optionsMove.push( new OO.ui.MenuOptionWidget( { label: item.split( ':' )[ 0 ], data: item.split( ':' )[ 1 ] } ) );
+	} );
+	return [ optionsEdit, optionsMove ];
 };
 
 StandardDialogs.ui.ProtectDialog.prototype.getStandardReasons = function () {
 	var optionsReason = [];
 	var protectReasons = mw.message( 'protect-dropdown' ).plain();
-	protectReasons = protectReasons.split('\n');
+	protectReasons = protectReasons.split( '\n' );
 
 	otherReason = mw.message( 'protect-otherreason-op' ).plain();
-	optionsReason.push( new OO.ui.MenuOptionWidget({ label: otherReason, data: otherReason }) );
+	optionsReason.push( new OO.ui.MenuOptionWidget( { label: otherReason, data: otherReason } ) );
 	protectReasons.forEach( ( reason ) => {
-		if ( reason.startsWith('** ') ) {
-			reason = reason.replace("** ", '');
-			optionsReason.push( new OO.ui.MenuOptionWidget({ label: reason, data: reason }) );
+		if ( reason.startsWith( '** ' ) ) {
+			reason = reason.replace( '** ', '' );
+			optionsReason.push( new OO.ui.MenuOptionWidget( { label: reason, data: reason } ) );
 		}
-	});
+	} );
 
 	return optionsReason;
 };

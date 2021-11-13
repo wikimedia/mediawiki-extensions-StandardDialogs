@@ -86,7 +86,7 @@ $( document ).on( 'click', '#t-info', function ( e ) {
 			} );
 			diag.show();
 		} );
-	});
+	} );
 	e.defaultPrevented = true;
 	return false;
 } );
