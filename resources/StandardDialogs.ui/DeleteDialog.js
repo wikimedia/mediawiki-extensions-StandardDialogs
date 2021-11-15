@@ -55,12 +55,15 @@ StandardDialogs.ui.DeleteDialog.prototype.makeDoneActionProcess = function () {
 	var dfd = new $.Deferred();
 	mw.loader.using( 'mediawiki.api' ).done( function () {
 		var mwApi = new mw.Api();
-		mwApi.postWithToken( 'csrf', {
+		var params = {
 			action: 'delete',
 			title: dialog.pageName,
-			reason: dialog.reasonCombo.getValue() + dialog.otherReasonText.getValue(),
-			watchlist: dialog.watchCheckbox.getValue()
-		} ).done( function ( data ) {
+			reason: dialog.reasonCombo.getValue() + dialog.otherReasonText.getValue()
+		};
+		if ( dialog.watchCheckbox.isSelected() ) {
+			params.watchlist = '1';
+		}
+		mwApi.postWithToken( 'csrf', params ).done( function ( data ) {
 			dfd.resolve.apply( dialog, arguments );
 		} ).fail( function () {
 			dfd.reject.apply( dialog, [ new OO.ui.Error( arguments[ 0 ], { recoverable: false } ) ] );
