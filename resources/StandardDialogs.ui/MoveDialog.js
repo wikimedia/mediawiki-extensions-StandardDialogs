@@ -73,16 +73,23 @@ StandardDialogs.ui.MoveDialog.prototype.makeDoneActionProcess = function () {
 	var dfd = new $.Deferred();
 	mw.loader.using( 'mediawiki.api' ).done( function () {
 		var mwApi = new mw.Api();
-		mwApi.postWithToken( 'csrf', {
+		var params = {
 			action: 'move',
 			from: dialog.pageName,
 			to: dialog.targetTitle.getValue(),
 			reason: dialog.moveReasonText.getValue(),
-			movetalk: true,
-			movesubpages: dialog.moveSubpagesCheckbox.isSelected(),
-			noredirect: dialog.moveLeaveRedirectCheckbox.isSelected(),
-			watchlist: dialog.moveWatchCheckbox.getValue()
-		} ).done( function ( data ) {
+			movetalk: true
+		};
+		if ( dialog.moveSubpagesCheckbox.isSelected() ) {
+			params.movesubpages = '1';
+		}
+		if ( dialog.moveLeaveRedirectCheckbox.isSelected() ) {
+			params.noredirect = '1';
+		}
+		if ( dialog.moveWatchCheckbox.isSelected() ) {
+			params.watchlist = '1';
+		}
+		mwApi.postWithToken( 'csrf', params ).done( function ( data ) {
 			dfd.resolve.apply( dialog, arguments );
 		} ).fail( function () {
 			dfd.reject.apply( dialog, [ new OO.ui.Error( arguments[ 0 ], { recoverable: false } ) ] );
