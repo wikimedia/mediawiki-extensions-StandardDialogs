@@ -89,11 +89,12 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getTemplates = function (
 	var templates = $( '<ul>' );
 	if ( this.pageInfo[ id ].templates ) {
 		for ( var i = 0; i < this.pageInfo[ id ].templates.length; i++ ) {
+			var title = mw.Title.newFromText( this.pageInfo[ id ].templates[ i ].title );
 			templates.append(
 				$( '<li>' )
 					.append( $( '<a>' )
 						.attr( {
-							href: this.pageInfo[ id ].templates[ i ].title
+							href: title.getUrl()
 						} )
 						.text( this.pageInfo[ id ].templates[ i ].title ) ) );
 		}
@@ -105,11 +106,12 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getCategories = function 
 	var categories = $( '<ul>' );
 	if ( this.pageInfo[ id ].categories ) {
 		for ( var i = 0; i < this.pageInfo[ id ].categories.length; i++ ) {
+			var title = mw.Title.newFromText( this.pageInfo[ id ].categories[ i ].title );
 			categories.append(
 				$( '<li>' )
 					.append( $( '<a>' )
 						.attr( {
-							href: this.pageInfo[ id ].categories[ i ].title
+							href: title.getUrl()
 						} )
 						.text( this.pageInfo[ id ].categories[ i ].title ) ) );
 		}
@@ -121,11 +123,12 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getInternalLinks = functi
 	var links = $( '<ul>' );
 	if ( this.pageInfo[ id ].links ) {
 		for ( var i = 0; i < this.pageInfo[ id ].links.length; i++ ) {
+			var title = mw.Title.newFromText( this.pageInfo[ id ].links[ i ].title );
 			links.append(
 				$( '<li>' )
 					.append( $( '<a>' )
 						.attr( {
-							href: this.pageInfo[ id ].links[ i ].title
+							href: title.getUrl()
 						} )
 						.text( this.pageInfo[ id ].links[ i ].title ) ) );
 		}
