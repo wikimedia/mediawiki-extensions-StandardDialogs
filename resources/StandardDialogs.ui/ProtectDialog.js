@@ -25,7 +25,7 @@ StandardDialogs.ui.ProtectDialog.prototype.getFormItems = function () {
 		value: mw.message( 'protect-default' ).plain(),
 		options: [
 			{ data: mw.message( 'protect-default' ).plain() },
-			{ data: mw.message( 'protect-level-editor' ).plain() },
+			{ data: mw.message( 'standarddialogs-protect-level-editor' ).plain() },
 			{ data: mw.message( 'protect-level-sysop' ).plain() }
 		]
 	} );
@@ -34,7 +34,7 @@ StandardDialogs.ui.ProtectDialog.prototype.getFormItems = function () {
 		value: mw.message( 'protect-default' ).plain(),
 		options: [
 			{ data: mw.message( 'protect-default' ).plain() },
-			{ data: mw.message( 'protect-level-editor' ).plain() },
+			{ data: mw.message( 'standarddialogs-protect-level-editor' ).plain() },
 			{ data: mw.message( 'protect-level-sysop' ).plain() }
 		],
 		disabled: true
@@ -150,7 +150,7 @@ StandardDialogs.ui.ProtectDialog.prototype.makeDoneActionProcess = function () {
 	var protections = 'edit=';
 	if ( me.editProtect.getValue() === mw.message( 'protect-level-sysop' ).plain() ) {
 		protections += 'sysop';
-	} else if ( me.editProtect.getValue() === mw.message( 'protect-level-editor' ).plain() ) {
+	} else if ( me.editProtect.getValue() === mw.message( 'standarddialogs-protect-level-editor' ).plain() ) {
 		protections += 'editor';
 	} else {
 		protections += 'all';
@@ -163,7 +163,7 @@ StandardDialogs.ui.ProtectDialog.prototype.makeDoneActionProcess = function () {
 		protections += '|move=';
 		if ( me.moveProtect.getValue() === mw.message( 'protect-level-sysop' ).plain() ) {
 			protections += 'sysop';
-		} else if ( me.moveProtect.getValue() === mw.message( 'protect-level-editor' ).plain() ) {
+		} else if ( me.moveProtect.getValue() === mw.message( 'standarddialogs-protect-level-editor' ).plain() ) {
 			protections += 'editor';
 		} else {
 			protections += 'all';

@@ -1,5 +1,11 @@
 {
-	"standarddialogs-desc": "English description of StandardDialogs",
+	"@metadata": {
+		"authors": [
+			"Miriam Schlindwein",
+			"Patric Wirth"
+		]
+	},
+	"standarddialogs-desc": "Provides dialog user interfaces for common page actions",
 	"standarddialogs-copy-btn": "Copy",
 	"standarddialogs-copy-title": "Copy page \"$1\"",
 	"standarddialogs-copy-page-legend": "Copy",
@@ -43,5 +49,6 @@
 	"standarddialogs-purge-btn": "Refresh",
 	"standarddialogs-purge-title": "Refresh page \"$1\"",
 	"standarddialogs-btn-done": "Done",
-	"standarddialogs-btn-cancel": "Cancel"
+	"standarddialogs-btn-cancel": "Cancel",
+	"standarddialogs-protect-level-editor": "Allow only editors and administrators"
 }
