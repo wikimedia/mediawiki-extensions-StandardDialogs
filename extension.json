@@ -16,9 +16,6 @@
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\StandardDialogs\\": "src/"
 	},
-	"TestAutoloadNamespaces": {
-		"MediaWiki\\Extension\\StandardDialogs\\Tests\\": "tests/phpunit/"
-	},
 	"ResourceModules": {
 		"ext.standardDialogs": {
 			"packageFiles": [
