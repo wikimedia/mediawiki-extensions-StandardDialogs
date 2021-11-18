@@ -1,5 +1,11 @@
 {
-	"standarddialogs-desc": "Deutsche Beschreibung von StandardDialogs",
+	"@metadata": {
+		"authors": [
+			"Miriam Schlindwein",
+			"Patric Wirth"
+		]
+	},
+	"standarddialogs-desc": "Stellt Dialog-Benutzeroberflächen für typische Seitenaktionen zur verfügung",
 	"standarddialogs-copy-btn": "Kopieren",
 	"standarddialogs-copy-title": "Kopieren von \"$1\"",
 	"standarddialogs-copy-page-legend": "Kopieren",
