@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"렌즈"
+		]
+	},
+	"standarddialogs-page-info-page-last-edit": "최근 편집",
+	"standarddialogs-page-info-page-categories": "분류",
+	"standarddialogs-page-info-page-images": "그림",
+	"standarddialogs-create-button-new-page-title": "새 문서 만들기",
+	"standarddialogs-protect-btn": "보호",
+	"standarddialogs-protect-title": "\"$1\" 문서 보호",
+	"standarddialogs-purge-title": "\"$1\" 문서 새로고침",
+	"standarddialogs-btn-cancel": "취소",
+	"standarddialogs-protect-level-editor": "편집자와 관리자만 허용"
+}

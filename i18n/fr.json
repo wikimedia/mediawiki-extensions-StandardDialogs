@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wladek92"
+		]
+	},
+	"standarddialogs-copy-page-legend": "Copier",
+	"standarddialogs-copy-page-new": "Nouveau nom de page",
+	"standarddialogs-page-info-close": "Fermer",
+	"standarddialogs-page-info-general": "Général",
+	"standarddialogs-page-info-history": "Dernière modification",
+	"standarddialogs-page-info-properties": "Propriétés",
+	"standarddialogs-page-info-page-title": "Titre",
+	"standarddialogs-page-info-page-language": "Langue",
+	"standarddialogs-page-info-page-model": "Modèle de contenu",
+	"standarddialogs-page-info-page-redirects": "Redirections",
+	"standarddialogs-page-info-page-contributors": "Contributeurs",
+	"standarddialogs-page-info-page-last-edit": "Dernière modification",
+	"standarddialogs-page-info-page-templates": "Modèles",
+	"standarddialogs-page-info-page-categories": "Catégories",
+	"standarddialogs-page-info-page-external": "Liens externes",
+	"standarddialogs-page-info-page-images": "Images",
+	"standarddialogs-new-page-label": "Nom de la page",
+	"standarddialogs-create-button-new-page-text": "Nouvelle page",
+	"standarddialogs-create-button-new-page-title": "Créer une nouvelle page",
+	"standarddialogs-delete-title": "Supprimer la page « $1 »",
+	"standarddialogs-move-btn": "Renommer",
+	"standarddialogs-protect-btn": "Protéger",
+	"standarddialogs-protect-title": "Protéger la page « $1 »",
+	"standarddialogs-purge-btn": "Actualiser",
+	"standarddialogs-purge-title": "Recharger la page « $1 »",
+	"standarddialogs-btn-done": "Terminé",
+	"standarddialogs-btn-cancel": "Annuler"
+}
