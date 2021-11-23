@@ -40,6 +40,7 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 		if ( defined( 'MW_PHPUNIT_TEST' ) ) {
 			return;
 		}
+
 		$user = $sktemplate->getSkin()->getUser();
 		$title = $sktemplate->getSkin()->getRelevantTitle();
 		if ( $title instanceof Title === false ) {
@@ -60,7 +61,7 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 		}
 
 		if ( $this->permissionManager->userHasRight( $user, 'createpage' ) ) {
-			$links['actions']['new-page'] = [
+			$links['namespaces']['new-page'] = [
 				'text' => $sktemplate->msg( 'standarddialogs-create-button-new-page-text' ),
 				'title' => $sktemplate->msg( 'standarddialogs-create-button-new-page-title' ),
 				'href' => '',
@@ -69,7 +70,7 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 		}
 
 		if ( $this->permissionManager->userHasRight( $user, 'createpage' ) ) {
-			$links['actions']['new-subpage'] = [
+			$links['namespaces']['new-subpage'] = [
 				'text' => $sktemplate->msg( 'standarddialogs-create-button-new-subpage-text' ),
 				'title' => $sktemplate->msg( 'standarddialogs-create-button-new-subpage-title' ),
 				'href' => '',
