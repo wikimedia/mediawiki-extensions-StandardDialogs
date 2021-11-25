@@ -83,7 +83,7 @@ StandardDialogs.ui.MoveDialog.prototype.makeDoneActionProcess = function () {
 		if ( dialog.moveSubpagesCheckbox.isSelected() ) {
 			params.movesubpages = '1';
 		}
-		if ( dialog.moveLeaveRedirectCheckbox.isSelected() ) {
+		if ( dialog.moveLeaveRedirectCheckbox.isSelected() === false ) {
 			params.noredirect = '1';
 		}
 		if ( dialog.moveWatchCheckbox.isSelected() ) {
