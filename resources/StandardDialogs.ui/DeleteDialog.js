@@ -61,7 +61,9 @@ StandardDialogs.ui.DeleteDialog.prototype.makeDoneActionProcess = function () {
 			reason: dialog.reasonCombo.getValue() + dialog.otherReasonText.getValue()
 		};
 		if ( dialog.watchCheckbox.isSelected() ) {
-			params.watchlist = '1';
+			params.watchlist = 'watch';
+		} else {
+			params.watchlist = 'unwatch';
 		}
 		mwApi.postWithToken( 'csrf', params ).done( function ( data ) {
 			dfd.resolve.apply( dialog, arguments );
