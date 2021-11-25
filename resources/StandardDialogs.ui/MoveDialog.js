@@ -87,7 +87,9 @@ StandardDialogs.ui.MoveDialog.prototype.makeDoneActionProcess = function () {
 			params.noredirect = '1';
 		}
 		if ( dialog.moveWatchCheckbox.isSelected() ) {
-			params.watchlist = '1';
+			params.watchlist = 'watch';
+		} else {
+			params.watchlist = 'unwatch';
 		}
 		mwApi.postWithToken( 'csrf', params ).done( function ( data ) {
 			dfd.resolve.apply( dialog, arguments );
