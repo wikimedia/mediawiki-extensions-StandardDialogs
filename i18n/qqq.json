@@ -18,7 +18,7 @@
 	"standarddialogs-page-info-close": "Label of the button, that closes the information dialog.\n{{Identical|Close}}",
 	"standarddialogs-page-info-general": "Label for the general information section in the menu of the page information dialog.\n{{Identical|General}}",
 	"standarddialogs-page-info-history": "Label for the history section in the menu of the page information dialog.\n{{Identical|Last edit}}",
-	"standarddialogs-page-info-properties": "Label for the properties section in the menu of the page information dialog.\n{{Identical|Properties}}",
+	"standarddialogs-page-info-properties": "Label for the properties section in the menu of the page information dialog.\n{{Identical|Property}}",
 	"standarddialogs-page-info-page-title": "Label for page title.\n{{Identical|Title}}",
 	"standarddialogs-page-info-page-length": "Label for page length in bytes.\n{{Identical|Page length (in bytes)}}",
 	"standarddialogs-page-info-page-id": "Label for the page id.\n{{Identical|Page ID}}",
