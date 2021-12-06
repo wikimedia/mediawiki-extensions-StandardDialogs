@@ -2,17 +2,18 @@
 	"@metadata": {
 		"authors": [
 			"Miriam Schlindwein",
-			"Patric Wirth"
+			"Patric Wirth",
+			"Umherirrender"
 		]
 	},
 	"standarddialogs-desc": "Stellt Dialog-Benutzeroberflächen für typische Seitenaktionen zur verfügung",
 	"standarddialogs-copy-btn": "Kopieren",
-	"standarddialogs-copy-title": "Kopieren von \"$1\"",
+	"standarddialogs-copy-title": "Kopieren von „$1“",
 	"standarddialogs-copy-page-legend": "Kopieren",
 	"standarddialogs-copy-page-new": "Neuer Seitenname",
 	"standarddialogs-copy-discussion": "Diskussionsseite kopieren",
 	"standarddialogs-copy-subpages": "Unterseiten kopieren",
-	"standarddialogs-page-info-title": "Seiteninformationen für \"$1\"",
+	"standarddialogs-page-info-title": "Seiteninformationen für „$1“",
 	"standarddialogs-page-info-close": "Schließen",
 	"standarddialogs-page-info-general": "Allgemein",
 	"standarddialogs-page-info-history": "Letzte Bearbeitung",
@@ -34,20 +35,20 @@
 	"standarddialogs-page-info-page-images": "Bilder",
 	"standarddialogs-new-page-title": "Neue Seite erstellen",
 	"standarddialogs-new-page-label": "Seitenname",
-	"standarddialogs-new-subpage-title": "Neue Unterseite für \"$1\" erstellen",
+	"standarddialogs-new-subpage-title": "Neue Unterseite für „$1“ erstellen",
 	"standarddialogs-new-subpage-label": "Unterseitenname",
 	"standarddialogs-create-button-new-page-text": "Neue Seite",
 	"standarddialogs-create-button-new-page-title": "Neue Seite anlegen",
 	"standarddialogs-create-button-new-subpage-text": "Neue Unterseite",
 	"standarddialogs-create-button-new-subpage-title": "Neue Unterseite erstellen",
 	"standarddialogs-delete-btn": "Löschen",
-	"standarddialogs-delete-title": "Seite \"$1\" löschen",
+	"standarddialogs-delete-title": "Seite „$1“ löschen",
 	"standarddialogs-move-btn": "Verschieben",
-	"standarddialogs-move-title": "Seite \"$1\" verschieben",
+	"standarddialogs-move-title": "Seite „$1“ verschieben",
 	"standarddialogs-protect-btn": "Schützen",
-	"standarddialogs-protect-title": "Seite \"$1\" schützen",
+	"standarddialogs-protect-title": "Seite „$1“ schützen",
 	"standarddialogs-purge-btn": "Neu laden",
-	"standarddialogs-purge-title": "Seite \"$1\" neu laden",
+	"standarddialogs-purge-title": "Seite „$1“ neu laden",
 	"standarddialogs-btn-done": "Fertig",
 	"standarddialogs-btn-cancel": "Abbrechen"
 }
