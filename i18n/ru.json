@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac"
+		]
+	},
+	"standarddialogs-copy-btn": "Копировать",
+	"standarddialogs-page-info-close": "Закрыть",
+	"standarddialogs-page-info-properties": "Свойства",
+	"standarddialogs-page-info-page-language": "Язык",
+	"standarddialogs-page-info-page-redirects": "Перенаправления",
+	"standarddialogs-page-info-page-templates": "Шаблоны",
+	"standarddialogs-page-info-page-categories": "Категории",
+	"standarddialogs-page-info-page-images": "Изображения",
+	"standarddialogs-new-page-title": "Создать новую страницу",
+	"standarddialogs-new-page-label": "Название страницы",
+	"standarddialogs-create-button-new-page-text": "Новая страница",
+	"standarddialogs-delete-btn": "Удалить",
+	"standarddialogs-btn-done": "Готово",
+	"standarddialogs-btn-cancel": "Отмена"
+}
