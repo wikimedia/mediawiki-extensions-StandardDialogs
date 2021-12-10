@@ -98,7 +98,7 @@ $( document ).on( 'click', '#ca-new-page, #new-content', function ( e ) {
 			pageName: mw.config.get( 'wgRelevantPageName' )
 		} );
 		diag.on( 'actioncompleted', function ( newTitle ) {
-			window.location.href = newTitle.getUrl();
+			window.location.href = newTitle.getUrl( { action: 'edit' } );
 		} );
 		diag.show();
 	} );
