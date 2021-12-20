@@ -11,11 +11,15 @@
 	"standarddialogs-page-info-page-redirects": "Перенаправления",
 	"standarddialogs-page-info-page-templates": "Шаблоны",
 	"standarddialogs-page-info-page-categories": "Категории",
+	"standarddialogs-page-info-page-internal": "Внутренние ссылки",
 	"standarddialogs-page-info-page-images": "Изображения",
 	"standarddialogs-new-page-title": "Создать новую страницу",
 	"standarddialogs-new-page-label": "Название страницы",
 	"standarddialogs-create-button-new-page-text": "Новая страница",
+	"standarddialogs-create-button-new-subpage-text": "Новая подстраница",
+	"standarddialogs-create-button-new-subpage-title": "Создать новую подстраницу",
 	"standarddialogs-delete-btn": "Удалить",
+	"standarddialogs-purge-btn": "Обновить",
 	"standarddialogs-btn-done": "Готово",
 	"standarddialogs-btn-cancel": "Отмена"
 }
