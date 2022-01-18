@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Miriam Schlindwein",
+			"Mschlindwein",
 			"Patric Wirth",
 			"Umherirrender"
 		]
@@ -50,5 +51,6 @@
 	"standarddialogs-purge-btn": "Neu laden",
 	"standarddialogs-purge-title": "Seite „$1“ neu laden",
 	"standarddialogs-btn-done": "Fertig",
-	"standarddialogs-btn-cancel": "Abbrechen"
+	"standarddialogs-btn-cancel": "Abbrechen",
+	"standarddialogs-protect-level-editor": "Nur Bearbeitern und Administratoren erlaubt"
 }
