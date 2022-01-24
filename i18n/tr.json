@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Can"
+		]
+	},
+	"standarddialogs-page-info-history": "Son düzenleme",
+	"standarddialogs-page-info-properties": "Nitelikler",
+	"standarddialogs-page-info-page-title": "Başlık",
+	"standarddialogs-page-info-page-length": "Sayfa uzunluğu (bayt olarak)",
+	"standarddialogs-page-info-page-id": "Sayfa kimliği",
+	"standarddialogs-page-info-page-contributors": "Katkıda bulunanlar",
+	"standarddialogs-page-info-page-last-edit": "Son düzenleme",
+	"standarddialogs-page-info-page-templates": "Şablonlar",
+	"standarddialogs-page-info-page-categories": "Kategoriler",
+	"standarddialogs-page-info-page-images": "Görseller",
+	"standarddialogs-new-page-title": "Yeni sayfa oluştur",
+	"standarddialogs-new-page-label": "Sayfa adı",
+	"standarddialogs-new-subpage-label": "Alt-sayfa adı",
+	"standarddialogs-delete-title": "\"$1\" sayfasını sil",
+	"standarddialogs-move-btn": "Taşı",
+	"standarddialogs-protect-btn": "Koru",
+	"standarddialogs-protect-title": "\"$1\" sayfasını koru",
+	"standarddialogs-purge-btn": "Yenile",
+	"standarddialogs-btn-done": "Tamam",
+	"standarddialogs-btn-cancel": "İptal",
+	"standarddialogs-protect-level-editor": "Sadece editör ve yöneticilere izin ver"
+}
