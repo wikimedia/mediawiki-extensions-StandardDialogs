@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Can",
-			"SaldırganSincap"
+			"SaldırganSincap",
+			"Sayginer"
 		]
 	},
 	"standarddialogs-page-info-history": "Son düzenleme",
@@ -10,6 +11,7 @@
 	"standarddialogs-page-info-page-title": "Başlık",
 	"standarddialogs-page-info-page-length": "Sayfa uzunluğu (bayt olarak)",
 	"standarddialogs-page-info-page-id": "Sayfa kimliği",
+	"standarddialogs-page-info-page-language": "Dil",
 	"standarddialogs-page-info-page-contributors": "Katkıda bulunanlar",
 	"standarddialogs-page-info-page-last-edit": "Son düzenleme",
 	"standarddialogs-page-info-page-templates": "Şablonlar",

@@ -4,7 +4,8 @@
 			"Ajeje Brazorf",
 			"Miriam Schlindwein",
 			"Patric Wirth",
-			"Robby"
+			"Robby",
+			"Verdy p"
 		]
 	},
 	"standarddialogs-desc": "{{desc|name=StandardDialogs}}",
@@ -45,7 +46,7 @@
 	"standarddialogs-delete-btn": "Label for the button, that allows deleting a page.\n{{Identical|Delete}}",
 	"standarddialogs-delete-title": "Title for the dialog, that allows deleting a page.\n{{Identical|Delete page \"$1\"}}.\n* $1 - Name of the page that is going to be deleted",
 	"standarddialogs-move-btn": "Label for the button, that allows moving a page.\n{{Identical|Move}}",
-	"standarddialogs-move-title": "Title for the dialog that allows moving a page.\n{{Identical|Move page \"$1\"}}.\n* $1 - Name of the page that is going to be moved",
+	"standarddialogs-move-title": "Title for the dialog that allows moving a page.\n{{Identical|Move}}\n* $1 - Name of the page that is going to be moved",
 	"standarddialogs-protect-btn": "Label for the button, that allows protecting a page.\n{{Identical|Protect}}",
 	"standarddialogs-protect-title": "Title for the dialog that allows protecting a page.\n{{Identical|Protect page \"$1\"}}.\n* $1 - Name of the page that is going to be protected",
 	"standarddialogs-purge-btn": "Label for the button, that allows purging a page.\n{{Identical|Refresh}}",
