@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Gomoko",
+			"Verdy p",
 			"Wladek92"
 		]
 	},
@@ -43,7 +44,7 @@
 	"standarddialogs-delete-btn": "Supprimer",
 	"standarddialogs-delete-title": "Supprimer la page « $1 »",
 	"standarddialogs-move-btn": "Renommer",
-	"standarddialogs-move-title": "Déplacer la page « $1 »",
+	"standarddialogs-move-title": "Renommer la page « $1 »",
 	"standarddialogs-protect-btn": "Protéger",
 	"standarddialogs-protect-title": "Protéger la page « $1 »",
 	"standarddialogs-purge-btn": "Actualiser",

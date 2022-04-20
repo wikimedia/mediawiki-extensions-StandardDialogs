@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Can",
-			"SaldırganSincap"
+			"SaldırganSincap",
+			"Sayginer"
 		]
 	},
 	"standarddialogs-page-info-history": "Son düzenleme",
@@ -25,5 +26,6 @@
 	"standarddialogs-purge-btn": "Yenile",
 	"standarddialogs-btn-done": "Tamam",
 	"standarddialogs-btn-cancel": "İptal",
-	"standarddialogs-protect-level-editor": "Yalnızca düzenleyiciler ve hizmetlilere izin ver"
+	"standarddialogs-protect-level-editor": "Yalnızca düzenleyiciler ve hizmetlilere izin ver",
+	"standarddialogs-page-info-page-language": "Dil"
 }
