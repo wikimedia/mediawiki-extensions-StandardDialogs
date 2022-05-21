@@ -1,6 +1,6 @@
 $( document ).on( 'click', '#ca-delete', function ( e ) {
 	mw.loader.using( [ 'ext.standardDialogs.ui.DeleteDialog' ] ).done( function () {
-		var diag = new StandardDialogs.ui.DeleteDialog( {
+		const diag = new StandardDialogs.ui.DeleteDialog( {
 			id: 'standarddialogs-dlg-delete',
 			pageName: mw.config.get( 'wgRelevantPageName' )
 		} );
@@ -15,7 +15,7 @@ $( document ).on( 'click', '#ca-delete', function ( e ) {
 
 $( document ).on( 'click', '#ca-move', function ( e ) {
 	mw.loader.using( [ 'ext.standardDialogs.ui.MoveDialog' ] ).done( function () {
-		var diag = new StandardDialogs.ui.MoveDialog( {
+		const diag = new StandardDialogs.ui.MoveDialog( {
 			id: 'standarddialogs-dlg-move',
 			pageName: mw.config.get( 'wgRelevantPageName' )
 		} );
@@ -30,7 +30,7 @@ $( document ).on( 'click', '#ca-move', function ( e ) {
 
 $( document ).on( 'click', '#ca-protect', function ( e ) {
 	mw.loader.using( [ 'ext.standardDialogs.ui.ProtectDialog' ] ).done( function () {
-		var diag = new StandardDialogs.ui.ProtectDialog( {
+		const diag = new StandardDialogs.ui.ProtectDialog( {
 			id: 'standarddialogs-dlg-protect',
 			pageName: mw.config.get( 'wgRelevantPageName' )
 		} );
@@ -45,7 +45,7 @@ $( document ).on( 'click', '#ca-protect', function ( e ) {
 
 $( document ).on( 'click', '#ca-purge', function ( e ) {
 	mw.loader.using( [ 'ext.standardDialogs.ui.RefreshDialog' ] ).done( function () {
-		var diag = new StandardDialogs.ui.RefreshDialog( {
+		const diag = new StandardDialogs.ui.RefreshDialog( {
 			id: 'standarddialogs-dlg-refresh',
 			pageName: mw.config.get( 'wgRelevantPageName' )
 		} );
@@ -60,7 +60,7 @@ $( document ).on( 'click', '#ca-purge', function ( e ) {
 
 $( document ).on( 'click', '#ca-copy', function ( e ) {
 	mw.loader.using( [ 'ext.standardDialogs.ui.DuplicateDialog' ] ).done( function () {
-		var diag = new StandardDialogs.ui.DuplicateDialog( {
+		const diag = new StandardDialogs.ui.DuplicateDialog( {
 			id: 'standarddialogs-dlg-copy',
 			pageName: mw.config.get( 'wgRelevantPageName' )
 		} );
@@ -75,11 +75,11 @@ $( document ).on( 'click', '#ca-copy', function ( e ) {
 
 window.registryPageInformation = new OO.Registry();
 $( document ).on( 'click', '#t-info', function ( e ) {
-	var rlModules = require( './pageInfoPanelModuleRegistry.json' );
+	const rlModules = require( './pageInfoPanelModuleRegistry.json' );
 
 	mw.loader.using( 'ext.standardDialogs.ui.PageInformationDialog' ).done( function () {
 		mw.loader.using( rlModules ).done( function () {
-			var diag = new StandardDialogs.ui.PageInformationDialog( {
+			const diag = new StandardDialogs.ui.PageInformationDialog( {
 				id: 'standarddialogs-dlg-pageinformation',
 				pageName: mw.config.get( 'wgRelevantPageName' ),
 				panelRegistry: registryPageInformation
@@ -93,7 +93,7 @@ $( document ).on( 'click', '#t-info', function ( e ) {
 
 $( document ).on( 'click', '#ca-new-page, #new-content', function ( e ) {
 	mw.loader.using( [ 'ext.standardDialogs.ui.NewPageDialog' ] ).done( function () {
-		var diag = new StandardDialogs.ui.NewPageDialog( {
+		const diag = new StandardDialogs.ui.NewPageDialog( {
 			id: 'standarddialogs-dlg-new-page',
 			pageName: mw.config.get( 'wgRelevantPageName' )
 		} );
@@ -108,7 +108,7 @@ $( document ).on( 'click', '#ca-new-page, #new-content', function ( e ) {
 
 $( document ).on( 'click', '#ca-new-subpage', function ( e ) {
 	mw.loader.using( [ 'ext.standardDialogs.ui.NewSubpageDialog' ] ).done( function () {
-		var diag = new StandardDialogs.ui.NewSubpageDialog( {
+		const diag = new StandardDialogs.ui.NewSubpageDialog( {
 			id: 'standarddialogs-dlg-new-subpage',
 			pageName: mw.config.get( 'wgRelevantPageName' )
 		} );

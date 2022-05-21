@@ -21,8 +21,8 @@ StandardDialogs.ui.PageInformationDialog.prototype.getSetupProcess = function ( 
 	data.title = mw.message(
 		'standarddialogs-page-info-title', this.pageName.replace( '_', ' ' )
 	).plain();
-	var page = null;
-	for ( var key in this.panelRegistry.registry ) {
+	let page = null;
+	for ( const key in this.panelRegistry.registry ) {
 		page = new this.panelRegistry.registry[ key ]( key, {
 			pageName: this.pageName
 		} );

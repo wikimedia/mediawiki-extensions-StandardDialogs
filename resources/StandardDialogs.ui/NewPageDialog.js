@@ -15,8 +15,8 @@ StandardDialogs.ui.NewPageDialog.prototype.makeSetupProcessData = function () {
 	return data;
 };
 StandardDialogs.ui.NewPageDialog.prototype.getFormItems = function () {
-	var title = new mw.Title( this.pageName );
-	var prefix = '';
+	const title = new mw.Title( this.pageName );
+	let prefix = '';
 	if ( title.getNamespaceId() > 0 ) {
 		prefix = title.getNamespacePrefix();
 	}

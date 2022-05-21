@@ -16,10 +16,10 @@ StandardDialogs.ui.ProtectDialog.prototype.makeSetupProcessData = function () {
 };
 
 StandardDialogs.ui.ProtectDialog.prototype.getFormItems = function () {
-	var options = this.getStandardExpiryDates();
-	var optionsReason = this.getStandardReasons();
-	var optionsEdit = options[ 0 ];
-	var optionsMove = options[ 1 ];
+	const options = this.getStandardExpiryDates();
+	const optionsReason = this.getStandardReasons();
+	const optionsEdit = options[ 0 ];
+	const optionsMove = options[ 1 ];
 	this.mainInput = this.editProtect = new OO.ui.ComboBoxInputWidget( {
 		id: this.elementId + '-cbx-edit-level',
 		value: mw.message( 'protect-default' ).plain(),
@@ -146,8 +146,8 @@ StandardDialogs.ui.ProtectDialog.prototype.getFormItems = function () {
 };
 
 StandardDialogs.ui.ProtectDialog.prototype.makeDoneActionProcess = function () {
-	var me = this;
-	var protections = 'edit=';
+	const me = this;
+	let protections = 'edit=';
 	if ( me.editProtect.getValue() === mw.message( 'protect-level-sysop' ).plain() ) {
 		protections += 'sysop';
 	} else if ( me.editProtect.getValue() === mw.message( 'standarddialogs-protect-level-editor' ).plain() ) {
@@ -155,7 +155,7 @@ StandardDialogs.ui.ProtectDialog.prototype.makeDoneActionProcess = function () {
 	} else {
 		protections += 'all';
 	}
-	var expiries = 'infinite';
+	let expiries = 'infinite';
 	if ( me.protectExpiry.getMenu().findSelectedItem() !== null ) {
 		expiries = me.protectExpiry.getMenu().findSelectedItem().data;
 	}
@@ -174,9 +174,9 @@ StandardDialogs.ui.ProtectDialog.prototype.makeDoneActionProcess = function () {
 		}
 	}
 
-	var dfd = new $.Deferred();
+	const dfd = new $.Deferred();
 	mw.loader.using( 'mediawiki.api' ).done( function () {
-		var mwApi = new mw.Api();
+		const mwApi = new mw.Api();
 		mwApi.postWithToken( 'csrf', {
 			action: 'protect',
 			title: me.pageName,
@@ -197,8 +197,8 @@ StandardDialogs.ui.ProtectDialog.prototype.makeDoneActionProcess = function () {
 };
 
 StandardDialogs.ui.ProtectDialog.prototype.getStandardExpiryDates = function () {
-	var expiryDates = mw.message( 'protect-expiry-options' ).plain();
-	var optionsEdit = [], optionsMove = [];
+	let expiryDates = mw.message( 'protect-expiry-options' ).plain();
+	const optionsEdit = [], optionsMove = [];
 	expiryDates = expiryDates.split( ',' );
 	expiryDates.forEach( ( item ) => {
 		optionsEdit.push( new OO.ui.MenuOptionWidget( { label: item.split( ':' )[ 0 ], data: item.split( ':' )[ 1 ] } ) );
@@ -208,8 +208,8 @@ StandardDialogs.ui.ProtectDialog.prototype.getStandardExpiryDates = function () 
 };
 
 StandardDialogs.ui.ProtectDialog.prototype.getStandardReasons = function () {
-	var optionsReason = [];
-	var protectReasons = mw.message( 'protect-dropdown' ).plain();
+	const optionsReason = [];
+	let protectReasons = mw.message( 'protect-dropdown' ).plain();
 	protectReasons = protectReasons.split( '\n' );
 
 	otherReason = mw.message( 'protect-otherreason-op' ).plain();

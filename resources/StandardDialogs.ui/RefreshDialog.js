@@ -32,11 +32,11 @@ StandardDialogs.ui.RefreshDialog.prototype.getFormItems = function () {
 };
 
 StandardDialogs.ui.RefreshDialog.prototype.makeDoneActionProcess = function () {
-	var dialog = this;
+	const dialog = this;
 
-	var dfd = new $.Deferred();
+	const dfd = new $.Deferred();
 	mw.loader.using( 'mediawiki.api' ).done( function () {
-		var mwApi = new mw.Api();
+		const mwApi = new mw.Api();
 		mwApi.postWithToken( 'csrf', {
 			action: 'purge',
 			titles: dialog.pageName

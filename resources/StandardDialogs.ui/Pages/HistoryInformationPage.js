@@ -13,22 +13,22 @@ StandardDialogs.ui.HistoryInformationPage.prototype.setupOutlineItem = function 
 };
 
 StandardDialogs.ui.HistoryInformationPage.prototype.setup = function () {
-	var me = this;
-	var dfdData = this.getData();
+	const me = this;
+	const dfdData = this.getData();
 	$.when( dfdData ).done( function () {
 		if ( me.pageInfo != undefined ) {
 			fieldLayout = new OO.ui.FieldsetLayout();
-			var contentTable = $( '<table>' );
+			const contentTable = $( '<table>' );
 			contentTable.addClass( 'wikitable page-information' );
 
-			for ( var p in me.pageInfo ) {
-				var contrib = me.getEditors( p );
+			for ( const p in me.pageInfo ) {
+				const contrib = me.getEditors( p );
 				contentTable.append(
 					$( '<tr>' ).append(
 						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-contributors' ).plain() ),
 						$( '<td>' ).append( contrib ) ) );
 
-				var dateTime = new Date( me.pageInfo[ p ].revisions[ 0 ].timestamp );
+				const dateTime = new Date( me.pageInfo[ p ].revisions[ 0 ].timestamp );
 				dateTime.toLocaleTimeString();
 
 				contentTable.append(
@@ -48,9 +48,9 @@ StandardDialogs.ui.HistoryInformationPage.prototype.setup = function () {
 };
 
 StandardDialogs.ui.HistoryInformationPage.prototype.getEditors = function ( id ) {
-	var editors = $( '<ul>' );
+	const editors = $( '<ul>' );
 	if ( this.pageInfo[ id ].contributors ) {
-		for ( var c in this.pageInfo[ id ].contributors ) {
+		for ( const c in this.pageInfo[ id ].contributors ) {
 			editors.append(
 				$( '<li>' )
 					.append( $( '<a>' )
@@ -63,10 +63,10 @@ StandardDialogs.ui.HistoryInformationPage.prototype.getEditors = function ( id )
 };
 
 StandardDialogs.ui.HistoryInformationPage.prototype.getData = function () {
-	var me = this;
-	var dfd = new $.Deferred();
+	const me = this;
+	const dfd = new $.Deferred();
 
-	var mwApi = new mw.Api();
+	const mwApi = new mw.Api();
 	mwApi.postWithToken( 'csrf', {
 		action: 'query',
 		titles: me.pageName,
