@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kareyac"
+			"Kareyac",
+			"Pacha Tchernof",
+			"Rairakkumee"
 		]
 	},
 	"standarddialogs-copy-btn": "Копировать",
@@ -21,5 +23,33 @@
 	"standarddialogs-delete-btn": "Удалить",
 	"standarddialogs-purge-btn": "Обновить",
 	"standarddialogs-btn-done": "Готово",
-	"standarddialogs-btn-cancel": "Отмена"
+	"standarddialogs-btn-cancel": "Отмена",
+	"standarddialogs-desc": "Предоставляет диалоговые окна для общих действий на странице",
+	"standarddialogs-copy-title": "Копирование «$1»",
+	"standarddialogs-copy-page-legend": "Копирование",
+	"standarddialogs-copy-page-new": "Название новой страницы",
+	"standarddialogs-copy-discussion": "Копировать страницу обсуждения",
+	"standarddialogs-copy-subpages": "Копировать подстраницы",
+	"standarddialogs-page-info-title": "Сведения о странице «$1»",
+	"standarddialogs-page-info-general": "Общие",
+	"standarddialogs-page-info-history": "Последняя правка",
+	"standarddialogs-page-info-page-title": "Название",
+	"standarddialogs-page-info-page-length": "Длина страницы (в байтах)",
+	"standarddialogs-page-info-page-id": "Идентификатор страницы",
+	"standarddialogs-page-info-page-model": "Модель контента",
+	"standarddialogs-page-info-page-watch": "Число наблюдающих",
+	"standarddialogs-page-info-page-contributors": "Авторы",
+	"standarddialogs-page-info-page-last-edit": "Последняя правка",
+	"standarddialogs-page-info-page-last-editor": "Последний редактор",
+	"standarddialogs-page-info-page-external": "Внешние ссылки",
+	"standarddialogs-new-subpage-title": "Создание подстраницы для «$1»",
+	"standarddialogs-new-subpage-label": "Название подстраницы",
+	"standarddialogs-create-button-new-page-title": "Создание новой страницы",
+	"standarddialogs-delete-title": "Удаление страницы «$1»",
+	"standarddialogs-move-btn": "Переименовать",
+	"standarddialogs-move-title": "Переименование «$1»",
+	"standarddialogs-protect-btn": "Защитить",
+	"standarddialogs-protect-title": "Защита страницы «$1»",
+	"standarddialogs-purge-title": "Обновление страницы «$1»",
+	"standarddialogs-protect-level-editor": "Разрешено только редакторам и администраторам"
 }
