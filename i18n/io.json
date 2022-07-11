@@ -6,5 +6,8 @@
 	},
 	"standarddialogs-page-info-page-title": "Titulo",
 	"standarddialogs-protect-btn": "Protektar",
-	"standarddialogs-btn-cancel": "Nuligar"
+	"standarddialogs-btn-cancel": "Nuligar",
+	"standarddialogs-delete-btn": "Efacez",
+	"standarddialogs-move-btn": "Movar",
+	"standarddialogs-move-title": "Movar pagino \"$1\""
 }
