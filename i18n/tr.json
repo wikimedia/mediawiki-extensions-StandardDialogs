@@ -11,6 +11,7 @@
 	"standarddialogs-page-info-page-title": "Başlık",
 	"standarddialogs-page-info-page-length": "Sayfa uzunluğu (bayt olarak)",
 	"standarddialogs-page-info-page-id": "Sayfa kimliği",
+	"standarddialogs-page-info-page-language": "Dil",
 	"standarddialogs-page-info-page-contributors": "Katkıda bulunanlar",
 	"standarddialogs-page-info-page-last-edit": "Son düzenleme",
 	"standarddialogs-page-info-page-templates": "Şablonlar",
@@ -26,6 +27,5 @@
 	"standarddialogs-purge-btn": "Yenile",
 	"standarddialogs-btn-done": "Tamam",
 	"standarddialogs-btn-cancel": "İptal",
-	"standarddialogs-protect-level-editor": "Yalnızca düzenleyiciler ve hizmetlilere izin ver",
-	"standarddialogs-page-info-page-language": "Dil"
+	"standarddialogs-protect-level-editor": "Yalnızca düzenleyiciler ve hizmetlilere izin ver"
 }

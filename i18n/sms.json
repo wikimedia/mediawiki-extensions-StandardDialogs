@@ -5,16 +5,16 @@
 		]
 	},
 	"standarddialogs-copy-page-new": "Ođđ seiddnõmm",
+	"standarddialogs-page-info-page-language": "Ǩiõll",
+	"standarddialogs-page-info-page-categories": "Kategoria",
 	"standarddialogs-new-page-label": "Seiddnõmm",
 	"standarddialogs-new-subpage-title": "Raaj ođđ vueʹllseeid sijddu $1",
 	"standarddialogs-new-subpage-label": "Vueʹllseeid nõmm",
 	"standarddialogs-create-button-new-page-title": "Raaj ođđ seeid",
 	"standarddialogs-create-button-new-subpage-text": "Ođđ vueʹllseidd",
 	"standarddialogs-create-button-new-subpage-title": "Raaj ođđ vueʹllseeid",
-	"standarddialogs-protect-btn": "Suõjjâd",
-	"standarddialogs-protect-title": "Suõjjâd seeid \"$1\"",
-	"standarddialogs-page-info-page-language": "Ǩiõll",
-	"standarddialogs-page-info-page-categories": "Kategoria",
 	"standarddialogs-delete-btn": "Jaukkâd",
-	"standarddialogs-delete-title": "Jaukkâd seeid \"$1\""
+	"standarddialogs-delete-title": "Jaukkâd seeid \"$1\"",
+	"standarddialogs-protect-btn": "Suõjjâd",
+	"standarddialogs-protect-title": "Suõjjâd seeid \"$1\""
 }

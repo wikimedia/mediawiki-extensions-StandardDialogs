@@ -4,10 +4,7 @@
 			"Joao Xavier"
 		]
 	},
-	"standarddialogs-protect-btn": "Protektar",
-	"standarddialogs-btn-cancel": "Nuligar",
 	"standarddialogs-page-info-page-title": "Titulo",
-	"standarddialogs-delete-btn": "Efacez",
-	"standarddialogs-move-btn": "Movar",
-	"standarddialogs-move-title": "Movar pagino \"$1\""
+	"standarddialogs-protect-btn": "Protektar",
+	"standarddialogs-btn-cancel": "Nuligar"
 }
