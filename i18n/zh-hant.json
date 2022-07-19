@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Weather Top Wizard",
-			"Kly"
+			"Kly",
+			"Weather Top Wizard"
 		]
 	},
 	"standarddialogs-desc": "為常用頁面操作提供對話框使用者介面",
