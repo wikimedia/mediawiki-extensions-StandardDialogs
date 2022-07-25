@@ -16,5 +16,22 @@
 	"standarddialogs-delete-btn": "Jaukkâd",
 	"standarddialogs-delete-title": "Jaukkâd seeid \"$1\"",
 	"standarddialogs-protect-btn": "Suõjjâd",
-	"standarddialogs-protect-title": "Suõjjâd seeid \"$1\""
+	"standarddialogs-protect-title": "Suõjjâd seeid \"$1\"",
+	"standarddialogs-copy-btn": "Kopiââʹst",
+	"standarddialogs-copy-title": "Kopiââʹst seeid \"$1\"",
+	"standarddialogs-copy-page-legend": "Kopiââʹst",
+	"standarddialogs-copy-discussion": "Kopiââʹst saǥstõõllâmseeid",
+	"standarddialogs-copy-subpages": "Kopiââʹst vueʹllseeidaid",
+	"standarddialogs-page-info-title": "Teâđ seeidast \"$1\"",
+	"standarddialogs-page-info-page-title": "Seiddnõmm",
+	"standarddialogs-page-info-page-id": "Seeid tobdstõk",
+	"standarddialogs-page-info-page-templates": "Maall",
+	"standarddialogs-page-info-page-images": "Snimldõõǥǥ",
+	"standarddialogs-new-page-title": "Raaj ođđ seeid",
+	"standarddialogs-create-button-new-page-text": "Ođđ seidd",
+	"standarddialogs-move-btn": "Seeʹrd",
+	"standarddialogs-move-title": "Seeʹrd seeid \"$1\"",
+	"standarddialogs-purge-btn": "Peiʹvved",
+	"standarddialogs-purge-title": "Peiʹvved seeid \"$1\"",
+	"standarddialogs-btn-done": "Vaalmâš"
 }
