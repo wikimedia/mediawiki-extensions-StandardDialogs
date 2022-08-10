@@ -7,5 +7,6 @@
 	"standarddialogs-delete-btn": "Izbriši",
 	"standarddialogs-btn-cancel": "Prekliči",
 	"standarddialogs-move-btn": "Prestavi",
-	"standarddialogs-move-title": "Prestavi stran »$1«"
+	"standarddialogs-move-title": "Prestavi stran »$1«",
+	"standarddialogs-btn-done": "Končano"
 }
