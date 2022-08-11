@@ -8,5 +8,7 @@
 	"standarddialogs-btn-cancel": "Prekliči",
 	"standarddialogs-move-btn": "Prestavi",
 	"standarddialogs-move-title": "Prestavi stran »$1«",
-	"standarddialogs-btn-done": "Končano"
+	"standarddialogs-btn-done": "Končano",
+	"standarddialogs-page-info-close": "Zapri",
+	"standarddialogs-page-info-page-language": "Jezik"
 }
