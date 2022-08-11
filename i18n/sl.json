@@ -4,6 +4,8 @@
 			"Eleassar"
 		]
 	},
+	"standarddialogs-page-info-close": "Zapri",
+	"standarddialogs-page-info-page-language": "Jezik",
 	"standarddialogs-delete-btn": "Izbriši",
 	"standarddialogs-move-btn": "Prestavi",
 	"standarddialogs-move-title": "Prestavi stran »$1«",
