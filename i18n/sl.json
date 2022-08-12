@@ -10,5 +10,6 @@
 	"standarddialogs-move-title": "Prestavi stran »$1«",
 	"standarddialogs-btn-done": "Končano",
 	"standarddialogs-page-info-close": "Zapri",
-	"standarddialogs-page-info-page-language": "Jezik"
+	"standarddialogs-page-info-page-language": "Jezik",
+	"standarddialogs-create-button-new-page-text": "Nova stran"
 }
