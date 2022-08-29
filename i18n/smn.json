@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Seipinne"
+			"Seipinne",
+			"Yupik"
 		]
 	},
 	"standarddialogs-page-info-page-language": "Kielâ",
-	"standarddialogs-page-info-page-images": "Koveh"
+	"standarddialogs-page-info-page-images": "Koveh",
+	"standarddialogs-btn-cancel": "Jooskâ"
 }
