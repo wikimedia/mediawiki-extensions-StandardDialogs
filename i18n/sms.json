@@ -34,5 +34,6 @@
 	"standarddialogs-protect-title": "Suõjjâd seeid \"$1\"",
 	"standarddialogs-purge-btn": "Peiʹvved",
 	"standarddialogs-purge-title": "Peiʹvved seeid \"$1\"",
-	"standarddialogs-btn-done": "Vaalmâš"
+	"standarddialogs-btn-done": "Vaalmâš",
+	"standarddialogs-btn-cancel": "Jõõsk"
 }
