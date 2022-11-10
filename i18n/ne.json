@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"बडा काजी"
+			"बडा काजी",
+			"पर्वत सुबेदी"
 		]
 	},
-	"standarddialogs-move-btn": "सार्नुहोस्"
+	"standarddialogs-delete-btn": "मेट्ने",
+	"standarddialogs-move-btn": "सार्नुहोस्",
+	"standarddialogs-protect-btn": "सुरक्षित"
 }
