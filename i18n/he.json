@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Ex-Diktator"
 		]
 	},
@@ -44,5 +45,10 @@
 	"standarddialogs-move-btn": "העברה",
 	"standarddialogs-move-title": "העברת הדף \"$1\"",
 	"standarddialogs-protect-btn": "הגנה",
-	"standarddialogs-btn-cancel": "ביטול"
+	"standarddialogs-btn-cancel": "ביטול",
+	"standarddialogs-protect-title": "הגנה על הדף \"$1\"",
+	"standarddialogs-purge-btn": "רענון",
+	"standarddialogs-purge-title": "רענון הדף \"$1\"",
+	"standarddialogs-btn-done": "בוצע",
+	"standarddialogs-protect-level-editor": "לאפשר רק לעורכים ולמנהלים"
 }
