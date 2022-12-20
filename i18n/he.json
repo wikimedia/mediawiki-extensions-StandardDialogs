@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ex-Diktator"
+			"Ex-Diktator",
+			"Amire80"
 		]
 	},
 	"standarddialogs-desc": "אספקת ממשקי תיבת דו שיח בשביל פעולות דף נפוצות",
@@ -44,5 +45,10 @@
 	"standarddialogs-move-btn": "העברה",
 	"standarddialogs-move-title": "העברת הדף \"$1\"",
 	"standarddialogs-protect-btn": "הגנה",
-	"standarddialogs-btn-cancel": "ביטול"
+	"standarddialogs-protect-title": "הגנה על הדף \"$1\"",
+	"standarddialogs-purge-btn": "רענון",
+	"standarddialogs-purge-title": "רענון הדף \"$1\"",
+	"standarddialogs-btn-done": "בוצע",
+	"standarddialogs-btn-cancel": "ביטול",
+	"standarddialogs-protect-level-editor": "לאפשר רק לעורכים ולמנהלים"
 }
