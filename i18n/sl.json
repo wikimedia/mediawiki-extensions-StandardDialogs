@@ -16,5 +16,9 @@
 	"standarddialogs-page-info-properties": "Lastnosti",
 	"standarddialogs-page-info-page-title": "Naslov",
 	"standarddialogs-page-info-page-templates": "Predloge",
-	"standarddialogs-page-info-page-redirects": "Preusmeritve"
+	"standarddialogs-page-info-page-redirects": "Preusmeritve",
+	"standarddialogs-copy-page-new": "Novo ime strani",
+	"standarddialogs-page-info-page-images": "Slike",
+	"standarddialogs-new-page-title": "Ustvari novo stran",
+	"standarddialogs-protect-btn": "Zaščiti"
 }
