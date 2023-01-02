@@ -91,6 +91,24 @@ $( document ).on( 'click', '#t-info', function ( e ) {
 	return false;
 } );
 
+$( document ).on( 'input', '#standarddialogs-dlg-new-page-tf-target input', function ( e ) {
+	var params = {
+		action: 'query',
+		list: 'search',
+		srsearch: e.target.value,
+		format: 'json'
+	},
+	api = new mw.Api();
+
+	api.get( params ).done( function ( data ) {
+		if( data.query.search[ 0 ] !== undefined ) {
+			$( '.oo-ui-inputWidget-input' ).removeAttr( 'aria-label' );
+		}else{
+			$( '.oo-ui-inputWidget-input' ).attr( 'aria-label', mw.message( 'standarddialogs-new-page-not-exist-label' ).plain() );
+		}
+	} );
+} );
+
 $( document ).on( 'click', '#ca-new-page, #new-content', function ( e ) {
 	mw.loader.using( [ 'ext.standardDialogs.ui.NewPageDialog' ] ).done( function () {
 		const diag = new StandardDialogs.ui.NewPageDialog( {
