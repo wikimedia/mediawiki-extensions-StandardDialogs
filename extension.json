@@ -201,7 +201,8 @@
 				"standarddialogs-new-page-label",
 				"create",
 				"standarddialogs-btn-done",
-				"standarddialogs-btn-cancel"
+				"standarddialogs-btn-cancel",
+				"standarddialogs-new-page-not-exist-label"
 			],
 			"dependencies": [
 				"oojs-ui-windows",
