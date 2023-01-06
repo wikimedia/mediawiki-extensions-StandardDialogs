@@ -17,6 +17,8 @@
 	"standarddialogs-new-page-title": "Ustvari novo stran",
 	"standarddialogs-new-page-label": "Ime strani",
 	"standarddialogs-create-button-new-page-text": "Nova stran",
+	"standarddialogs-create-button-new-page-title": "Ustvari novo stran",
+	"standarddialogs-create-button-new-subpage-title": "Ustvari novo podstran",
 	"standarddialogs-delete-btn": "Izbriši",
 	"standarddialogs-move-btn": "Prestavi",
 	"standarddialogs-move-title": "Prestavi stran »$1«",
