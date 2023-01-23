@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kimberli Mäkäräinen (WMNO)",
 			"Yupik"
 		]
 	},
 	"standarddialogs-copy-page-new": "Ođđa siiddu namma",
 	"standarddialogs-new-page-label": "Siidonamma",
 	"standarddialogs-delete-btn": "Sihko",
-	"standarddialogs-create-button-new-page-text": "Ođđa siidu"
+	"standarddialogs-create-button-new-page-text": "Ođđa siidu",
+	"standarddialogs-page-info-properties": "Iešvuođat"
 }
