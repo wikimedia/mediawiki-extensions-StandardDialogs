@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Can",
+			"Rapsar",
 			"SaldırganSincap",
 			"Sayginer",
 			"ToprakM"
@@ -26,7 +27,7 @@
 	"standarddialogs-page-info-page-watch": "İzleyici sayısı",
 	"standarddialogs-page-info-page-redirects": "Yönlendirmeler",
 	"standarddialogs-page-info-page-contributors": "Katkıda bulunanlar",
-	"standarddialogs-page-info-page-last-edit": "Son düzenleme",
+	"standarddialogs-page-info-page-last-edit": "Son değişiklik",
 	"standarddialogs-page-info-page-last-editor": "Son düzenleyen",
 	"standarddialogs-page-info-page-templates": "Şablonlar",
 	"standarddialogs-page-info-page-categories": "Kategoriler",
