@@ -9,5 +9,6 @@
 	"standarddialogs-new-page-label": "Siidonamma",
 	"standarddialogs-delete-btn": "Sihko",
 	"standarddialogs-create-button-new-page-text": "Ođđa siidu",
-	"standarddialogs-page-info-properties": "Iešvuođat"
+	"standarddialogs-page-info-properties": "Iešvuođat",
+	"standarddialogs-new-subpage-title": "Ráhkat ođđa oalgesiiddu siidui \"$1\""
 }
