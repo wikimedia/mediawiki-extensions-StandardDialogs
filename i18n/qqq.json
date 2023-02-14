@@ -53,5 +53,6 @@
 	"standarddialogs-purge-title": "Title for the dialog that allows purging a page.\n{{Identical|Refresh page \"$1\"}}.\n* $1 - Name of the page that is going to be refreshed",
 	"standarddialogs-btn-done": "Label for primary action buttons of the dialogs.\n{{Identical|Done}}",
 	"standarddialogs-btn-cancel": "Label for cancel buttons of the dialogs.\n{{Identical|Cancel}}",
-	"standarddialogs-protect-level-editor": "Used as protect level.\n\nSee example: {{canonicalurl:Main_Page|action=info}}"
+	"standarddialogs-protect-level-editor": "Used as protect level.\n\nSee example: {{canonicalurl:Main_Page|action=info}}",
+	"standarddialogs-new-page-not-exist-label": "Label for those pages which do not exist"
 }
