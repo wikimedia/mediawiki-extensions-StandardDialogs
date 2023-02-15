@@ -33,6 +33,7 @@
 	"standarddialogs-page-info-page-images": "Slike",
 	"standarddialogs-new-page-title": "Ustvari novo stran",
 	"standarddialogs-new-page-label": "Ime strani",
+	"standarddialogs-new-page-not-exist-label": "Stran ne obstaja",
 	"standarddialogs-new-subpage-title": "Ustvari novo podstran strani »$1«",
 	"standarddialogs-new-subpage-label": "Ime podstrani",
 	"standarddialogs-create-button-new-page-text": "Nova stran",

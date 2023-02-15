@@ -35,6 +35,7 @@
 	"standarddialogs-page-info-page-images": "Изображения",
 	"standarddialogs-new-page-title": "Создать новую страницу",
 	"standarddialogs-new-page-label": "Название страницы",
+	"standarddialogs-new-page-not-exist-label": "Страница не существует",
 	"standarddialogs-new-subpage-title": "Создание подстраницы для «$1»",
 	"standarddialogs-new-subpage-label": "Название подстраницы",
 	"standarddialogs-create-button-new-page-text": "Новая страница",

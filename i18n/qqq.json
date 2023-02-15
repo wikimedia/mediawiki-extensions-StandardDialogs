@@ -37,6 +37,7 @@
 	"standarddialogs-page-info-page-images": "Label for images of the page.\n{{Identical|Image}}",
 	"standarddialogs-new-page-title": "Title of the page creation dialog.\n{{Identical|Create new page}}",
 	"standarddialogs-new-page-label": "Label for the page name input field of the new page dialog.\n{{Identical|Page name}}",
+	"standarddialogs-new-page-not-exist-label": "Label for those pages which do not exist",
 	"standarddialogs-new-subpage-title": "Title of the subpage creation dialog.\n{{Identical|Create new subpage to \"$1\"}}\n* $1 - Name of the page, a subpage gets created under",
 	"standarddialogs-new-subpage-label": "Label for the page name input field of the new subpage dialog.\n{{Identical|Subpage}}",
 	"standarddialogs-create-button-new-page-text": "Text for the button, that opens the create new page dialog.\n{{Identical|New page}}",
@@ -53,6 +54,5 @@
 	"standarddialogs-purge-title": "Title for the dialog that allows purging a page.\n{{Identical|Refresh page \"$1\"}}.\n* $1 - Name of the page that is going to be refreshed",
 	"standarddialogs-btn-done": "Label for primary action buttons of the dialogs.\n{{Identical|Done}}",
 	"standarddialogs-btn-cancel": "Label for cancel buttons of the dialogs.\n{{Identical|Cancel}}",
-	"standarddialogs-protect-level-editor": "Used as protect level.\n\nSee example: {{canonicalurl:Main_Page|action=info}}",
-	"standarddialogs-new-page-not-exist-label": "Label for those pages which do not exist"
+	"standarddialogs-protect-level-editor": "Used as protect level.\n\nSee example: {{canonicalurl:Main_Page|action=info}}"
 }
