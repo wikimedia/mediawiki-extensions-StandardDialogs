@@ -51,5 +51,6 @@
 	"standarddialogs-purge-title": "Обновление страницы «$1»",
 	"standarddialogs-btn-done": "Готово",
 	"standarddialogs-btn-cancel": "Отмена",
-	"standarddialogs-protect-level-editor": "Разрешено только редакторам и администраторам"
+	"standarddialogs-protect-level-editor": "Разрешено только редакторам и администраторам",
+	"standarddialogs-new-page-not-exist-label": "Страница не существует"
 }

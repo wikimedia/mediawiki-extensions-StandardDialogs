@@ -49,5 +49,6 @@
 	"standarddialogs-protect-title": "Zaščiti stran »$1«",
 	"standarddialogs-purge-btn": "Osveži",
 	"standarddialogs-purge-title": "Osveži stran »$1«",
-	"standarddialogs-protect-level-editor": "Dovoli samo urejevalcem in administratorjem"
+	"standarddialogs-protect-level-editor": "Dovoli samo urejevalcem in administratorjem",
+	"standarddialogs-new-page-not-exist-label": "Stran ne obstaja"
 }
