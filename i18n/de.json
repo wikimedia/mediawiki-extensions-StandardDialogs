@@ -52,5 +52,6 @@
 	"standarddialogs-purge-title": "Seite „$1“ neu laden",
 	"standarddialogs-btn-done": "Fertig",
 	"standarddialogs-btn-cancel": "Abbrechen",
-	"standarddialogs-protect-level-editor": "Nur Bearbeitern und Administratoren erlaubt"
+	"standarddialogs-protect-level-editor": "Nur Bearbeitern und Administratoren erlaubt",
+	"standarddialogs-new-page-not-exist-label": "Die Seite existiert nicht"
 }
