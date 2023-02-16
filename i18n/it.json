@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"Beta16"
 		]
 	},
-	"standarddialogs-move-btn": "Sposta"
+	"standarddialogs-move-btn": "Sposta",
+	"standarddialogs-new-page-not-exist-label": "La pagina non esiste"
 }

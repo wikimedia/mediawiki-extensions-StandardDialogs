@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"McDutchie"
 		]
 	},
 	"standarddialogs-copy-btn": "Kopiëren",
@@ -48,5 +49,6 @@
 	"standarddialogs-purge-title": "Pagina \"$1\" verversen",
 	"standarddialogs-btn-done": "Afgerond",
 	"standarddialogs-btn-cancel": "Annuleren",
-	"standarddialogs-protect-level-editor": "Alleen bewerkers en beheerders toestaan"
+	"standarddialogs-protect-level-editor": "Alleen bewerkers en beheerders toestaan",
+	"standarddialogs-new-page-not-exist-label": "De pagina bestaat niet"
 }

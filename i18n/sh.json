@@ -47,5 +47,6 @@
 	"standarddialogs-btn-cancel": "Otkaži",
 	"standarddialogs-protect-level-editor": "Dopusti samo uređivačima i administratorima",
 	"standarddialogs-desc": "Pruža dijaloge za uobičajene radnje na stranicama",
-	"standarddialogs-new-subpage-title": "Napravi novu podstranicu stranice \"$1\""
+	"standarddialogs-new-subpage-title": "Napravi novu podstranicu stranice \"$1\"",
+	"standarddialogs-new-page-not-exist-label": "Stranica ne postoji"
 }
