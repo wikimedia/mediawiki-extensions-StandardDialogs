@@ -51,5 +51,6 @@
 	"standarddialogs-purge-title": "Recharger la page « $1 »",
 	"standarddialogs-btn-done": "Terminé",
 	"standarddialogs-btn-cancel": "Annuler",
-	"standarddialogs-protect-level-editor": "Autoriser seulement les éditeurs et les administrateurs"
+	"standarddialogs-protect-level-editor": "Autoriser seulement les éditeurs et les administrateurs",
+	"standarddialogs-new-page-not-exist-label": "La page n’existe pas"
 }

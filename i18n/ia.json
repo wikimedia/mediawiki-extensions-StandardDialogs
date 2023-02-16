@@ -49,5 +49,6 @@
 	"standarddialogs-purge-title": "Refrescar le pagina \"$1\"",
 	"standarddialogs-btn-done": "Facite",
 	"standarddialogs-btn-cancel": "Cancellar",
-	"standarddialogs-protect-level-editor": "Permitter solmente redactores e aministratores"
+	"standarddialogs-protect-level-editor": "Permitter solmente redactores e aministratores",
+	"standarddialogs-new-page-not-exist-label": "Pagina non existe"
 }
