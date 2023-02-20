@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"standarddialogs-desc": "Stellt Dialog-Benotzerinterface fir typesch Säitenaktiounen zur Verfügung",
@@ -33,6 +34,7 @@
 	"standarddialogs-page-info-page-images": "Biller",
 	"standarddialogs-new-page-title": "Nei Säit uleeën",
 	"standarddialogs-new-page-label": "Numm vun der Säit",
+	"standarddialogs-new-page-not-exist-label": "Dës Säit gëtt et net",
 	"standarddialogs-new-subpage-title": "Eng nei Ënnersäit fir \"$1\" uleeën",
 	"standarddialogs-new-subpage-label": "Numm vun der Ënnersäit",
 	"standarddialogs-create-button-new-page-text": "Nei Säit",
