@@ -49,5 +49,6 @@
 	"standarddialogs-purge-title": "Превчитување на страницата „$1“",
 	"standarddialogs-btn-done": "Готово",
 	"standarddialogs-btn-cancel": "Откажи",
-	"standarddialogs-protect-level-editor": "Дозволи само за уредници и администратори"
+	"standarddialogs-protect-level-editor": "Дозволи само за уредници и администратори",
+	"standarddialogs-new-page-not-exist-label": "Страницата не постои"
 }
