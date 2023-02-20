@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"standarddialogs-desc": "Stellt Dialog-Benotzerinterface fir typesch Säitenaktiounen zur Verfügung",
@@ -49,5 +50,6 @@
 	"standarddialogs-purge-title": "Säit \"$1\" nei lueden",
 	"standarddialogs-btn-done": "Fäerdeg",
 	"standarddialogs-btn-cancel": "Ofbriechen",
-	"standarddialogs-protect-level-editor": "Nëmme fir Editeuren an Administrateuren erlaben"
+	"standarddialogs-protect-level-editor": "Nëmme fir Editeuren an Administrateuren erlaben",
+	"standarddialogs-new-page-not-exist-label": "Dës Säit gëtt et net"
 }
