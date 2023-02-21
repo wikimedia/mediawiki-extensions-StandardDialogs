@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"McDutchie"
 		]
 	},
 	"standarddialogs-copy-btn": "Kopiëren",
@@ -32,6 +33,7 @@
 	"standarddialogs-page-info-page-images": "Afbeeldingen",
 	"standarddialogs-new-page-title": "Nieuwe pagina maken",
 	"standarddialogs-new-page-label": "Paginanaam",
+	"standarddialogs-new-page-not-exist-label": "De pagina bestaat niet",
 	"standarddialogs-new-subpage-title": "Nieuwe deelpagina voor \"$1\" aanmaken",
 	"standarddialogs-new-subpage-label": "Deelpaginanaam",
 	"standarddialogs-create-button-new-page-text": "Nieuwe pagina",

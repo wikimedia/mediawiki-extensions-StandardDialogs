@@ -36,6 +36,7 @@
 	"standarddialogs-page-info-page-images": "Bilder",
 	"standarddialogs-new-page-title": "Neue Seite erstellen",
 	"standarddialogs-new-page-label": "Seitenname",
+	"standarddialogs-new-page-not-exist-label": "Die Seite existiert nicht",
 	"standarddialogs-new-subpage-title": "Neue Unterseite für „$1“ erstellen",
 	"standarddialogs-new-subpage-label": "Unterseitenname",
 	"standarddialogs-create-button-new-page-text": "Neue Seite",

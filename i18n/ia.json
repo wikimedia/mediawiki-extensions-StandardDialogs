@@ -33,6 +33,7 @@
 	"standarddialogs-page-info-page-images": "Imagines",
 	"standarddialogs-new-page-title": "Crear nove pagina",
 	"standarddialogs-new-page-label": "Nomine del pagina",
+	"standarddialogs-new-page-not-exist-label": "Pagina non existe",
 	"standarddialogs-new-subpage-title": "Crear un nove subpagina de \"$1\"",
 	"standarddialogs-new-subpage-label": "Nomine del subpagina",
 	"standarddialogs-create-button-new-page-text": "Nove pagina",

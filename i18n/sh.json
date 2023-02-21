@@ -32,6 +32,7 @@
 	"standarddialogs-page-info-page-images": "Slike",
 	"standarddialogs-new-page-title": "Napravi novu stranicu",
 	"standarddialogs-new-page-label": "Ime stranice",
+	"standarddialogs-new-page-not-exist-label": "Stranica ne postoji",
 	"standarddialogs-new-subpage-title": "Napravi novu podstranicu stranice \"$1\"",
 	"standarddialogs-create-button-new-page-text": "Nova stranica",
 	"standarddialogs-create-button-new-page-title": "Napravi novu stranicu",
