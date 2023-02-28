@@ -34,6 +34,7 @@
 	"standarddialogs-page-info-page-images": "圖片",
 	"standarddialogs-new-page-title": "建立新頁面",
 	"standarddialogs-new-page-label": "頁面名稱",
+	"standarddialogs-new-page-not-exist-label": "頁面不存在",
 	"standarddialogs-new-subpage-title": "在「$1」下建立子頁面",
 	"standarddialogs-new-subpage-label": "子頁面名稱",
 	"standarddialogs-create-button-new-page-text": "新頁面",
