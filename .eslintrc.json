@@ -19,6 +19,7 @@
 		"no-jquery/no-visibility": "warn",
 		"no-jquery/variable-pattern": "warn",
 		"no-jquery/no-class-state": "warn",
+		"no-jquery/no-global-selector": "warn",
 		"new-cap": "warn",
 		"block-scoped-var": "warn",
 		"mediawiki/valid-package-file-require": "warn",
