@@ -49,7 +49,9 @@
 				"word-separator",
 				"history",
 				"standarddialogs-btn-done",
-				"standarddialogs-btn-cancel"
+				"standarddialogs-btn-cancel",
+				"standarddialogs-delete-subpages",
+				"standarddialogs-confirm-mass-deletion"
 			],
 			"dependencies": [
 				"oojs-ui-windows"
