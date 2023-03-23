@@ -54,5 +54,7 @@
 	"standarddialogs-btn-done": "Label for primary action buttons of the dialogs.\n{{Identical|Done}}",
 	"standarddialogs-btn-cancel": "Label for cancel buttons of the dialogs.\n{{Identical|Cancel}}",
 	"standarddialogs-protect-level-editor": "Used as protect level.\n\nSee example: {{canonicalurl:Main_Page|action=info}}",
-	"standarddialogs-new-page-not-exist-label": "Label for those pages which do not exist"
+	"standarddialogs-new-page-not-exist-label": "Label for those pages which do not exist",
+	"standarddialogs-delete-subpages": "Label for the checkbox, that allows deleting the pages subpages as well, when checked",
+	"standarddialogs-confirm-mass-deletion": "Message shown when the user tries to delete a large number pages at once.\n* $1 - Number of pages to be deleted"
 }

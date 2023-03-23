@@ -51,5 +51,7 @@
 	"standarddialogs-purge-title": "Refresh page \"$1\"",
 	"standarddialogs-btn-done": "Done",
 	"standarddialogs-btn-cancel": "Cancel",
-	"standarddialogs-protect-level-editor": "Allow only editors and administrators"
+	"standarddialogs-protect-level-editor": "Allow only editors and administrators",
+	"standarddialogs-delete-subpages": "Delete subpages",
+	"standarddialogs-confirm-mass-deletion": "This will delete {{PLURAL:$1|page|pages}}. Are you sure?"
 }
