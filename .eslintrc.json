@@ -29,6 +29,6 @@
 		"no-var": "warn",
 		"no-unused-vars": "warn",
 		"no-implicit-globals": "warn",
-		"es/no-object-values": "warn"
+		"es-x/no-object-values": "warn"
 	}
 }
