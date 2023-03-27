@@ -92,18 +92,18 @@ $( document ).on( 'click', '#t-info', function ( e ) {
 } );
 
 $( document ).on( 'input', '#standarddialogs-dlg-new-page-tf-target input', function ( e ) {
-	var params = {
-		action: 'query',
-		list: 'search',
-		srsearch: e.target.value,
-		format: 'json'
-	},
-	api = new mw.Api();
+	const params = {
+			action: 'query',
+			list: 'search',
+			srsearch: e.target.value,
+			format: 'json'
+		},
+		api = new mw.Api();
 
 	api.get( params ).done( function ( data ) {
-		if( data.query.search[ 0 ] !== undefined ) {
+		if ( data.query.search[ 0 ] !== undefined ) {
 			$( '.oo-ui-inputWidget-input' ).removeAttr( 'aria-label' );
-		}else{
+		} else {
 			$( '.oo-ui-inputWidget-input' ).attr( 'aria-label', mw.message( 'standarddialogs-new-page-not-exist-label' ).plain() );
 		}
 	} );
