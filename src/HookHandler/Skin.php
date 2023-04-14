@@ -51,7 +51,9 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 			return;
 		}
 
-		if ( $title->isContentPage() && $title->exists() ) {
+		$userCanCreatePages = $this->permissionManager->userHasRight( $user, 'createpage' );
+
+		if ( $userCanCreatePages && $title->exists() ) {
 			$links['actions']['copy'] = [
 				"href" => '',
 				"text" => $sktemplate->msg( 'standarddialogs-copy-page-legend' )->text(),
@@ -60,7 +62,7 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 			];
 		}
 
-		if ( $this->permissionManager->userHasRight( $user, 'createpage' ) ) {
+		if ( $userCanCreatePages ) {
 			$links['namespaces']['new-page'] = [
 				'text' => $sktemplate->msg( 'standarddialogs-create-button-new-page-text' ),
 				'title' => $sktemplate->msg( 'standarddialogs-create-button-new-page-title' ),
@@ -69,7 +71,7 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 			];
 		}
 
-		if ( $this->permissionManager->userHasRight( $user, 'createpage' ) ) {
+		if ( $userCanCreatePages ) {
 			$links['namespaces']['new-subpage'] = [
 				'text' => $sktemplate->msg( 'standarddialogs-create-button-new-subpage-text' ),
 				'title' => $sktemplate->msg( 'standarddialogs-create-button-new-subpage-title' ),
