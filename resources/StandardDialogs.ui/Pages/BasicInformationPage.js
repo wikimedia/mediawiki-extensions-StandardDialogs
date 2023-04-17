@@ -13,15 +13,15 @@ StandardDialogs.ui.BasicInformationPage.prototype.setupOutlineItem = function ()
 };
 
 StandardDialogs.ui.BasicInformationPage.prototype.setup = function () {
-	var me = this;
-	var dfdData = this.getData();
+	const me = this;
+	const dfdData = this.getData();
 	$.when( dfdData ).done( function () {
 		if ( me.pageInfo != undefined ) {
 			fieldLayout = new OO.ui.FieldsetLayout();
-			var contentTable = $( '<table>' );
+			const contentTable = $( '<table>' );
 			contentTable.addClass( 'wikitable page-information' );
 
-			for ( var p in me.pageInfo ) {
+			for ( const p in me.pageInfo ) {
 				contentTable.append(
 					$( '<tr>' ).append(
 						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-title' ).plain() ),
@@ -69,10 +69,10 @@ StandardDialogs.ui.BasicInformationPage.prototype.setup = function () {
 };
 
 StandardDialogs.ui.BasicInformationPage.prototype.getData = function () {
-	var me = this;
-	var dfd = new $.Deferred();
+	const me = this;
+	const dfd = new $.Deferred();
 
-	var mwApi = new mw.Api();
+	const mwApi = new mw.Api();
 	mwApi.postWithToken( 'csrf', {
 		action: 'query',
 		titles: me.pageName,

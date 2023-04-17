@@ -14,27 +14,27 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.setupOutlineItem = functi
 };
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.setup = function () {
-	var me = this;
-	var dfdData = this.getData();
+	const me = this;
+	const dfdData = this.getData();
 	$.when( dfdData ).done( function () {
 		if ( me.pageInfo !== undefined ) {
-			var fieldLayout = new OO.ui.FieldsetLayout();
-			var contentTable = $( '<table>' );
+			const fieldLayout = new OO.ui.FieldsetLayout();
+			const contentTable = $( '<table>' );
 			contentTable.addClass( 'wikitable page-information' );
 
-			for ( var p in me.pageInfo ) {
-				var templates = me.getTemplates( p );
+			for ( const p in me.pageInfo ) {
+				const templates = me.getTemplates( p );
 				contentTable.append(
 					$( '<tr>' ).append(
 						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-templates' ).plain() ),
 						$( '<td>' ).append( templates ) ) );
 
-				var categories = me.getCategories( p );
+				const categories = me.getCategories( p );
 				contentTable.append(
 					$( '<tr>' ).append(
 						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-categories' ).plain() ),
 						$( '<td>' ).append( categories ) ) );
-				var links = me.getInternalLinks( p );
+				const links = me.getInternalLinks( p );
 				contentTable.append(
 					$( '<tr>' ).append(
 						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-internal' ).plain() ),
@@ -52,7 +52,7 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.setup = function () {
 							$( '<td>' ).text() ) );
 				}
 
-				var extLinks = me.getExternalLinks( p );
+				const extLinks = me.getExternalLinks( p );
 				contentTable.append(
 					$( '<tr>' ).append(
 						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-external' ).plain() ),
@@ -66,9 +66,9 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.setup = function () {
 };
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.getData = function () {
-	var me = this;
-	var dfd = new $.Deferred();
-	var mwApi = new mw.Api();
+	const me = this;
+	const dfd = new $.Deferred();
+	const mwApi = new mw.Api();
 	mwApi.postWithToken( 'csrf', {
 		action: 'query',
 		titles: me.pageName,
@@ -86,10 +86,10 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getData = function () {
 };
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.getTemplates = function ( id ) {
-	var templates = $( '<ul>' );
+	const templates = $( '<ul>' );
 	if ( this.pageInfo[ id ].templates ) {
-		for ( var i = 0; i < this.pageInfo[ id ].templates.length; i++ ) {
-			var title = mw.Title.newFromText( this.pageInfo[ id ].templates[ i ].title );
+		for ( let i = 0; i < this.pageInfo[ id ].templates.length; i++ ) {
+			const title = mw.Title.newFromText( this.pageInfo[ id ].templates[ i ].title );
 			templates.append(
 				$( '<li>' )
 					.append( $( '<a>' )
@@ -103,10 +103,10 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getTemplates = function (
 };
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.getCategories = function ( id ) {
-	var categories = $( '<ul>' );
+	const categories = $( '<ul>' );
 	if ( this.pageInfo[ id ].categories ) {
-		for ( var i = 0; i < this.pageInfo[ id ].categories.length; i++ ) {
-			var title = mw.Title.newFromText( this.pageInfo[ id ].categories[ i ].title );
+		for ( let i = 0; i < this.pageInfo[ id ].categories.length; i++ ) {
+			const title = mw.Title.newFromText( this.pageInfo[ id ].categories[ i ].title );
 			categories.append(
 				$( '<li>' )
 					.append( $( '<a>' )
@@ -120,10 +120,10 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getCategories = function 
 };
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.getInternalLinks = function ( id ) {
-	var links = $( '<ul>' );
+	const links = $( '<ul>' );
 	if ( this.pageInfo[ id ].links ) {
-		for ( var i = 0; i < this.pageInfo[ id ].links.length; i++ ) {
-			var title = mw.Title.newFromText( this.pageInfo[ id ].links[ i ].title );
+		for ( let i = 0; i < this.pageInfo[ id ].links.length; i++ ) {
+			const title = mw.Title.newFromText( this.pageInfo[ id ].links[ i ].title );
 			links.append(
 				$( '<li>' )
 					.append( $( '<a>' )
@@ -137,9 +137,9 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getInternalLinks = functi
 };
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.getExternalLinks = function ( id ) {
-	var links = $( '<ul>' );
+	const links = $( '<ul>' );
 	if ( this.pageInfo[ id ].extlinks ) {
-		for ( var key in this.pageInfo[ id ].extlinks ) {
+		for ( const key in this.pageInfo[ id ].extlinks ) {
 			links.append(
 				$( '<li>' )
 					.append( $( '<a>' )
