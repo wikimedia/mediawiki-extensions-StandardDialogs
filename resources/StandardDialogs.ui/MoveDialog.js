@@ -66,14 +66,14 @@ StandardDialogs.ui.MoveDialog.prototype.getFormItems = function () {
 };
 
 StandardDialogs.ui.MoveDialog.prototype.makeDoneActionProcess = function () {
-	var dialog = this;
+	const dialog = this;
 
 	this.newTitle = mw.Title.newFromText( dialog.targetTitle.getValue() );
 
-	var dfd = new $.Deferred();
+	const dfd = new $.Deferred();
 	mw.loader.using( 'mediawiki.api' ).done( function () {
-		var mwApi = new mw.Api();
-		var params = {
+		const mwApi = new mw.Api();
+		const params = {
 			action: 'move',
 			from: dialog.pageName,
 			to: dialog.targetTitle.getValue(),

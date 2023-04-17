@@ -14,7 +14,7 @@ StandardDialogs.ui.BaseDialog.prototype.getDialogTitlePageName = function () {
 
 StandardDialogs.ui.BaseDialog.prototype.getSetupProcess = function ( data ) {
 	data = data || {};
-	var additionalData = this.makeSetupProcessData();
+	const additionalData = this.makeSetupProcessData();
 	data = $.extend( data, additionalData );
 	return StandardDialogs.ui.BaseDialog.super.prototype.getSetupProcess.call( this, data );
 };
@@ -25,7 +25,7 @@ StandardDialogs.ui.BaseDialog.prototype.initialize = function () {
 		padded: true,
 		expanded: true
 	} );
-	var formItems = this.getFormItems();
+	const formItems = this.getFormItems();
 	this.content.$element.append(
 		formItems.map( function ( item ) {
 			return item.$element;
@@ -93,7 +93,7 @@ StandardDialogs.ui.BaseDialog.prototype.getBodyHeight = function () {
 
 StandardDialogs.ui.BaseDialog.prototype.getActionProcess = function ( action ) {
 	if ( action === 'done' ) {
-		var doneActionProcess = this.makeDoneActionProcess();
+		const doneActionProcess = this.makeDoneActionProcess();
 		doneActionProcess.next( this.onActionDone, this );
 		return doneActionProcess;
 	}
@@ -107,7 +107,7 @@ StandardDialogs.ui.BaseDialog.prototype.makeDoneActionProcess = function ( actio
 
 // Stub to be overwritten by subclass
 StandardDialogs.ui.BaseDialog.prototype.onActionDone = function ( action ) {
-	var args = [ 'actioncompleted' ];
+	let args = [ 'actioncompleted' ];
 	args = args.concat( this.getActionCompletedEventArgs() );
 	this.emit.apply( this, args );
 	this.close( { action: action } );

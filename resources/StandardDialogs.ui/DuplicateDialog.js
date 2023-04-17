@@ -54,11 +54,11 @@ StandardDialogs.ui.DuplicateDialog.prototype.getFormItems = function () {
 };
 
 StandardDialogs.ui.DuplicateDialog.prototype.makeDoneActionProcess = function () {
-	var me = this;
+	const me = this;
 	this.newTitle = mw.Title.newFromText( me.targetTitle.getValue() );
-	var dfd = new $.Deferred();
+	const dfd = new $.Deferred();
 	mw.loader.using( 'mediawiki.api' ).done( function () {
-		var dfdCopy = me.doCopy( me.pageName, me.targetTitle.getValue() );
+		const dfdCopy = me.doCopy( me.pageName, me.targetTitle.getValue() );
 		$.when( dfdCopy ).done( function () {
 
 			if ( me.checkDiscussion.isSelected() ) {
@@ -70,18 +70,18 @@ StandardDialogs.ui.DuplicateDialog.prototype.makeDoneActionProcess = function ()
 			}
 
 			$.when( dfdDiscussion, dfdSubpages ).done( function () {
-				var copyDfds = [];
+				const copyDfds = [];
 				if ( me.subpages.length > 0 ) {
 					me.subpages.forEach( function ( subpage ) {
-						var pageTargetName = subpage.replace( me.pageName, me.targetTitle.getValue() );
-						var currentCopyDfd = me.doCopy( subpage, pageTargetName );
+						const pageTargetName = subpage.replace( me.pageName, me.targetTitle.getValue() );
+						const currentCopyDfd = me.doCopy( subpage, pageTargetName );
 						copyDfds.push( currentCopyDfd );
 					} );
 				}
 				if ( me.talkpages.length > 0 ) {
 					me.talkpages.forEach( function ( talkpage ) {
-						var pageTargetName = talkpage.replace( me.pageName, me.targetTitle.getValue() );
-						var currentCopyDfd = me.doCopy( talkpage, pageTargetName );
+						const pageTargetName = talkpage.replace( me.pageName, me.targetTitle.getValue() );
+						const currentCopyDfd = me.doCopy( talkpage, pageTargetName );
 						copyDfds.push( currentCopyDfd );
 					} );
 				}
@@ -102,9 +102,9 @@ StandardDialogs.ui.DuplicateDialog.prototype.getActionCompletedEventArgs = funct
 };
 
 StandardDialogs.ui.DuplicateDialog.prototype.getDiscussionPages = function ( srcPageName, srcNamespace ) {
-	var me = this;
-	var dfd = new $.Deferred();
-	var mwApi = new mw.Api();
+	const me = this;
+	const dfd = new $.Deferred();
+	const mwApi = new mw.Api();
 	mwApi.postWithToken( 'csrf', {
 		action: 'query',
 		list: 'allpages',
@@ -135,16 +135,16 @@ StandardDialogs.ui.DuplicateDialog.prototype.getDiscussionPages = function ( src
 };
 
 StandardDialogs.ui.DuplicateDialog.prototype.getSubPages = function ( srcPageName, srcNamespace ) {
-	var me = this;
+	const me = this;
 
-	var dfd = me.doGetSubPages( srcPageName, srcNamespace, '' );
+	const dfd = me.doGetSubPages( srcPageName, srcNamespace, '' );
 	return dfd.promise();
 };
 
 StandardDialogs.ui.DuplicateDialog.prototype.doGetSubPages = function ( srcPageName, srcNamespace, continueVal ) {
-	var me = this;
-	var dfd = new $.Deferred();
-	var params = {
+	const me = this;
+	const dfd = new $.Deferred();
+	const params = {
 		action: 'query',
 		list: 'allpages',
 		apprefix: srcPageName + '/',
@@ -155,13 +155,13 @@ StandardDialogs.ui.DuplicateDialog.prototype.doGetSubPages = function ( srcPageN
 		params.apcontinue = continueVal;
 	}
 
-	var mwApi = new mw.Api();
+	const mwApi = new mw.Api();
 	mwApi.postWithToken( 'csrf', params ).done( function ( resp ) {
 		resp.query.allpages.forEach( function ( page ) {
 			me.subpages.push( page.title );
 		} );
 		if ( resp.continue ) {
-			var recursiveCall = me.doGetSubPages( srcPageName, srcNamespace, resp.continue.apcontinue );
+			const recursiveCall = me.doGetSubPages( srcPageName, srcNamespace, resp.continue.apcontinue );
 			recursiveCall.done( function () {
 				dfd.resolve( resp );
 			} );
@@ -176,8 +176,8 @@ StandardDialogs.ui.DuplicateDialog.prototype.doGetSubPages = function ( srcPageN
 };
 
 StandardDialogs.ui.DuplicateDialog.prototype.doCopy = function ( srcPageName, targetPageName ) {
-	var dfd = new $.Deferred();
-	var mwApi = new mw.Api();
+	const dfd = new $.Deferred();
+	const mwApi = new mw.Api();
 	mwApi.postWithToken( 'csrf', {
 		action: 'query',
 		titles: srcPageName,
@@ -185,8 +185,8 @@ StandardDialogs.ui.DuplicateDialog.prototype.doCopy = function ( srcPageName, ta
 		rvprop: 'content',
 		indexpageids: ''
 	} ).done( function ( resp ) {
-		var pageId = resp.query.pageids[ 0 ];
-		var pageInfo = resp.query.pages[ pageId ];
+		const pageId = resp.query.pageids[ 0 ];
+		const pageInfo = resp.query.pages[ pageId ];
 		if ( pageInfo.missing || !pageInfo.revisions || !pageInfo.revisions[ 0 ] ) {
 			dfd.reject( resp );
 		}

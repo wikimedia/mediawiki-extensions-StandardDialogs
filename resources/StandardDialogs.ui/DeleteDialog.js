@@ -50,12 +50,12 @@ StandardDialogs.ui.DeleteDialog.prototype.getFormItems = function () {
 };
 
 StandardDialogs.ui.DeleteDialog.prototype.makeDoneActionProcess = function () {
-	var dialog = this;
+	const dialog = this;
 
-	var dfd = new $.Deferred();
+	const dfd = new $.Deferred();
 	mw.loader.using( 'mediawiki.api' ).done( function () {
-		var mwApi = new mw.Api();
-		var params = {
+		const mwApi = new mw.Api();
+		const params = {
 			action: 'delete',
 			title: dialog.pageName,
 			reason: dialog.reasonCombo.getValue() + dialog.otherReasonText.getValue()
