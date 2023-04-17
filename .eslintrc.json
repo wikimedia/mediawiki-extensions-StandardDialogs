@@ -11,7 +11,8 @@
 		"VisualEditorSupportCheck": "readonly",
 		"unicodeJS": "readonly",
 		"RangeFix": "readonly",
-		"Papa": "readonly"
+		"Papa": "readonly",
+		"StandardDialogs": "writable"
 	},
 	"rules": {
 		"no-jquery/no-deferred": "warn",

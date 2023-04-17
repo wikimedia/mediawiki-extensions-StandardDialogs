@@ -92,7 +92,7 @@ $( document ).on( 'click', '#t-info', function ( e ) {
 } );
 
 $( document ).on( 'input', '#standarddialogs-dlg-new-page-tf-target input', function ( e ) {
-	var params = {
+	const params = {
 			action: 'query',
 			list: 'search',
 			srsearch: e.target.value,
