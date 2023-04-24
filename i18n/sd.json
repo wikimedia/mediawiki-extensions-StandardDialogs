@@ -8,5 +8,8 @@
 	"standarddialogs-new-page-label": "صفحي جو نالو",
 	"standarddialogs-move-btn": "چوريو",
 	"standarddialogs-purge-btn": "تازو ڪريو",
-	"standarddialogs-page-info-page-redirects": "چورڻا"
+	"standarddialogs-page-info-page-redirects": "چورڻا",
+	"standarddialogs-page-info-general": "عام",
+	"standarddialogs-page-info-page-language": "ٻولي",
+	"standarddialogs-page-info-page-categories": "زمرا"
 }
