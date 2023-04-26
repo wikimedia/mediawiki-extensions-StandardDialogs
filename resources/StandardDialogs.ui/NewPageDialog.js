@@ -22,7 +22,8 @@ StandardDialogs.ui.NewPageDialog.prototype.getFormItems = function () {
 	}
 	this.mainInput = this.targetTitle = new mw.widgets.TitleInputWidget( {
 		id: this.elementId + '-tf-target',
-		value: prefix
+		value: prefix,
+		$overlay: this.$overlay
 	} );
 
 	return [

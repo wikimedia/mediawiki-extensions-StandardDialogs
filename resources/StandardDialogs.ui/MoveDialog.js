@@ -18,7 +18,8 @@ StandardDialogs.ui.MoveDialog.prototype.makeSetupProcessData = function () {
 StandardDialogs.ui.MoveDialog.prototype.getFormItems = function () {
 	this.mainInput = this.targetTitle = new mw.widgets.TitleInputWidget( {
 		id: this.elementId + '-tf-target',
-		value: this.getDialogTitlePageName()
+		value: this.getDialogTitlePageName(),
+		$overlay: this.$overlay
 	} );
 	this.moveReasonText = new OO.ui.TextInputWidget( {} );
 	this.moveLeaveRedirectCheckbox = new OO.ui.CheckboxInputWidget( {

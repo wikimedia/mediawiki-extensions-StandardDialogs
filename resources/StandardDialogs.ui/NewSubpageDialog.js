@@ -16,7 +16,8 @@ StandardDialogs.ui.NewSubpageDialog.prototype.makeSetupProcessData = function ()
 };
 StandardDialogs.ui.NewSubpageDialog.prototype.getFormItems = function () {
 	this.mainInput = this.targetTitle = new mw.widgets.TitleInputWidget( {
-		id: this.elementId + '-tf-target'
+		id: this.elementId + '-tf-target',
+		$overlay: this.$overlay
 	} );
 
 	return [
