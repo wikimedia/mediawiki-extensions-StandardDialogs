@@ -21,7 +21,8 @@ StandardDialogs.ui.DuplicateDialog.prototype.makeSetupProcessData = function () 
 StandardDialogs.ui.DuplicateDialog.prototype.getFormItems = function () {
 	this.mainInput = this.targetTitle = new mw.widgets.TitleInputWidget( {
 		id: this.elementId + '-tf-target',
-		value: this.getDialogTitlePageName() + ' (2)'
+		value: this.getDialogTitlePageName() + ' (2)',
+		$overlay: this.$overlay
 	} );
 	this.checkDiscussion = new OO.ui.CheckboxInputWidget( {
 		id: this.elementId + '-cb-discussion',

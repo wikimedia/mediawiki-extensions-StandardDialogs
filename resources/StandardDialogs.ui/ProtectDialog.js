@@ -27,7 +27,8 @@ StandardDialogs.ui.ProtectDialog.prototype.getFormItems = function () {
 			{ data: mw.message( 'protect-default' ).plain() },
 			{ data: mw.message( 'standarddialogs-protect-level-editor' ).plain() },
 			{ data: mw.message( 'protect-level-sysop' ).plain() }
-		]
+		],
+		$overlay: this.$overlay
 	} );
 	this.moveProtect = new OO.ui.ComboBoxInputWidget( {
 		id: this.elementId + '-cbx-move-level',
@@ -37,7 +38,8 @@ StandardDialogs.ui.ProtectDialog.prototype.getFormItems = function () {
 			{ data: mw.message( 'standarddialogs-protect-level-editor' ).plain() },
 			{ data: mw.message( 'protect-level-sysop' ).plain() }
 		],
-		disabled: true
+		disabled: true,
+		$overlay: this.$overlay
 	} );
 
 	this.protectExpiry = new OO.ui.DropdownWidget( {
