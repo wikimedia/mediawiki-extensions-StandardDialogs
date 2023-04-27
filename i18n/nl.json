@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
-			"McDutchie"
+			"McDutchie",
+			"Sjoerddebruin"
 		]
 	},
 	"standarddialogs-copy-btn": "Kopiëren",
@@ -48,7 +49,7 @@
 	"standarddialogs-protect-title": "Pagina \"$1\" beveiligen",
 	"standarddialogs-purge-btn": "Verversen",
 	"standarddialogs-purge-title": "Pagina \"$1\" verversen",
-	"standarddialogs-btn-done": "Afgerond",
+	"standarddialogs-btn-done": "Gereed",
 	"standarddialogs-btn-cancel": "Annuleren",
 	"standarddialogs-protect-level-editor": "Alleen bewerkers en beheerders toestaan"
 }
