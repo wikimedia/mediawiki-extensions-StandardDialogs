@@ -8,7 +8,11 @@
 	"url": "https://en.wiki.bluespice.com/wiki/Reference:StandardDialogs",
 	"descriptionmsg": "standarddialogs-desc",
 	"requires": {
-		"MediaWiki": ">= 1.35.0"
+		"MediaWiki": ">= 1.35.0",
+		"extensions": {
+			"OOJSPlus": "*"
+		}
+
 	},
 	"MessagesDirs": {
 		"StandardDialogs": "i18n"
