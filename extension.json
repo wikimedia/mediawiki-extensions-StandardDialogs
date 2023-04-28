@@ -78,7 +78,8 @@
 			],
 			"dependencies": [
 				"oojs-ui-windows",
-				"mediawiki.widgets"
+				"mediawiki.widgets",
+				"ext.oOJSPlus.widgets"
 			]
 		},
 		"ext.standardDialogs.ui.ProtectDialog": {
@@ -149,7 +150,8 @@
 			],
 			"dependencies": [
 				"oojs-ui-windows",
-				"mediawiki.widgets"
+				"mediawiki.widgets",
+				"ext.oOJSPlus.widgets"
 			]
 		},
 		"ext.standardDialogs.ui.PageInformationDialog": {
@@ -208,7 +210,8 @@
 			],
 			"dependencies": [
 				"oojs-ui-windows",
-				"mediawiki.widgets"
+				"mediawiki.widgets",
+				"ext.oOJSPlus.widgets"
 			]
 		},
 		"ext.standardDialogs.ui.NewSubpageDialog": {
@@ -225,7 +228,8 @@
 			],
 			"dependencies": [
 				"oojs-ui-windows",
-				"mediawiki.widgets"
+				"mediawiki.widgets",
+				"ext.oOJSPlus.widgets"
 			]
 		}
 	},

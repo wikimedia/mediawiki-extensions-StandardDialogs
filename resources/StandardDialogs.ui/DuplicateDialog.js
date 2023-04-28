@@ -19,10 +19,12 @@ StandardDialogs.ui.DuplicateDialog.prototype.makeSetupProcessData = function () 
 };
 
 StandardDialogs.ui.DuplicateDialog.prototype.getFormItems = function () {
-	this.mainInput = this.targetTitle = new mw.widgets.TitleInputWidget( {
+	this.mainInput = this.targetTitle = new OOJSPlus.ui.widget.TitleInputWidget( {
 		id: this.elementId + '-tf-target',
 		value: this.getDialogTitlePageName() + ' (2)',
-		$overlay: this.$overlay
+		$overlay: this.$overlay,
+		mustExist: false,
+		contentPagesOnly: false
 	} );
 	this.checkDiscussion = new OO.ui.CheckboxInputWidget( {
 		id: this.elementId + '-cb-discussion',

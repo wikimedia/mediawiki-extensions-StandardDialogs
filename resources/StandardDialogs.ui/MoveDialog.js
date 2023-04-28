@@ -16,10 +16,12 @@ StandardDialogs.ui.MoveDialog.prototype.makeSetupProcessData = function () {
 };
 
 StandardDialogs.ui.MoveDialog.prototype.getFormItems = function () {
-	this.mainInput = this.targetTitle = new mw.widgets.TitleInputWidget( {
+	this.mainInput = this.targetTitle = new OOJSPlus.ui.widget.TitleInputWidget( {
 		id: this.elementId + '-tf-target',
 		value: this.getDialogTitlePageName(),
-		$overlay: this.$overlay
+		$overlay: this.$overlay,
+		mustExist: false,
+		contentPagesOnly: false
 	} );
 	this.moveReasonText = new OO.ui.TextInputWidget( {} );
 	this.moveLeaveRedirectCheckbox = new OO.ui.CheckboxInputWidget( {
