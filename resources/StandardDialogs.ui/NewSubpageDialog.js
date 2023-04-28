@@ -15,9 +15,12 @@ StandardDialogs.ui.NewSubpageDialog.prototype.makeSetupProcessData = function ()
 	return data;
 };
 StandardDialogs.ui.NewSubpageDialog.prototype.getFormItems = function () {
-	this.mainInput = this.targetTitle = new mw.widgets.TitleInputWidget( {
+	this.mainInput = this.targetTitle = new OOJSPlus.ui.widget.TitleInputWidget( {
 		id: this.elementId + '-tf-target',
-		$overlay: this.$overlay
+		$overlay: this.$overlay,
+		mustExist: false,
+		prefix: this.pageName + '/',
+		contentPagesOnly: false
 	} );
 
 	return [

@@ -20,10 +20,12 @@ StandardDialogs.ui.NewPageDialog.prototype.getFormItems = function () {
 	if ( title.getNamespaceId() > 0 ) {
 		prefix = title.getNamespacePrefix();
 	}
-	this.mainInput = this.targetTitle = new mw.widgets.TitleInputWidget( {
+	this.mainInput = this.targetTitle = new OOJSPlus.ui.widget.TitleInputWidget( {
 		id: this.elementId + '-tf-target',
 		value: prefix,
-		$overlay: this.$overlay
+		$overlay: this.$overlay,
+		mustExist: false,
+		contentPagesOnly: false
 	} );
 
 	return [
