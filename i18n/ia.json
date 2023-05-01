@@ -50,5 +50,7 @@
 	"standarddialogs-btn-done": "Facite",
 	"standarddialogs-btn-cancel": "Cancellar",
 	"standarddialogs-protect-level-editor": "Permitter solmente redactores e aministratores",
-	"standarddialogs-new-page-not-exist-label": "Pagina non existe"
+	"standarddialogs-new-page-not-exist-label": "Pagina non existe",
+	"standarddialogs-delete-subpages": "Deler subpaginas",
+	"standarddialogs-confirm-mass-deletion": "Isto delera $1 pagina{{PLURAL:$1||s}}. Es tu secur?"
 }
