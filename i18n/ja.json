@@ -4,5 +4,6 @@
 			"MathXplore"
 		]
 	},
-	"standarddialogs-new-page-not-exist-label": "ページが存在しません。"
+	"standarddialogs-new-page-not-exist-label": "ページが存在しません。",
+	"standarddialogs-delete-subpages": "下位ページを削除"
 }
