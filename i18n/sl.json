@@ -50,5 +50,7 @@
 	"standarddialogs-purge-btn": "Osveži",
 	"standarddialogs-purge-title": "Osveži stran »$1«",
 	"standarddialogs-protect-level-editor": "Dovoli samo urejevalcem in administratorjem",
-	"standarddialogs-new-page-not-exist-label": "Stran ne obstaja"
+	"standarddialogs-new-page-not-exist-label": "Stran ne obstaja",
+	"standarddialogs-delete-subpages": "Izbriši podstrani",
+	"standarddialogs-confirm-mass-deletion": "To bo izbrisalo {{PLURAL:$1|stran|strani}}. Ste prepričani?"
 }
