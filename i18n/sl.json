@@ -50,5 +50,7 @@
 	"standarddialogs-purge-title": "Osveži stran »$1«",
 	"standarddialogs-btn-done": "Končano",
 	"standarddialogs-btn-cancel": "Prekliči",
-	"standarddialogs-protect-level-editor": "Dovoli samo urejevalcem in administratorjem"
+	"standarddialogs-protect-level-editor": "Dovoli samo urejevalcem in administratorjem",
+	"standarddialogs-delete-subpages": "Izbriši podstrani",
+	"standarddialogs-confirm-mass-deletion": "To bo izbrisalo {{PLURAL:$1|stran|strani}}. Ste prepričani?"
 }
