@@ -4,5 +4,6 @@
 			"Milicevic01"
 		]
 	},
-	"standarddialogs-new-page-not-exist-label": "Страница не постоји"
+	"standarddialogs-new-page-not-exist-label": "Страница не постоји",
+	"standarddialogs-delete-subpages": "Обриши подстранице"
 }
