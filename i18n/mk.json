@@ -50,5 +50,7 @@
 	"standarddialogs-btn-done": "Готово",
 	"standarddialogs-btn-cancel": "Откажи",
 	"standarddialogs-protect-level-editor": "Дозволи само за уредници и администратори",
-	"standarddialogs-new-page-not-exist-label": "Страницата не постои"
+	"standarddialogs-new-page-not-exist-label": "Страницата не постои",
+	"standarddialogs-delete-subpages": "Избриши потстраници",
+	"standarddialogs-confirm-mass-deletion": "Со ова ќе се {{PLURAL:$1|избрише страница|избришат страници}}. Дали сте сигурни?"
 }
