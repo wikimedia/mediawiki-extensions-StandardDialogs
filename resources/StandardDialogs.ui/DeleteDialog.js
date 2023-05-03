@@ -60,7 +60,6 @@ StandardDialogs.ui.DeleteDialog.prototype.getFormItems = function () {
 
 StandardDialogs.ui.DeleteDialog.prototype.makeDoneActionProcess = function () {
 	const dialog = this;
-
 	const dfd = new $.Deferred();
 	mw.loader.using( 'mediawiki.api' ).done( function () {
 		const mwApi = new mw.Api();
@@ -68,13 +67,13 @@ StandardDialogs.ui.DeleteDialog.prototype.makeDoneActionProcess = function () {
 		getPagesToDeletePromise.done( function ( pages ) {
 			if ( pages.length > 10 ) {
 				dialog.confirmMassDeletion( pages.length ).done( function () {
-					dialog.performDeletion( dfd, pages );
+					dialog.performDeletion( dfd, pages, mwApi );
 				} )
 					.fail( function () {
 						dfd.reject.apply( dialog, arguments );
 					} );
 			} else {
-				dialog.performDeletion( dfd, pages );
+				dialog.performDeletion( dfd, pages, mwApi );
 			}
 		} );
 	} ).fail( function () {
@@ -98,7 +97,8 @@ StandardDialogs.ui.DeleteDialog.prototype.confirmMassDeletion = function ( numbe
 	return dfd.promise();
 };
 
-StandardDialogs.ui.DeleteDialog.prototype.performDeletion = function ( dfd, pages ) {
+StandardDialogs.ui.DeleteDialog.prototype.performDeletion = function ( dfd, pages, mwApi ) {
+	const dialog = this;
 	const deletePageApiCallPromises = [];
 	const params = {
 		action: 'delete',
