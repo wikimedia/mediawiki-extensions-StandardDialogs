@@ -4,7 +4,8 @@
 			"Miriam Schlindwein",
 			"Mschlindwein",
 			"Patric Wirth",
-			"Umherirrender"
+			"Umherirrender",
+			"Vhoesl"
 		]
 	},
 	"standarddialogs-desc": "Stellt Dialog-Benutzeroberflächen für typische Seitenaktionen zur verfügung",
@@ -53,5 +54,6 @@
 	"standarddialogs-purge-title": "Seite „$1“ neu laden",
 	"standarddialogs-btn-done": "Fertig",
 	"standarddialogs-btn-cancel": "Abbrechen",
-	"standarddialogs-protect-level-editor": "Nur Bearbeitern und Administratoren erlaubt"
+	"standarddialogs-protect-level-editor": "Nur Bearbeitern und Administratoren erlaubt",
+	"standarddialogs-delete-subpages": "Unterseiten löschen"
 }
