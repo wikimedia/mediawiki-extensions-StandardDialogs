@@ -51,5 +51,7 @@
 	"standarddialogs-purge-title": "רענון הדף \"$1\"",
 	"standarddialogs-btn-done": "בוצע",
 	"standarddialogs-protect-level-editor": "לאפשר רק לעורכים ולמנהלים",
-	"standarddialogs-new-page-not-exist-label": "הדף אינו קיים"
+	"standarddialogs-new-page-not-exist-label": "הדף אינו קיים",
+	"standarddialogs-delete-subpages": "מחיקת דפי־משנה",
+	"standarddialogs-confirm-mass-deletion": "זה ימחק {{PLURAL:$1|דף|דפים}}. באמת לעשות את זה?"
 }
