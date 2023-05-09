@@ -50,5 +50,6 @@
 	"standarddialogs-purge-title": "\"$1\" 문서 새로고침",
 	"standarddialogs-btn-done": "완료",
 	"standarddialogs-btn-cancel": "취소",
-	"standarddialogs-protect-level-editor": "편집자와 관리자만 허용"
+	"standarddialogs-protect-level-editor": "편집자와 관리자만 허용",
+	"standarddialogs-delete-subpages": "하위 문서 삭제"
 }
