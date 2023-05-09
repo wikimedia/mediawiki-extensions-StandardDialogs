@@ -63,26 +63,29 @@ StandardDialogs.ui.DuplicateDialog.prototype.makeDoneActionProcess = function ()
 		$.when( dfdCopy ).done( function () {
 
 			if ( me.checkDiscussion.isSelected() ) {
-				var dfdDiscussion = me.getDiscussionPages( me.pageName, me.page.getNamespaceId() );
+				var dfdDiscussion = me.getDiscussionPages( me.page.getName(), me.page.getNamespaceId() );
 			}
 
 			if ( me.checkSubpages.isSelected() ) {
-				var dfdSubpages = me.getSubPages( me.pageName, me.page.getNamespaceId() );
+				var dfdSubpages = me.getSubPages( me.page.getName(), me.page.getNamespaceId() );
 			}
 
 			$.when( dfdDiscussion, dfdSubpages ).done( function () {
 				const copyDfds = [];
+				const mainTargetPageName = me.targetTitle.getValue().replace( / /g, '_' );
 				if ( me.subpages.length > 0 ) {
 					me.subpages.forEach( function ( subpage ) {
-						const pageTargetName = subpage.replace( me.pageName, me.targetTitle.getValue() );
-						const currentCopyDfd = me.doCopy( subpage, pageTargetName );
+						var sourceName = subpage.replace( / /g, '_' ),
+							targetName = sourceName.replace( me.pageName, mainTargetPageName ),
+							currentCopyDfd = me.doCopy( sourceName, targetName );
 						copyDfds.push( currentCopyDfd );
 					} );
 				}
 				if ( me.talkpages.length > 0 ) {
 					me.talkpages.forEach( function ( talkpage ) {
-						const pageTargetName = talkpage.replace( me.pageName, me.targetTitle.getValue() );
-						const currentCopyDfd = me.doCopy( talkpage, pageTargetName );
+						var sourceName = talkpage.replace( / /g, '_' ),
+							targetName = sourceName.replace( me.pageName, mainTargetPageName ),
+							currentCopyDfd = me.doCopy( sourceName, targetName );
 						copyDfds.push( currentCopyDfd );
 					} );
 				}
