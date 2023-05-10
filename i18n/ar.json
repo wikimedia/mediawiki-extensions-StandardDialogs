@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Alshamiri1",
 			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"standarddialogs-protect-btn": "احمِ",
 	"standarddialogs-protect-title": "حماية صفحة «$1»",
-	"standarddialogs-page-info-general": "عام"
+	"standarddialogs-page-info-general": "عام",
+	"standarddialogs-delete-subpages": "حذف الصفحات الفرعية",
+	"standarddialogs-confirm-mass-deletion": "سيؤدي هذا إلى حذف {{PLURAL:$1| الصفحة | الصفحات}}. هل أنت متأكد؟"
 }
