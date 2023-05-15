@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Justman10000",
 			"Miriam Schlindwein",
 			"Mschlindwein",
 			"Patric Wirth",
@@ -55,5 +56,6 @@
 	"standarddialogs-btn-done": "Fertig",
 	"standarddialogs-btn-cancel": "Abbrechen",
 	"standarddialogs-protect-level-editor": "Nur Bearbeitern und Administratoren erlaubt",
-	"standarddialogs-delete-subpages": "Unterseiten löschen"
+	"standarddialogs-delete-subpages": "Unterseiten löschen",
+	"standarddialogs-confirm-mass-deletion": "Dadurch wird {{PLURAL:$1|Seite|Seiten}} gelöscht. Bist du sicher?"
 }
