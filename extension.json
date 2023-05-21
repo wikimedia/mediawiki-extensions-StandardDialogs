@@ -25,6 +25,10 @@
 			"packageFiles": [
 				"ext.standardDialogs.js",
 				{
+					"name": "deleteDialogMsg.json",
+					"callback": "MediaWiki\\Extension\\StandardDialogs\\ClientConfig::makeDeleteDialogMsgJson"
+				},
+				{
 					"name": "pageInfoPanelModuleRegistry.json",
 					"callback": "MediaWiki\\Extension\\StandardDialogs\\ClientConfig::makePageInfoPanelModuleRegistryJson"
 				}
@@ -42,7 +46,6 @@
 				"standarddialogs-delete-btn",
 				"standarddialogs-delete-title",
 				"delete-confirm",
-				"confirmdeletetext",
 				"delete-legend",
 				"deletecomment",
 				"deleteotherreason",
