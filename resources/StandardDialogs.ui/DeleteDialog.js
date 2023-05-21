@@ -3,6 +3,7 @@ StandardDialogs.ui = StandardDialogs.ui || {};
 
 StandardDialogs.ui.DeleteDialog = function StandardDialogsUiDeleteDialog( config ) {
 	StandardDialogs.ui.DeleteDialog.super.call( this, config );
+	this.msg = config.msg;
 };
 OO.inheritClass( StandardDialogs.ui.DeleteDialog, StandardDialogs.ui.BaseDialog );
 
@@ -37,6 +38,9 @@ StandardDialogs.ui.DeleteDialog.prototype.getFormItems = function () {
 	return [
 		new OO.ui.FieldsetLayout( {
 			items: [
+				new OO.ui.Element( {
+					content: [ new OO.ui.HtmlSnippet( this.msg.confirmdeletetext ) ]
+				} ),
 				new OO.ui.FieldLayout( this.reasonCombo, {
 					label: mw.message( 'deletecomment' ).plain(),
 					align: 'top'
