@@ -52,5 +52,5 @@
 	"standarddialogs-btn-cancel": "Prekliči",
 	"standarddialogs-protect-level-editor": "Dovoli samo urejevalcem in administratorjem",
 	"standarddialogs-delete-subpages": "Izbriši podstrani",
-	"standarddialogs-confirm-mass-deletion": "To bo izbrisalo {{PLURAL:$1|stran|strani}}. Ste prepričani?"
+	"standarddialogs-confirm-mass-deletion": "To bo izbrisalo $1 {{PLURAL:$1|stran|strani}}. Ste prepričani?"
 }

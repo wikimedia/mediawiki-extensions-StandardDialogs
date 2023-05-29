@@ -57,5 +57,5 @@
 	"standarddialogs-btn-cancel": "Abbrechen",
 	"standarddialogs-protect-level-editor": "Nur Bearbeitern und Administratoren erlaubt",
 	"standarddialogs-delete-subpages": "Unterseiten löschen",
-	"standarddialogs-confirm-mass-deletion": "Dadurch wird {{PLURAL:$1|Seite|Seiten}} gelöscht. Bist du sicher?"
+	"standarddialogs-confirm-mass-deletion": "Dadurch {{PLURAL:$1|wird eine Seite|werden $1 Seiten}} gelöscht. Bist du sicher?"
 }
