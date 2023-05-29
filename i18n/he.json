@@ -53,5 +53,5 @@
 	"standarddialogs-protect-level-editor": "לאפשר רק לעורכים ולמנהלים",
 	"standarddialogs-new-page-not-exist-label": "הדף אינו קיים",
 	"standarddialogs-delete-subpages": "מחיקת דפי־משנה",
-	"standarddialogs-confirm-mass-deletion": "זה ימחק {{PLURAL:$1|דף|דפים}}. באמת לעשות את זה?"
+	"standarddialogs-confirm-mass-deletion": "זה ימחק {{PLURAL:$1|דף|$1 דפים}}. באמת לעשות את זה?"
 }
