@@ -10,5 +10,6 @@
 	"standarddialogs-delete-btn": "Efacez",
 	"standarddialogs-move-btn": "Movar",
 	"standarddialogs-move-title": "Movar pagino \"$1\"",
-	"standarddialogs-page-info-page-categories": "Kategorii"
+	"standarddialogs-page-info-page-categories": "Kategorii",
+	"standarddialogs-page-info-close": "Klozar"
 }
