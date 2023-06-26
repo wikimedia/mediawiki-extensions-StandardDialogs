@@ -51,5 +51,7 @@
 	"standarddialogs-btn-done": "完成",
 	"standarddialogs-btn-cancel": "取消",
 	"standarddialogs-protect-level-editor": "僅允許編輯者和管理員",
-	"standarddialogs-new-page-not-exist-label": "頁面不存在"
+	"standarddialogs-new-page-not-exist-label": "頁面不存在",
+	"standarddialogs-delete-subpages": "刪除子頁面",
+	"standarddialogs-confirm-mass-deletion": "這會刪除 $1 個{{PLURAL:$1|頁面}}。您確定嗎？"
 }
