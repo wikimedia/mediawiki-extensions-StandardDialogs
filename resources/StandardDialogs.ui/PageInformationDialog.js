@@ -38,6 +38,7 @@ StandardDialogs.ui.PageInformationDialog.prototype.getSetupProcess = function ( 
 		}
 	} );
 
+	this.bookletLayout.selectFirstSelectablePage();
 	return StandardDialogs.ui.PageInformationDialog.super.prototype.getSetupProcess.call( this, data );
 };
 
