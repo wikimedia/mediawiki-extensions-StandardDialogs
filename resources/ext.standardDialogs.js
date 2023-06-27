@@ -1,8 +1,11 @@
 $( document ).on( 'click', '#ca-delete', function ( e ) {
 	mw.loader.using( [ 'ext.standardDialogs.ui.DeleteDialog' ] ).done( function () {
+		const msg = require( './deleteDialogMsg.json' );
+
 		const diag = new StandardDialogs.ui.DeleteDialog( {
 			id: 'standarddialogs-dlg-delete',
-			pageName: mw.config.get( 'wgRelevantPageName' )
+			pageName: mw.config.get( 'wgRelevantPageName' ),
+			msg: msg
 		} );
 		diag.on( 'actioncompleted', function () {
 			window.location.reload();
