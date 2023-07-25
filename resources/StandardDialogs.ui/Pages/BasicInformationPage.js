@@ -49,17 +49,11 @@ StandardDialogs.ui.BasicInformationPage.prototype.setup = function () {
 					$( '<tr>' ).append(
 						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-watch' ).plain() ),
 						$( '<td>' ).text( me.pageInfo[ p ].watchers ) ) );
-				if ( me.pageInfo[ p ].redirects ) {
-					contentTable.append(
-						$( '<tr>' ).append(
-							$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-redirects' ).plain() ),
-							$( '<td>' ).text( me.pageInfo[ p ].redirects ) ) );
-				} else {
-					contentTable.append(
-						$( '<tr>' ).append(
-							$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-redirects' ).plain() ),
-							$( '<td>' ).text( 0 ) ) );
-				}
+				var redirects = me.getRedirectLinks( p );
+				contentTable.append(
+					$( '<tr>' ).append(
+						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-redirects' ).plain() ),
+						$( '<td>' ).append( redirects ) ) );
 			}
 			fieldLayout.$element.append( contentTable );
 
@@ -87,6 +81,26 @@ StandardDialogs.ui.BasicInformationPage.prototype.getData = function () {
 			dfd.resolve( arguments );
 		} );
 	return dfd.promise();
+};
+
+StandardDialogs.ui.BasicInformationPage.prototype.getRedirectLinks = function ( id ) {
+	const links = $( '<ul>' );
+	if ( this.pageInfo[ id ].redirects ) {
+		for ( const key in this.pageInfo[ id ].redirects ) {
+			var redirect = this.pageInfo[ id ].redirects[ key ];
+			var title = mw.Title.newFromText( redirect.title, redirect.ns );
+			links.append(
+				$( '<li>' )
+					.append( $( '<a>' )
+						.attr( {
+							href: title.getUrl(),
+							title: title.getMainText()
+						} )
+						.text( title.getMainText() ) ) );
+		}
+		return links;
+	}
+	return '0';
 };
 
 // register
