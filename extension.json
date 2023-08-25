@@ -199,7 +199,8 @@
 				"standarddialogs-btn-cancel"
 			],
 			"dependencies": [
-				"oojs-ui-windows"
+				"oojs-ui-windows",
+				"ext.oOJSPlus.widgets"
 			]
 		},
 		"ext.standardDialogs.ui.NewPageDialog": {
