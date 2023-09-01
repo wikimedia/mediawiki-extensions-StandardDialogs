@@ -40,17 +40,11 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.setup = function () {
 						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-internal' ).plain() ),
 						$( '<td>' ).append( links ) ) );
 
-				if ( me.pageInfo[ p ].pageprops.page_image_free ) {
-					contentTable.append(
+				const images = me.getImageLinks( p );
+				contentTable.append(
 						$( '<tr>' ).append(
 							$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-images' ).plain() ),
-							$( '<td>' ).text( me.pageInfo[ p ].pageprops.page_image_free ) ) );
-				} else {
-					contentTable.append(
-						$( '<tr>' ).append(
-							$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-images' ).plain() ),
-							$( '<td>' ).text() ) );
-				}
+							$( '<td>' ).append( images ) ) );
 
 				const extLinks = me.getExternalLinks( p );
 				contentTable.append(
@@ -73,7 +67,7 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getData = function () {
 		action: 'query',
 		titles: me.pageName,
 		format: 'json',
-		prop: 'categories|templates|info|links|pageprops|extlinks'
+		prop: 'categories|templates|info|links|images|extlinks'
 
 	} ).fail( function () {
 		dfd.reject( [ new OO.ui.Error( arguments[ 0 ], { recoverable: false } ) ] );
@@ -85,6 +79,25 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getData = function () {
 	return dfd.promise();
 };
 
+StandardDialogs.ui.PropertiesInformationPage.prototype.getImageLinks = function ( id ) {
+	const images = $( '<ul>' );
+	if ( this.pageInfo[ id ].images ) {
+		for ( let i = 0; i < this.pageInfo[ id ].images.length; i++ ) {
+			let title = mw.Title.newFromText( this.pageInfo[ id ].images[ i ].title );
+
+			images.append(
+				$( '<li>' ).append( $( '<a>' )
+						.attr( {
+							href: title.getUrl(),
+							title: title.getPrefixedText()
+						} )
+						.text( title.getMainText() ) ) );
+		}
+	}
+	return images;
+};
+
+
 StandardDialogs.ui.PropertiesInformationPage.prototype.getTemplates = function ( id ) {
 	const templates = $( '<ul>' );
 	if ( this.pageInfo[ id ].templates ) {
@@ -94,9 +107,10 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getTemplates = function (
 				$( '<li>' )
 					.append( $( '<a>' )
 						.attr( {
-							href: title.getUrl()
+							href: title.getUrl(),
+							title: title.getPrefixedText()
 						} )
-						.text( this.pageInfo[ id ].templates[ i ].title ) ) );
+						.text( title.getMainText() ) ) );
 		}
 	}
 	return templates;
@@ -111,9 +125,10 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getCategories = function 
 				$( '<li>' )
 					.append( $( '<a>' )
 						.attr( {
-							href: title.getUrl()
+							href: title.getUrl(),
+							title: title.getPrefixedText()
 						} )
-						.text( this.pageInfo[ id ].categories[ i ].title ) ) );
+						.text( title.getMainText() ) ) );
 		}
 	}
 	return categories;
@@ -128,9 +143,10 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getInternalLinks = functi
 				$( '<li>' )
 					.append( $( '<a>' )
 						.attr( {
-							href: title.getUrl()
+							href: title.getUrl(),
+							title: title.getPrefixedText()
 						} )
-						.text( this.pageInfo[ id ].links[ i ].title ) ) );
+						.text( title.getMainText() ) ) );
 		}
 	}
 	return links;
