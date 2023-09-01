@@ -39,7 +39,8 @@ StandardDialogs.ui.HistoryInformationPage.prototype.setup = function () {
 				const user = new OOJSPlus.ui.widget.UserWidget( {
 					user_name: me.pageInfo[ p ].revisions[ 0 ].user,
 					showImage: true,
-					showLink: true
+					showLink: true,
+					showRawUsername: false
 				} );
 				contentTable.append(
 					$( '<tr>' ).append(
@@ -61,7 +62,8 @@ StandardDialogs.ui.HistoryInformationPage.prototype.getEditors = function ( id )
 			let userWidget = new OOJSPlus.ui.widget.UserWidget( {
 				user_name:this.pageInfo[ id ].contributors[ c ].name,
 				showImage: true,
-				showLink: true
+				showLink: true,
+				showRawUsername: false
 			});
 			editors.append(
 				$( '<li>' )
