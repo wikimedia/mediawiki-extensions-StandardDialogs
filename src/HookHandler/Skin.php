@@ -57,6 +57,7 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 			return;
 		}
 
+		$sktemplate->getOutput()->addModules( 'ext.standardDialogs' );
 		$userCanCreatePages = $this->permissionManager->userHasRight( $user, 'createpage' );
 
 		if ( $userCanCreatePages && $title->exists() ) {
@@ -68,7 +69,7 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 			];
 		}
 
-		if ( $userCanCreatePages ) {
+		if ( isset( $links['namespaces']['new-page'] ) ) {
 			$links['namespaces']['new-page'] = [
 				'text' => $sktemplate->msg( 'standarddialogs-create-button-new-page-text' ),
 				'title' => $sktemplate->msg( 'standarddialogs-create-button-new-page-title' ),
@@ -85,7 +86,5 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 				'class' => 'new-subpage'
 			];
 		}
-
-		$sktemplate->getOutput()->addModules( 'ext.standardDialogs' );
 	}
 }
