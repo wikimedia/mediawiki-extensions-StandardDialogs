@@ -1,9 +1,31 @@
 {
 	"@metadata": {
 		"authors": [
-			"MathXplore"
+			"MathXplore",
+			"LaMagiaaa"
 		]
 	},
+	"standarddialogs-copy-btn": "コピー",
+	"standarddialogs-copy-page-legend": "コピー",
+	"standarddialogs-copy-page-new": "新しいページ名",
+	"standarddialogs-copy-subpages": "下位ページをコピー",
+	"standarddialogs-page-info-title": "「$1」のページ情報",
+	"standarddialogs-page-info-close": "閉じる",
+	"standarddialogs-page-info-general": "全般",
+	"standarddialogs-page-info-history": "最終編集",
+	"standarddialogs-page-info-page-last-edit": "最終編集",
 	"standarddialogs-new-page-not-exist-label": "ページが存在しません。",
-	"standarddialogs-delete-subpages": "下位ページを削除"
+	"standarddialogs-delete-btn": "削除",
+	"standarddialogs-delete-title": "ページ「$1」を削除",
+	"standarddialogs-move-btn": "移動",
+	"standarddialogs-move-title": "ページ「$1」を移動",
+	"standarddialogs-protect-btn": "保護",
+	"standarddialogs-protect-title": "ページ「$1」を保護",
+	"standarddialogs-purge-btn": "更新",
+	"standarddialogs-purge-title": "ページ「$1」を更新",
+	"standarddialogs-btn-done": "完了",
+	"standarddialogs-btn-cancel": "キャンセル",
+	"standarddialogs-protect-level-editor": "編集者と管理者のみに許可",
+	"standarddialogs-delete-subpages": "下位ページを削除",
+	"standarddialogs-confirm-mass-deletion": "$1{{PLURAL:$1|件のページ}}を削除します。本当に実行しますか？"
 }
