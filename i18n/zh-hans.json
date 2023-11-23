@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"GuoPC"
+			"GuoPC",
+			"沈澄心"
 		]
 	},
 	"standarddialogs-desc": "为常见页面操作提供对话框用户界面",
@@ -49,5 +50,8 @@
 	"standarddialogs-purge-title": "刷新页面“$1”",
 	"standarddialogs-btn-done": "完成",
 	"standarddialogs-btn-cancel": "取消",
-	"standarddialogs-protect-level-editor": "仅允许编辑者和管理员"
+	"standarddialogs-protect-level-editor": "仅允许编辑者和管理员",
+	"standarddialogs-new-page-not-exist-label": "页面不存在",
+	"standarddialogs-delete-subpages": "删除子页面",
+	"standarddialogs-confirm-mass-deletion": "这会删除$1个{{PLURAL:$1|页面}}。您确定吗？"
 }

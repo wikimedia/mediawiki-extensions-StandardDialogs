@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ex-Diktator",
-			"Amire80"
+			"Amire80",
+			"Ex-Diktator"
 		]
 	},
 	"standarddialogs-desc": "אספקת ממשקי תיבת דו־שיח בשביל פעולות דף נפוצות",
@@ -49,9 +49,9 @@
 	"standarddialogs-protect-title": "הגנה על הדף \"$1\"",
 	"standarddialogs-purge-btn": "רענון",
 	"standarddialogs-purge-title": "רענון הדף \"$1\"",
-	"standarddialogs-btn-done": "בוצע",
+	"standarddialogs-btn-done": "סיום",
 	"standarddialogs-btn-cancel": "ביטול",
 	"standarddialogs-protect-level-editor": "לאפשר רק לעורכים ולמנהלים",
 	"standarddialogs-delete-subpages": "מחיקת דפי־משנה",
-	"standarddialogs-confirm-mass-deletion": "זה ימחק {{PLURAL:$1|דף|דפים}}. באמת לעשות את זה?"
+	"standarddialogs-confirm-mass-deletion": "זה ימחק {{PLURAL:$1|דף|$1 דפים}}. באמת לעשות את זה?"
 }

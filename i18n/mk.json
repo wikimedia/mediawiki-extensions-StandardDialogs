@@ -52,5 +52,5 @@
 	"standarddialogs-btn-cancel": "Откажи",
 	"standarddialogs-protect-level-editor": "Дозволи само за уредници и администратори",
 	"standarddialogs-delete-subpages": "Избриши потстраници",
-	"standarddialogs-confirm-mass-deletion": "Со ова ќе се {{PLURAL:$1|избрише страница|избришат страници}}. Дали сте сигурни?"
+	"standarddialogs-confirm-mass-deletion": "Со ова ќе се {{PLURAL:$1|избрише $1 страница|избришат $1 страници}}. Дали сте сигурни?"
 }
