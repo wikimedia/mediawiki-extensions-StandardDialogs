@@ -1,12 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Justman10000",
 			"Miriam Schlindwein",
 			"Mschlindwein",
 			"Patric Wirth",
 			"Umherirrender",
-			"Vhoesl",
-			"Justman10000"
+			"Vhoesl"
 		]
 	},
 	"standarddialogs-desc": "Stellt Dialog-Benutzeroberflächen für typische Seitenaktionen zur verfügung",
