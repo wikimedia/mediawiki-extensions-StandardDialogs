@@ -3,7 +3,8 @@
 		"authors": [
 			"Mainframe98",
 			"McDutchie",
-			"Sjoerddebruin"
+			"Sjoerddebruin",
+			"Vistaus"
 		]
 	},
 	"standarddialogs-copy-btn": "Kopiëren",
@@ -51,5 +52,8 @@
 	"standarddialogs-purge-title": "Pagina \"$1\" verversen",
 	"standarddialogs-btn-done": "Gereed",
 	"standarddialogs-btn-cancel": "Annuleren",
-	"standarddialogs-protect-level-editor": "Alleen bewerkers en beheerders toestaan"
+	"standarddialogs-protect-level-editor": "Alleen bewerkers en beheerders toestaan",
+	"standarddialogs-desc": "Biedt gebruikersinterfaces met dialogen voor algemene handelingen m.b.t. pagina’s",
+	"standarddialogs-delete-subpages": "Subpagina’s verwijderen",
+	"standarddialogs-confirm-mass-deletion": "U staat op het punt om $1 {{PLURAL:$1|pagina|pagina's}} te verwijderen. Weet u het zeker?"
 }
