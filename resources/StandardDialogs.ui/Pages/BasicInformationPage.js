@@ -49,7 +49,7 @@ StandardDialogs.ui.BasicInformationPage.prototype.setup = function () {
 					$( '<tr>' ).append(
 						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-watch' ).plain() ),
 						$( '<td>' ).text( me.pageInfo[ p ].watchers ) ) );
-				var redirects = me.getRedirectLinks( p );
+				const redirects = me.getRedirectLinks( p );
 				contentTable.append(
 					$( '<tr>' ).append(
 						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-redirects' ).plain() ),
@@ -87,8 +87,8 @@ StandardDialogs.ui.BasicInformationPage.prototype.getRedirectLinks = function ( 
 	const links = $( '<ul>' );
 	if ( this.pageInfo[ id ].redirects ) {
 		for ( const key in this.pageInfo[ id ].redirects ) {
-			var redirect = this.pageInfo[ id ].redirects[ key ];
-			var title = mw.Title.newFromText( redirect.title, redirect.ns );
+			const redirect = this.pageInfo[ id ].redirects[ key ];
+			const title = mw.Title.newFromText( redirect.title, redirect.ns );
 			links.append(
 				$( '<li>' )
 					.append( $( '<a>' )
