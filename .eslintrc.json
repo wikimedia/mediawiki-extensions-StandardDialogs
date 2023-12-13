@@ -15,15 +15,11 @@
 		"StandardDialogs": "writable"
 	},
 	"rules": {
-		"no-jquery/no-deferred": "warn",
-		"no-jquery/no-when": "warn",
-		"no-jquery/no-visibility": "warn",
 		"no-jquery/variable-pattern": "warn",
 		"no-jquery/no-class-state": "warn",
 		"no-jquery/no-global-selector": "warn",
 		"new-cap": "warn",
 		"block-scoped-var": "warn",
-		"mediawiki/valid-package-file-require": "warn",
 		"no-undef": "warn",
 		"eqeqeq": "warn",
 		"no-shadow": "warn",
