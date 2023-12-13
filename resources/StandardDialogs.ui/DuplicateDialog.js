@@ -77,7 +77,7 @@ StandardDialogs.ui.DuplicateDialog.prototype.makeDoneActionProcess = function ()
 				const mainTargetPageName = me.targetTitle.getValue().replace( / /g, '_' );
 				if ( me.subpages.length > 0 ) {
 					me.subpages.forEach( function ( subpage ) {
-						var sourceName = subpage.replace( / /g, '_' ),
+						const sourceName = subpage.replace( / /g, '_' ),
 							targetName = sourceName.replace( me.pageName, mainTargetPageName ),
 							currentCopyDfd = me.doCopy( sourceName, targetName );
 						copyDfds.push( currentCopyDfd );
@@ -85,7 +85,7 @@ StandardDialogs.ui.DuplicateDialog.prototype.makeDoneActionProcess = function ()
 				}
 				if ( me.talkpages.length > 0 ) {
 					me.talkpages.forEach( function ( talkpage ) {
-						var sourceName = talkpage.replace( / /g, '_' ),
+						const sourceName = talkpage.replace( / /g, '_' ),
 							targetName = sourceName.replace( me.pageName, mainTargetPageName ),
 							currentCopyDfd = me.doCopy( sourceName, targetName );
 						copyDfds.push( currentCopyDfd );

@@ -16,7 +16,7 @@ StandardDialogs.ui.HistoryInformationPage.prototype.setup = function () {
 	const me = this;
 	const dfdData = this.getData();
 	$.when( dfdData ).done( function () {
-		if ( me.pageInfo != undefined ) {
+		if ( me.pageInfo !== undefined ) {
 			fieldLayout = new OO.ui.FieldsetLayout();
 			const contentTable = $( '<table>' );
 			contentTable.addClass( 'wikitable page-information' );
@@ -37,7 +37,7 @@ StandardDialogs.ui.HistoryInformationPage.prototype.setup = function () {
 						$( '<td>' ).text( dateTime ) ) );
 
 				const user = new OOJSPlus.ui.widget.UserWidget( {
-					user_name: me.pageInfo[ p ].revisions[ 0 ].user,
+					user_name: me.pageInfo[ p ].revisions[ 0 ].user, // eslint-disable-line camelcase
 					showImage: true,
 					showLink: true,
 					showRawUsername: false
@@ -59,12 +59,12 @@ StandardDialogs.ui.HistoryInformationPage.prototype.getEditors = function ( id )
 	editors.addClass( 'editors-list' );
 	if ( this.pageInfo[ id ].contributors ) {
 		for ( const c in this.pageInfo[ id ].contributors ) {
-			let userWidget = new OOJSPlus.ui.widget.UserWidget( {
-				user_name:this.pageInfo[ id ].contributors[ c ].name,
+			const userWidget = new OOJSPlus.ui.widget.UserWidget( {
+				user_name: this.pageInfo[ id ].contributors[ c ].name, // eslint-disable-line camelcase
 				showImage: true,
 				showLink: true,
 				showRawUsername: false
-			});
+			} );
 			editors.append(
 				$( '<li>' )
 					.append( userWidget.$element )

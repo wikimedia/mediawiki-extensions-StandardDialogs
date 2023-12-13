@@ -42,9 +42,9 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.setup = function () {
 
 				const images = me.getImageLinks( p );
 				contentTable.append(
-						$( '<tr>' ).append(
-							$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-images' ).plain() ),
-							$( '<td>' ).append( images ) ) );
+					$( '<tr>' ).append(
+						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-images' ).plain() ),
+						$( '<td>' ).append( images ) ) );
 
 				const extLinks = me.getExternalLinks( p );
 				contentTable.append(
@@ -83,20 +83,19 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getImageLinks = function 
 	const images = $( '<ul>' );
 	if ( this.pageInfo[ id ].images ) {
 		for ( let i = 0; i < this.pageInfo[ id ].images.length; i++ ) {
-			let title = mw.Title.newFromText( this.pageInfo[ id ].images[ i ].title );
+			const title = mw.Title.newFromText( this.pageInfo[ id ].images[ i ].title );
 
 			images.append(
 				$( '<li>' ).append( $( '<a>' )
-						.attr( {
-							href: title.getUrl(),
-							title: title.getPrefixedText()
-						} )
-						.text( title.getMainText() ) ) );
+					.attr( {
+						href: title.getUrl(),
+						title: title.getPrefixedText()
+					} )
+					.text( title.getMainText() ) ) );
 		}
 	}
 	return images;
 };
-
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.getTemplates = function ( id ) {
 	const templates = $( '<ul>' );
