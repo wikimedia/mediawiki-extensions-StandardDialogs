@@ -47,6 +47,10 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 			return;
 		}
 
+		if ( $title->isSpecialPage() ) {
+			return;
+		}
+
 		if ( !$this->permissionManager->userHasRight( $user, 'edit' ) ) {
 			return;
 		}
