@@ -4,11 +4,11 @@ namespace MediaWiki\Extension\StandardDialogs;
 
 use Config;
 use MediaWiki\MediaWikiServices;
-use ResourceLoaderContext;
+use MediaWiki\ResourceLoader\Context as ResourceLoaderContext;
 
 class ClientConfig {
+
 	/**
-	 *
 	 * @param ResourceLoaderContext $context
 	 * @param Config $config
 	 * @param array $param
@@ -26,7 +26,6 @@ class ClientConfig {
 	}
 
 	/**
-	 *
 	 * @param ResourceLoaderContext $context
 	 * @param Config $config
 	 * @param array $param
