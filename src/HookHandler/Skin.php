@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\StandardDialogs\HookHandler;
 
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\Permissions\PermissionManager;
+use NamespaceInfo;
 use SkinTemplate;
 use Title;
 
@@ -15,12 +16,17 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 	 */
 	private $permissionManager = null;
 
+	/** @var NamespaceInfo */
+	private $namespaceInfo = null;
+
 	/**
 	 *
 	 * @param PermissionManager $permissionManager
+	 * @param NamespaceInfo $namespaceInfo
 	 */
-	public function __construct( PermissionManager $permissionManager ) {
+	public function __construct( PermissionManager $permissionManager, NamespaceInfo $namespaceInfo ) {
 		$this->permissionManager = $permissionManager;
+		$this->namespaceInfo = $namespaceInfo;
 	}
 
 	/**
@@ -75,7 +81,7 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 			];
 		}
 
-		if ( $userCanCreatePages ) {
+		if ( $userCanCreatePages && $this->namespaceInfo->hasSubpages( $title->getNamespace() ) ) {
 			$links['namespaces']['new-subpage'] = [
 				'text' => $sktemplate->msg( 'standarddialogs-create-button-new-subpage-text' ),
 				'title' => $sktemplate->msg( 'standarddialogs-create-button-new-subpage-title' ),
