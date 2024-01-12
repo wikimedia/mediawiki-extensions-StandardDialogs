@@ -248,7 +248,7 @@
 	"HookHandlers": {
 		"skin": {
 			"class": "\\MediaWiki\\Extension\\StandardDialogs\\HookHandler\\Skin",
-			"services": [ "PermissionManager" ]
+			"services": [ "PermissionManager", "NamespaceInfo" ]
 		},
 		"discovery-skin": {
 			"class": "\\MediaWiki\\Extension\\StandardDialogs\\HookHandler\\DiscoverySkin"
