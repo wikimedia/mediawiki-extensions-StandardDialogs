@@ -3,12 +3,11 @@
 namespace MediaWiki\Extension\StandardDialogs\Hook;
 
 use Config;
-use ResourceLoaderContext;
+use MediaWiki\ResourceLoader\Context as ResourceLoaderContext;
 
 interface StandardDialogsRegisterPageInfoPanelModules {
 
 	/**
-	 *
 	 * @param string[] &$modules
 	 * @param ResourceLoaderContext $context
 	 * @param Config $config
