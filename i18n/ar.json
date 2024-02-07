@@ -18,5 +18,6 @@
 	"standarddialogs-create-button-new-subpage-text": "صفحة فرعية جديدة",
 	"standarddialogs-btn-cancel": "ألغ",
 	"standarddialogs-delete-subpages": "حذف الصفحات الفرعية",
-	"standarddialogs-confirm-mass-deletion": "سيؤدي هذا إلى حذف $1 {{PLURAL:$1|page|pages}}. هل أنت متأكد؟"
+	"standarddialogs-confirm-mass-deletion": "سيؤدي هذا إلى حذف $1 {{PLURAL:$1|page|pages}}. هل أنت متأكد؟",
+	"standarddialogs-delete-title": "حذف صفحة «$1»"
 }
