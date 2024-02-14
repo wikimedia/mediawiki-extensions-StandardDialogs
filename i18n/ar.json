@@ -14,6 +14,7 @@
 	"standarddialogs-page-info-page-templates": "القوالب",
 	"standarddialogs-create-button-new-page-text": "صفحة جديدة",
 	"standarddialogs-create-button-new-subpage-text": "صفحة فرعية جديدة",
+	"standarddialogs-delete-title": "حذف صفحة «$1»",
 	"standarddialogs-protect-btn": "احمِ",
 	"standarddialogs-protect-title": "حماية صفحة «$1»",
 	"standarddialogs-btn-cancel": "ألغ",
