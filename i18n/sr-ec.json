@@ -5,6 +5,7 @@
 		]
 	},
 	"standarddialogs-new-page-not-exist-label": "Страница не постоји",
+	"standarddialogs-purge-btn": "Освежи",
 	"standarddialogs-delete-subpages": "Обриши подстранице",
 	"standarddialogs-confirm-mass-deletion": "Ово ће обрисати $1 {{PLURAL:$1|страницу|странице}}. Сигурно?"
 }
