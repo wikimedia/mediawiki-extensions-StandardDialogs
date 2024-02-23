@@ -57,10 +57,6 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 			return;
 		}
 
-		if ( !$this->permissionManager->userHasRight( $user, 'edit' ) ) {
-			return;
-		}
-
 		$userCanCreatePages = $this->permissionManager->userHasRight( $user, 'createpage' );
 
 		if ( $userCanCreatePages && $title->exists() ) {
