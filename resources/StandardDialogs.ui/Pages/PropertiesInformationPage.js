@@ -15,6 +15,7 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.setupOutlineItem = functi
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.setup = function () {
 	const me = this;
+	me.pageInfo = {};
 	const dfdData = this.getData();
 	$.when( dfdData ).done( function () {
 		if ( me.pageInfo !== undefined ) {
@@ -22,36 +23,35 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.setup = function () {
 			const contentTable = $( '<table>' );
 			contentTable.addClass( 'wikitable page-information' );
 
-			for ( const p in me.pageInfo ) {
-				const templates = me.getTemplates( p );
-				contentTable.append(
-					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-templates' ).plain() ),
-						$( '<td>' ).append( templates ) ) );
+			const templates = me.getTemplates();
+			contentTable.append(
+				$( '<tr>' ).append(
+					$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-templates' ).plain() ),
+					$( '<td>' ).append( templates ) ) );
 
-				const categories = me.getCategories( p );
-				contentTable.append(
-					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-categories' ).plain() ),
-						$( '<td>' ).append( categories ) ) );
-				const links = me.getInternalLinks( p );
-				contentTable.append(
-					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-internal' ).plain() ),
-						$( '<td>' ).append( links ) ) );
+			const categories = me.getCategories();
+			contentTable.append(
+				$( '<tr>' ).append(
+					$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-categories' ).plain() ),
+					$( '<td>' ).append( categories ) ) );
+			const links = me.getInternalLinks();
+			contentTable.append(
+				$( '<tr>' ).append(
+					$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-internal' ).plain() ),
+					$( '<td>' ).append( links ) ) );
 
-				const images = me.getImageLinks( p );
-				contentTable.append(
-					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-images' ).plain() ),
-						$( '<td>' ).append( images ) ) );
+			const images = me.getImageLinks();
+			contentTable.append(
+				$( '<tr>' ).append(
+					$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-images' ).plain() ),
+					$( '<td>' ).append( images ) ) );
 
-				const extLinks = me.getExternalLinks( p );
-				contentTable.append(
-					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-external' ).plain() ),
-						$( '<td>' ).append( extLinks ) ) );
-			}
+			const extLinks = me.getExternalLinks();
+			contentTable.append(
+				$( '<tr>' ).append(
+					$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-external' ).plain() ),
+					$( '<td>' ).append( extLinks ) ) );
+
 			fieldLayout.$element.append( contentTable );
 
 			me.$element.append( fieldLayout.$element );
@@ -60,108 +60,167 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.setup = function () {
 };
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.getData = function () {
+	var me = this;
+	const dfd = new $.Deferred();
+
+	me.pageInfo.templates = [];
+	const dfdTemplates = me.doApiCall( 'templates', 'tl', '' );
+	me.pageInfo.categories = [];
+	const dfdCategories = me.doApiCall( 'categories', 'cl', '' );
+	me.pageInfo.links = [];
+	const dfdLinks = me.doApiCall( 'links', 'pl', '' );
+	me.pageInfo.images = [];
+	const dfdImages = me.doApiCall( 'images', 'im', '' );
+	me.pageInfo.extlinks = [];
+	const dfdExtLinks = me.doApiCall( 'extlinks', 'el', '' );
+	$.when( dfdTemplates, dfdCategories, dfdLinks, dfdImages, dfdExtLinks ).done( function () {
+		const dfds = [];
+		dfds.push( dfdTemplates );
+		dfds.push( dfdCategories );
+		dfds.push( dfdLinks );
+		dfds.push( dfdImages );
+		dfds.push( dfdExtLinks );
+
+		$.when.apply( me, dfds ).done( function () {
+			dfd.resolve.apply( this, arguments );
+		} );
+	} );
+
+	return dfd.promise();
+};
+
+StandardDialogs.ui.PropertiesInformationPage.prototype.doApiCall = function ( prop, continueProp, continueVal ) {
 	const me = this;
 	const dfd = new $.Deferred();
 	const mwApi = new mw.Api();
-	mwApi.postWithToken( 'csrf', {
+	const params = {
 		action: 'query',
 		titles: me.pageName,
 		format: 'json',
-		prop: 'categories|templates|info|links|images|extlinks'
-
-	} ).fail( function () {
+		prop: prop
+	};
+	var paramProperty = continueProp + 'continue';
+	if ( continueVal !== '' ) {
+		params[ paramProperty ] = continueVal;
+	}
+	mwApi.postWithToken( 'csrf', params ).fail( function () {
 		dfd.reject( [ new OO.ui.Error( arguments[ 0 ], { recoverable: false } ) ] );
 	} )
 		.done( function ( resp ) {
-			me.pageInfo = resp.query.pages;
-			dfd.resolve( arguments );
+			for ( var page in resp.query.pages ) {
+				me.pageInfo[ prop ].push( resp.query.pages[ page ][ prop ] );
+			}
+
+			if ( resp.continue ) {
+				if ( resp.continue.continue ) {
+					const recursiveCall = me.doApiCall(
+						prop,
+						continueProp,
+						resp.continue[ paramProperty ]
+					);
+					recursiveCall.done( function () {
+						dfd.resolve( resp );
+					} );
+				}
+			} else {
+				dfd.resolve( resp );
+			}
 		} );
 	return dfd.promise();
 };
 
-StandardDialogs.ui.PropertiesInformationPage.prototype.getImageLinks = function ( id ) {
+StandardDialogs.ui.PropertiesInformationPage.prototype.getImageLinks = function () {
 	const images = $( '<ul>' );
-	if ( this.pageInfo[ id ].images ) {
-		for ( let i = 0; i < this.pageInfo[ id ].images.length; i++ ) {
-			const title = mw.Title.newFromText( this.pageInfo[ id ].images[ i ].title );
-
-			images.append(
-				$( '<li>' ).append( $( '<a>' )
-					.attr( {
-						href: title.getUrl(),
-						title: title.getPrefixedText()
-					} )
-					.text( title.getMainText() ) ) );
+	for ( const x in this.pageInfo.images ) {
+		if ( this.pageInfo.images[ x ] ) {
+			for ( let y = 0; y < this.pageInfo.images[ x ].length; y++ ) {
+				const title = mw.Title.newFromText( this.pageInfo.images[ x ][ y ].title );
+				images.append(
+					$( '<li>' ).append( $( '<a>' )
+						.attr( {
+							href: title.getUrl(),
+							title: title.getPrefixedText()
+						} )
+						.text( title.getMainText() ) ) );
+			}
 		}
 	}
 	return images;
 };
 
-StandardDialogs.ui.PropertiesInformationPage.prototype.getTemplates = function ( id ) {
+StandardDialogs.ui.PropertiesInformationPage.prototype.getTemplates = function () {
 	const templates = $( '<ul>' );
-	if ( this.pageInfo[ id ].templates ) {
-		for ( let i = 0; i < this.pageInfo[ id ].templates.length; i++ ) {
-			const title = mw.Title.newFromText( this.pageInfo[ id ].templates[ i ].title );
-			templates.append(
-				$( '<li>' )
-					.append( $( '<a>' )
-						.attr( {
-							href: title.getUrl(),
-							title: title.getPrefixedText()
-						} )
-						.text( title.getMainText() ) ) );
+	for ( const x in this.pageInfo.templates ) {
+		if ( this.pageInfo.templates[ x ] ) {
+			for ( let y = 0; y < this.pageInfo.templates[ x ].length; y++ ) {
+				const title = mw.Title.newFromText( this.pageInfo.templates[ x ][ y ].title );
+				templates.append(
+					$( '<li>' )
+						.append( $( '<a>' )
+							.attr( {
+								href: title.getUrl(),
+								title: title.getPrefixedText()
+							} )
+							.text( title.getMainText() ) ) );
+			}
 		}
 	}
 	return templates;
 };
 
-StandardDialogs.ui.PropertiesInformationPage.prototype.getCategories = function ( id ) {
+StandardDialogs.ui.PropertiesInformationPage.prototype.getCategories = function () {
 	const categories = $( '<ul>' );
-	if ( this.pageInfo[ id ].categories ) {
-		for ( let i = 0; i < this.pageInfo[ id ].categories.length; i++ ) {
-			const title = mw.Title.newFromText( this.pageInfo[ id ].categories[ i ].title );
-			categories.append(
-				$( '<li>' )
-					.append( $( '<a>' )
-						.attr( {
-							href: title.getUrl(),
-							title: title.getPrefixedText()
-						} )
-						.text( title.getMainText() ) ) );
+	for ( const x in this.pageInfo.categories ) {
+		if ( this.pageInfo.categories[ x ] ) {
+			for ( let y = 0; y < this.pageInfo.categories[ x ].length; y++ ) {
+				const title = mw.Title.newFromText( this.pageInfo.categories[ x ][ y ].title );
+				categories.append(
+					$( '<li>' )
+						.append( $( '<a>' )
+							.attr( {
+								href: title.getUrl(),
+								title: title.getPrefixedText()
+							} )
+							.text( title.getMainText() ) ) );
+			}
 		}
 	}
 	return categories;
 };
 
-StandardDialogs.ui.PropertiesInformationPage.prototype.getInternalLinks = function ( id ) {
+StandardDialogs.ui.PropertiesInformationPage.prototype.getInternalLinks = function () {
 	const links = $( '<ul>' );
-	if ( this.pageInfo[ id ].links ) {
-		for ( let i = 0; i < this.pageInfo[ id ].links.length; i++ ) {
-			const title = mw.Title.newFromText( this.pageInfo[ id ].links[ i ].title );
-			links.append(
-				$( '<li>' )
-					.append( $( '<a>' )
-						.attr( {
-							href: title.getUrl(),
-							title: title.getPrefixedText()
-						} )
-						.text( title.getMainText() ) ) );
+	for ( const x in this.pageInfo.links ) {
+		if ( this.pageInfo.links[ x ] ) {
+			for ( let y = 0; y < this.pageInfo.links[ x ].length; y++ ) {
+				const title = mw.Title.newFromText( this.pageInfo.links[ x ][ y ].title );
+				links.append(
+					$( '<li>' )
+						.append( $( '<a>' )
+							.attr( {
+								href: title.getUrl(),
+								title: title.getPrefixedText()
+							} )
+							.text( title.getMainText() ) ) );
+			}
 		}
 	}
 	return links;
 };
 
-StandardDialogs.ui.PropertiesInformationPage.prototype.getExternalLinks = function ( id ) {
+StandardDialogs.ui.PropertiesInformationPage.prototype.getExternalLinks = function () {
 	const links = $( '<ul>' );
-	if ( this.pageInfo[ id ].extlinks ) {
-		for ( const key in this.pageInfo[ id ].extlinks ) {
-			links.append(
-				$( '<li>' )
-					.append( $( '<a>' )
-						.attr( {
-							href: Object.values( this.pageInfo[ id ].extlinks[ key ] )
-						} )
-						.text( Object.values( this.pageInfo[ id ].extlinks[ key ] ) ) ) );
+	for ( const x in this.pageInfo.extlinks ) {
+		if ( this.pageInfo.extlinks[ x ] ) {
+			for ( const key in this.pageInfo.extlinks[ x ] ) {
+				links.append(
+					$( '<li>' )
+						.append( $( '<a>' )
+							.attr( {
+								href: Object.values( this.pageInfo.extlinks[ x ][ key ] )
+							} )
+							.text( Object.values( this.pageInfo.extlinks[ x ][ key ] ) ) ) );
+			}
 		}
 	}
 	return links;
