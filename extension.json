@@ -17,6 +17,9 @@
 		"EnhancedStandardUIs": {
 			"AllPagesPluginModules": [
 				"ext.standardDialogs.allpages"
+			],
+			"FilelistPluginModules": [
+				"ext.standardDialogs.filelist"
 			]
 		}
 	},
@@ -252,6 +255,15 @@
 				{
 					"name": "pageInfoPanelModuleRegistry.json",
 					"callback": "MediaWiki\\Extension\\StandardDialogs\\ClientConfig::makePageInfoPanelModuleRegistryJson"
+				}
+			]
+		},
+		"ext.standardDialogs.filelist": {
+			"packageFiles": [
+				"ext.standardDialogs.filelist.js",
+				{
+					"name": "deleteDialogMsg.json",
+					"callback": "MediaWiki\\Extension\\StandardDialogs\\ClientConfig::makeDeleteDialogMsgJson"
 				}
 			]
 		}
