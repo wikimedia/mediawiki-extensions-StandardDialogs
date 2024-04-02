@@ -90,7 +90,7 @@ StandardDialogs.ui.DeleteDialog.prototype.makeDoneActionProcess = function () {
 StandardDialogs.ui.DeleteDialog.prototype.confirmMassDeletion = function ( numberOfPages ) {
 	const dfd = new $.Deferred();
 	const confirmMessage = mw.message(
-		'standarddialogs-confirm-mass-deletion', numberOfPages ).plain();
+		'standarddialogs-confirm-mass-deletion', numberOfPages ).text();
 	OO.ui.confirm( confirmMessage ).done( function ( confirmed ) {
 		if ( confirmed ) {
 			dfd.resolve();
