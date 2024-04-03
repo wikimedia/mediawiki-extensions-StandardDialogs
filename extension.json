@@ -12,7 +12,13 @@
 		"extensions": {
 			"OOJSPlus": ">= 2.0.0"
 		}
-
+	},
+	"attributes": {
+		"EnhancedStandardUIs": {
+			"AllPagesPluginModules": [
+				"ext.standardDialogs.allpages"
+			]
+		}
 	},
 	"MessagesDirs": {
 		"StandardDialogs": "i18n"
@@ -238,6 +244,15 @@
 				"oojs-ui-windows",
 				"mediawiki.widgets",
 				"ext.oOJSPlus.widgets"
+			]
+		},
+		"ext.standardDialogs.allpages": {
+			"packageFiles": [
+				"ext.standardDialogs.allpages.js",
+				{
+					"name": "pageInfoPanelModuleRegistry.json",
+					"callback": "MediaWiki\\Extension\\StandardDialogs\\ClientConfig::makePageInfoPanelModuleRegistryJson"
+				}
 			]
 		}
 	},
