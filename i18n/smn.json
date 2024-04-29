@@ -5,14 +5,15 @@
 			"Yupik"
 		]
 	},
-	"standarddialogs-copy-page-new": "Uđđâ siijđo nommâ",
-	"standarddialogs-page-info-page-language": "Kielâ",
+	"standarddialogs-copy-page-new": "U\u0111\u0111\u00e2 siij\u0111o nomm\u00e2",
+	"standarddialogs-page-info-page-language": "Kiel\u00e2",
 	"standarddialogs-page-info-page-categories": "Luokah",
 	"standarddialogs-page-info-page-images": "Koveh",
-	"standarddialogs-new-page-title": "Räähti uđđâ siijđo",
-	"standarddialogs-new-page-label": "Sijđonommâ",
-	"standarddialogs-create-button-new-page-text": "Uđđâ sijđo",
-	"standarddialogs-create-button-new-page-title": "Räähti uđđâ siijđo",
+	"standarddialogs-new-page-title": "R\u00e4\u00e4hti u\u0111\u0111\u00e2 siij\u0111o",
+	"standarddialogs-new-page-label": "Sij\u0111onomm\u00e2",
+	"standarddialogs-create-button-new-page-text": "U\u0111\u0111\u00e2 sij\u0111o",
+	"standarddialogs-create-button-new-page-title": "R\u00e4\u00e4hti u\u0111\u0111\u00e2 siij\u0111o",
 	"standarddialogs-delete-btn": "Siho",
-	"standarddialogs-btn-cancel": "Jooskâ"
+	"standarddialogs-btn-cancel": "Joosk\u00e2",
+	"standarddialogs-page-info-page-templates": "Myenstereh"
 }
