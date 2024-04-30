@@ -1,17 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kimberli M\u00e4k\u00e4r\u00e4inen (WMNO)",
+			"Kimberli Mäkäräinen (WMNO)",
 			"Yupik"
 		]
 	},
-	"standarddialogs-copy-page-new": "O\u0111\u0111a siiddu namma",
+	"standarddialogs-copy-page-new": "Ođđa siiddu namma",
 	"standarddialogs-page-info-close": "Gidde",
-	"standarddialogs-page-info-properties": "Ie\u0161vuo\u0111at",
+	"standarddialogs-page-info-properties": "Iešvuođat",
 	"standarddialogs-new-page-label": "Siidonamma",
-	"standarddialogs-new-subpage-title": "R\u00e1hkat o\u0111\u0111a oalgesiiddu siidui \"$1\"",
-	"standarddialogs-create-button-new-page-text": "O\u0111\u0111a siidu",
+	"standarddialogs-new-subpage-title": "Ráhkat ođđa oalgesiiddu siidui \"$1\"",
+	"standarddialogs-create-button-new-page-text": "Ođđa siidu",
 	"standarddialogs-delete-btn": "Sihko",
 	"standarddialogs-btn-cancel": "Gaskkalduhte",
-	"standarddialogs-page-info-page-templates": "M\u00e1llet"
+	"standarddialogs-page-info-page-templates": "Mállet"
 }

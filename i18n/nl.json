@@ -7,12 +7,12 @@
 			"Vistaus"
 		]
 	},
-	"standarddialogs-copy-btn": "Kopi\u00ebren",
-	"standarddialogs-copy-title": "Pagina \"$1\" kopi\u00ebren",
-	"standarddialogs-copy-page-legend": "Kopi\u00ebren",
+	"standarddialogs-copy-btn": "Kopiëren",
+	"standarddialogs-copy-title": "Pagina \"$1\" kopiëren",
+	"standarddialogs-copy-page-legend": "Kopiëren",
 	"standarddialogs-copy-page-new": "Nieuwe paginanaam",
-	"standarddialogs-copy-discussion": "Overlegpagina kopi\u00ebren",
-	"standarddialogs-copy-subpages": "Deelpagina's kopi\u00ebren",
+	"standarddialogs-copy-discussion": "Overlegpagina kopiëren",
+	"standarddialogs-copy-subpages": "Deelpagina's kopiëren",
 	"standarddialogs-page-info-title": "Pagina-informatie over \"$1\"",
 	"standarddialogs-page-info-close": "Sluiten",
 	"standarddialogs-page-info-general": "Algemeen",
@@ -29,7 +29,7 @@
 	"standarddialogs-page-info-page-last-edit": "Laatste bewerking",
 	"standarddialogs-page-info-page-last-editor": "Laatste bewerker",
 	"standarddialogs-page-info-page-templates": "Sjablonen",
-	"standarddialogs-page-info-page-categories": "Categorie\u00ebn",
+	"standarddialogs-page-info-page-categories": "Categorieën",
 	"standarddialogs-page-info-page-internal": "Interne koppelingen",
 	"standarddialogs-page-info-page-external": "Externe koppelingen",
 	"standarddialogs-page-info-page-images": "Afbeeldingen",
@@ -53,7 +53,7 @@
 	"standarddialogs-btn-done": "Gereed",
 	"standarddialogs-btn-cancel": "Annuleren",
 	"standarddialogs-protect-level-editor": "Alleen bewerkers en beheerders toestaan",
-	"standarddialogs-desc": "Biedt gebruikersinterfaces met dialogen voor algemene handelingen m.b.t. pagina\u2019s",
-	"standarddialogs-delete-subpages": "Subpagina\u2019s verwijderen",
+	"standarddialogs-desc": "Biedt gebruikersinterfaces met dialogen voor algemene handelingen m.b.t. pagina’s",
+	"standarddialogs-delete-subpages": "Subpagina’s verwijderen",
 	"standarddialogs-confirm-mass-deletion": "U staat op het punt om $1 {{PLURAL:$1|pagina|pagina's}} te verwijderen. Weet u het zeker?"
 }
