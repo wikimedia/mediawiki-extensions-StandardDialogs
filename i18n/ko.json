@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Dr1t jg",
+			"Suleiman the Magnificent Television",
 			"Ykhwong",
 			"렌즈"
 		]
@@ -35,6 +36,7 @@
 	"standarddialogs-page-info-page-images": "그림",
 	"standarddialogs-new-page-title": "새 문서 만들기",
 	"standarddialogs-new-page-label": "문서 이름",
+	"standarddialogs-new-page-not-exist-label": "페이지가 존재하지 않습니다",
 	"standarddialogs-new-subpage-title": "\"$1\"의 새 하위 문서 만들기",
 	"standarddialogs-new-subpage-label": "하위 문서 이름",
 	"standarddialogs-create-button-new-page-text": "새 문서",
