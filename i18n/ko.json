@@ -3,7 +3,8 @@
 		"authors": [
 			"Dr1t jg",
 			"Ykhwong",
-			"렌즈"
+			"렌즈",
+			"Suleiman the Magnificent Television"
 		]
 	},
 	"standarddialogs-desc": "공통 문서 동작을 위한 대화 상자 사용자 인터페이스를 제공합니다",
@@ -35,6 +36,7 @@
 	"standarddialogs-page-info-page-images": "그림",
 	"standarddialogs-new-page-title": "새 문서 만들기",
 	"standarddialogs-new-page-label": "문서 이름",
+	"standarddialogs-new-page-not-exist-label": "페이지가 존재하지 않습니다",
 	"standarddialogs-new-subpage-title": "\"$1\"의 새 하위 문서 만들기",
 	"standarddialogs-new-subpage-label": "하위 문서 이름",
 	"standarddialogs-create-button-new-page-text": "새 문서",
@@ -53,6 +55,5 @@
 	"standarddialogs-btn-cancel": "취소",
 	"standarddialogs-protect-level-editor": "편집자와 관리자만 허용",
 	"standarddialogs-delete-subpages": "하위 문서 삭제",
-	"standarddialogs-new-page-not-exist-label": "페이지가 존재하지 않음",
 	"standarddialogs-confirm-mass-deletion": "이는 $1 {{PLURAL:$1|페이지|페이지들}}를 제거할 거야. 확실해?"
 }
