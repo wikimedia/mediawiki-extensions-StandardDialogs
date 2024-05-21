@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"GuoPC",
+			"LittlePaw365",
 			"沈澄心"
 		]
 	},
@@ -14,7 +15,7 @@
 	"standarddialogs-copy-subpages": "复制子页面",
 	"standarddialogs-page-info-title": "“$1”的页面信息",
 	"standarddialogs-page-info-close": "关闭",
-	"standarddialogs-page-info-general": "一般",
+	"standarddialogs-page-info-general": "常规",
 	"standarddialogs-page-info-history": "最新编辑",
 	"standarddialogs-page-info-properties": "属性",
 	"standarddialogs-page-info-page-title": "标题",
