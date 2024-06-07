@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\StandardDialogs\HookHandler;
 
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
 use NamespaceInfo;
 use SkinTemplate;
@@ -60,7 +61,7 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 		$sktemplate->getOutput()->addModules( 'ext.standardDialogs' );
 		$userCanCreatePages = $this->permissionManager->userHasRight( $user, 'createpage' );
 
-		if ( $userCanCreatePages && $title->exists() ) {
+		if ( $userCanCreatePages && $title->exists() && $this->isAllowedContentModel( $title ) ) {
 			$links['actions']['copy'] = [
 				"href" => '',
 				"text" => $sktemplate->msg( 'standarddialogs-copy-page-legend' )->text(),
@@ -86,5 +87,27 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 				'class' => 'new-subpage'
 			];
 		}
+	}
+
+	/**
+	 * @param Title $title
+	 * @return bool
+	 */
+	private function isAllowedContentModel( Title $title ): bool {
+		$wikiPageFactory = MediaWikiServices::getInstance()->getWikiPageFactory();
+		$wikiPage = $wikiPageFactory->newFromTitle( $title );
+		$content = $wikiPage->getContent();
+
+		if ( !$content ) {
+			return false;
+		}
+
+		$model = $content->getModel();
+		$allowedModels = [ CONTENT_MODEL_TEXT, CONTENT_MODEL_WIKITEXT ];
+		if ( in_array( $model, $allowedModels ) ) {
+			return true;
+		}
+
+		return false;
 	}
 }
