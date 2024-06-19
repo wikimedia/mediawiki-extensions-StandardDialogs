@@ -266,6 +266,15 @@
 					"callback": "MediaWiki\\Extension\\StandardDialogs\\ClientConfig::makeDeleteDialogMsgJson"
 				}
 			]
+		},
+		"ext.standardDialogs.books.deleteAction": {
+			"packageFiles": [
+				"ext.standardDialogs.books.deleteAction.js",
+				{
+					"name": "deleteDialogMsg.json",
+					"callback": "MediaWiki\\Extension\\StandardDialogs\\ClientConfig::makeDeleteDialogMsgJson"
+				}
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -279,11 +288,15 @@
 		},
 		"discovery-skin": {
 			"class": "\\MediaWiki\\Extension\\StandardDialogs\\HookHandler\\DiscoverySkin"
+		},
+		"bs-books-overview-page-actions": {
+			"class": "\\MediaWiki\\Extension\\StandardDialogs\\HookHandler\\BookshelfDeleteAction"
 		}
 	},
 	"Hooks": {
 		"SkinTemplateNavigation::Universal": "skin",
-		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin"
+		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
+		"BSBookshelfBooksOverviewBeforeSetBookActions": "bs-books-overview-page-actions"
 	},
 	"manifest_version": 2
 }
