@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"GuoPC",
+			"LittlePaw365",
 			"沈澄心"
 		]
 	},
@@ -14,7 +15,7 @@
 	"standarddialogs-copy-subpages": "复制子页面",
 	"standarddialogs-page-info-title": "“$1”的页面信息",
 	"standarddialogs-page-info-close": "关闭",
-	"standarddialogs-page-info-general": "一般",
+	"standarddialogs-page-info-general": "常规",
 	"standarddialogs-page-info-history": "最新编辑",
 	"standarddialogs-page-info-properties": "属性",
 	"standarddialogs-page-info-page-title": "标题",
@@ -37,9 +38,9 @@
 	"standarddialogs-new-subpage-title": "在“$1”下创建新子页面",
 	"standarddialogs-new-subpage-label": "子页面名称",
 	"standarddialogs-create-button-new-page-text": "新页面",
-	"standarddialogs-create-button-new-page-title": "创建一个新页面",
+	"standarddialogs-create-button-new-page-title": "创建新页面",
 	"standarddialogs-create-button-new-subpage-text": "新子页面",
-	"standarddialogs-create-button-new-subpage-title": "创建一个新子页面",
+	"standarddialogs-create-button-new-subpage-title": "创建新子页面",
 	"standarddialogs-delete-btn": "删除",
 	"standarddialogs-delete-title": "删除页面“$1”",
 	"standarddialogs-move-btn": "移动",
