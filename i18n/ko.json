@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Dr1t jg",
+			"Suleiman the Magnificent Television",
 			"Ykhwong",
 			"렌즈"
 		]
@@ -53,6 +54,6 @@
 	"standarddialogs-btn-cancel": "취소",
 	"standarddialogs-protect-level-editor": "편집자와 관리자만 허용",
 	"standarddialogs-delete-subpages": "하위 문서 삭제",
-	"standarddialogs-new-page-not-exist-label": "페이지가 존재하지 않음",
+	"standarddialogs-new-page-not-exist-label": "페이지가 존재하지 않습니다",
 	"standarddialogs-confirm-mass-deletion": "이는 $1 {{PLURAL:$1|페이지|페이지들}}를 제거할 거야. 확실해?"
 }
