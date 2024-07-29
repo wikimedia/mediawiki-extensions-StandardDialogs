@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Danniel07",
-			"No se"
+			"No se",
+			"-jem-"
 		]
 	},
 	"standarddialogs-desc": "Proporciona interfaces de usuario de diálogos para acciones de página comunes",
@@ -22,7 +23,7 @@
 	"standarddialogs-page-info-page-id": "Identificador de la página",
 	"standarddialogs-page-info-page-language": "Idioma",
 	"standarddialogs-page-info-page-model": "Modelo de contenido",
-	"standarddialogs-page-info-page-watch": "Número de usuarios que vigilan la página",
+	"standarddialogs-page-info-page-watch": "Número de vigilantes",
 	"standarddialogs-page-info-page-redirects": "Redirecciones",
 	"standarddialogs-page-info-page-contributors": "Colaboradores",
 	"standarddialogs-page-info-page-last-edit": "Última edición",
