@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"-jem-",
 			"Danniel07",
-			"No se",
-			"-jem-"
+			"No se"
 		]
 	},
 	"standarddialogs-desc": "Proporciona interfaces de usuario de diálogos para acciones de página comunes",
