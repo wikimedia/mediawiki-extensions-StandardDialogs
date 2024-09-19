@@ -53,5 +53,10 @@
 	"standarddialogs-btn-cancel": "Cancel",
 	"standarddialogs-protect-level-editor": "Allow only editors and administrators",
 	"standarddialogs-delete-subpages": "Delete subpages",
-	"standarddialogs-confirm-mass-deletion": "This will delete $1 {{PLURAL:$1|page|pages}}. Are you sure?"
+	"standarddialogs-confirm-mass-deletion": "This will delete $1 {{PLURAL:$1|page|pages}}. Are you sure?",
+	"standarddialogs-page-info-page-no-images-label": "This page contains no images or files (incl. audio and video files)",
+	"standarddialogs-page-info-page-no-templates-label": "This page contains no templates",
+	"standarddialogs-page-info-page-no-categories-label": "This page contains no categories",
+	"standarddialogs-page-info-page-no-links-label": "This page contains no links",
+	"standarddialogs-page-info-page-no-extlinks-label": "This page contains no external links"
 }
