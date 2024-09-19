@@ -25,7 +25,7 @@ StandardDialogs.ui.HistoryInformationPage.prototype.setup = function () {
 				const contrib = me.getEditors( p );
 				contentTable.append(
 					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-contributors' ).plain() ),
+						$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-contributors' ).plain() ),
 						$( '<td>' ).append( contrib ) ) );
 
 				const dateTime = new Date( me.pageInfo[ p ].revisions[ 0 ].timestamp );
@@ -33,7 +33,7 @@ StandardDialogs.ui.HistoryInformationPage.prototype.setup = function () {
 
 				contentTable.append(
 					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-last-edit' ).plain() ),
+						$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-last-edit' ).plain() ),
 						$( '<td>' ).text( dateTime ) ) );
 
 				const user = new OOJSPlus.ui.widget.UserWidget( {
@@ -44,7 +44,7 @@ StandardDialogs.ui.HistoryInformationPage.prototype.setup = function () {
 				} );
 				contentTable.append(
 					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-last-editor' ).plain() ),
+						$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-last-editor' ).plain() ),
 						$( '<td>' ).append( user.$element ) ) );
 			}
 			fieldLayout.$element.append( contentTable );

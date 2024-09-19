@@ -56,5 +56,10 @@
 	"standarddialogs-btn-cancel": "Label for cancel buttons of the dialogs.\n{{Identical|Cancel}}",
 	"standarddialogs-protect-level-editor": "Used as protect level.\n\nSee example: {{canonicalurl:Main_Page|action=info}}",
 	"standarddialogs-delete-subpages": "Label for the checkbox, that allows deleting the pages subpages as well, when checked",
-	"standarddialogs-confirm-mass-deletion": "Message shown when the user tries to delete a large number pages at once.\n* $1 - Number of pages to be deleted"
+	"standarddialogs-confirm-mass-deletion": "Message shown when the user tries to delete a large number pages at once.\n* $1 - Number of pages to be deleted",
+	"standarddialogs-page-info-page-no-images-label": "Text for table cell, which is used when page contains no images which can be listed",
+	"standarddialogs-page-info-page-no-templates-label": "Text for table cell, which is used when page contains no templates which can be listed",
+	"standarddialogs-page-info-page-no-categories-label": "Text for table cell, which is used when page contains no categories which can be listed",
+	"standarddialogs-page-info-page-no-links-label": "Text for table cell, which is used when page contains no links which can be listed",
+	"standarddialogs-page-info-page-no-extlinks-label": "Text for table cell, which is used when page contains no external links which can be listed"
 }

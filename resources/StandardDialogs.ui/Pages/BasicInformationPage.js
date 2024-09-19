@@ -24,35 +24,35 @@ StandardDialogs.ui.BasicInformationPage.prototype.setup = function () {
 			for ( const p in me.pageInfo ) {
 				contentTable.append(
 					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-title' ).plain() ),
+						$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-title' ).plain() ),
 						$( '<td>' ).text( me.pageInfo[ p ].title ) ) );
 
 				contentTable.append(
 					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-length' ).plain() ),
+						$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-length' ).plain() ),
 						$( '<td>' ).text( me.pageInfo[ p ].length ) ) );
 
 				contentTable.append(
 					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-id' ).plain() ),
+						$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-id' ).plain() ),
 						$( '<td>' ).text( me.pageInfo[ p ].pageid ) ) );
 
 				contentTable.append(
 					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-language' ).plain() ),
+						$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-language' ).plain() ),
 						$( '<td>' ).text( me.pageInfo[ p ].pagelanguage ) ) );
 				contentTable.append(
 					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-model' ).plain() ),
+						$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-model' ).plain() ),
 						$( '<td>' ).text( me.pageInfo[ p ].contentmodel ) ) );
 				contentTable.append(
 					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-watch' ).plain() ),
+						$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-watch' ).plain() ),
 						$( '<td>' ).text( me.pageInfo[ p ].watchers ) ) );
 				const redirects = me.getRedirectLinks( p );
 				contentTable.append(
 					$( '<tr>' ).append(
-						$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-redirects' ).plain() ),
+						$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-redirects' ).plain() ),
 						$( '<td>' ).append( redirects ) ) );
 			}
 			fieldLayout.$element.append( contentTable );

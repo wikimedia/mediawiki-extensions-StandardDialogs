@@ -26,30 +26,30 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.setup = function () {
 			const templates = me.getTemplates();
 			contentTable.append(
 				$( '<tr>' ).append(
-					$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-templates' ).plain() ),
+					$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-templates' ).plain() ),
 					$( '<td>' ).append( templates ) ) );
 
 			const categories = me.getCategories();
 			contentTable.append(
 				$( '<tr>' ).append(
-					$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-categories' ).plain() ),
+					$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-categories' ).plain() ),
 					$( '<td>' ).append( categories ) ) );
 			const links = me.getInternalLinks();
 			contentTable.append(
 				$( '<tr>' ).append(
-					$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-internal' ).plain() ),
+					$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-internal' ).plain() ),
 					$( '<td>' ).append( links ) ) );
 
 			const images = me.getImageLinks();
 			contentTable.append(
 				$( '<tr>' ).append(
-					$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-images' ).plain() ),
+					$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-images' ).plain() ),
 					$( '<td>' ).append( images ) ) );
 
 			const extLinks = me.getExternalLinks();
 			contentTable.append(
 				$( '<tr>' ).append(
-					$( '<td>' ).text( mw.message( 'standarddialogs-page-info-page-external' ).plain() ),
+					$( '<th>' ).text( mw.message( 'standarddialogs-page-info-page-external' ).plain() ),
 					$( '<td>' ).append( extLinks ) ) );
 
 			fieldLayout.$element.append( contentTable );
@@ -108,7 +108,9 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.doApiCall = function ( pr
 	} )
 		.done( ( resp ) => {
 			for ( const page in resp.query.pages ) {
-				me.pageInfo[ prop ].push( resp.query.pages[ page ][ prop ] );
+				if ( resp.query.pages[ page ][ prop ] ) {
+					me.pageInfo[ prop ].push( resp.query.pages[ page ][ prop ] );
+				}
 			}
 
 			if ( resp.continue ) {
@@ -131,6 +133,11 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.doApiCall = function ( pr
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.getImageLinks = function () {
 	const images = $( '<ul>' );
+
+	if ( this.pageInfo.images.length === 0 ) {
+		return $( '<span>' ).text(
+			mw.message( 'standarddialogs-page-info-page-no-images-label' ).text() );
+	}
 	for ( const x in this.pageInfo.images ) {
 		if ( this.pageInfo.images[ x ] ) {
 			for ( let y = 0; y < this.pageInfo.images[ x ].length; y++ ) {
@@ -150,6 +157,10 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getImageLinks = function 
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.getTemplates = function () {
 	const templates = $( '<ul>' );
+	if ( this.pageInfo.templates.length === 0 ) {
+		return $( '<span>' ).text(
+			mw.message( 'standarddialogs-page-info-page-no-templates-label' ).text() );
+	}
 	for ( const x in this.pageInfo.templates ) {
 		if ( this.pageInfo.templates[ x ] ) {
 			for ( let y = 0; y < this.pageInfo.templates[ x ].length; y++ ) {
@@ -170,6 +181,10 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getTemplates = function (
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.getCategories = function () {
 	const categories = $( '<ul>' );
+	if ( this.pageInfo.categories.length === 0 ) {
+		return $( '<span>' ).text(
+			mw.message( 'standarddialogs-page-info-page-no-categories-label' ).text() );
+	}
 	for ( const x in this.pageInfo.categories ) {
 		if ( this.pageInfo.categories[ x ] ) {
 			for ( let y = 0; y < this.pageInfo.categories[ x ].length; y++ ) {
@@ -190,6 +205,10 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getCategories = function 
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.getInternalLinks = function () {
 	const links = $( '<ul>' );
+	if ( this.pageInfo.links.length === 0 ) {
+		return $( '<span>' ).text(
+			mw.message( 'standarddialogs-page-info-page-no-links-label' ).text() );
+	}
 	for ( const x in this.pageInfo.links ) {
 		if ( this.pageInfo.links[ x ] ) {
 			for ( let y = 0; y < this.pageInfo.links[ x ].length; y++ ) {
@@ -210,6 +229,10 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getInternalLinks = functi
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.getExternalLinks = function () {
 	const links = $( '<ul>' );
+	if ( this.pageInfo.extlinks.length === 0 ) {
+		return $( '<span>' ).text(
+			mw.message( 'standarddialogs-page-info-page-no-extlinks-label' ).text() );
+	}
 	for ( const x in this.pageInfo.extlinks ) {
 		if ( this.pageInfo.extlinks[ x ] ) {
 			for ( const key in this.pageInfo.extlinks[ x ] ) {
