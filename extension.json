@@ -205,7 +205,12 @@
 				"standarddialogs-page-info-page-external",
 				"standarddialogs-page-info-page-images",
 				"standarddialogs-btn-done",
-				"standarddialogs-btn-cancel"
+				"standarddialogs-btn-cancel",
+				"standarddialogs-page-info-page-no-images-label",
+				"standarddialogs-page-info-page-no-templates-label",
+				"standarddialogs-page-info-page-no-categories-label",
+				"standarddialogs-page-info-page-no-links-label",
+				"standarddialogs-page-info-page-no-extlinks-label"
 			],
 			"dependencies": [
 				"oojs-ui-windows",
