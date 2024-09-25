@@ -60,7 +60,7 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.setup = function () {
 };
 
 StandardDialogs.ui.PropertiesInformationPage.prototype.getData = function () {
-	var me = this;
+	const me = this;
 	const dfd = new $.Deferred();
 
 	me.pageInfo.templates = [];
@@ -99,7 +99,7 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.doApiCall = function ( pr
 		format: 'json',
 		prop: prop
 	};
-	var paramProperty = continueProp + 'continue';
+	const paramProperty = continueProp + 'continue';
 	if ( continueVal !== '' ) {
 		params[ paramProperty ] = continueVal;
 	}
@@ -107,7 +107,7 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.doApiCall = function ( pr
 		dfd.reject( [ new OO.ui.Error( arguments[ 0 ], { recoverable: false } ) ] );
 	} )
 		.done( function ( resp ) {
-			for ( var page in resp.query.pages ) {
+			for ( const page in resp.query.pages ) {
 				me.pageInfo[ prop ].push( resp.query.pages[ page ][ prop ] );
 			}
 

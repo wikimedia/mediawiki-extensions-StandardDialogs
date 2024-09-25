@@ -4,7 +4,7 @@ $( document ).on( 'click', '.page-tree-action-info', function ( e ) {
 	if ( !e.currentTarget.dataset.title ) {
 		return;
 	}
-	var title = e.currentTarget.dataset.title;
+	const title = e.currentTarget.dataset.title;
 
 	mw.loader.using( 'ext.standardDialogs.ui.PageInformationDialog' ).done( function () {
 		mw.loader.using( rlModules ).done( function () {
