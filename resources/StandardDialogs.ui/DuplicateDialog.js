@@ -60,9 +60,9 @@ StandardDialogs.ui.DuplicateDialog.prototype.makeDoneActionProcess = function ()
 	const me = this;
 	this.newTitle = mw.Title.newFromText( me.targetTitle.getValue() );
 	const dfd = new $.Deferred();
-	mw.loader.using( 'mediawiki.api' ).done( function () {
+	mw.loader.using( 'mediawiki.api' ).done( () => {
 		const dfdCopy = me.doCopy( me.pageName, me.targetTitle.getValue() );
-		$.when( dfdCopy ).done( function () {
+		$.when( dfdCopy ).done( () => {
 
 			if ( me.checkDiscussion.isSelected() ) {
 				var dfdDiscussion = me.getDiscussionPages( me.page.getName(), me.page.getNamespaceId() );
@@ -72,11 +72,11 @@ StandardDialogs.ui.DuplicateDialog.prototype.makeDoneActionProcess = function ()
 				var dfdSubpages = me.getSubPages( me.page.getName(), me.page.getNamespaceId() );
 			}
 
-			$.when( dfdDiscussion, dfdSubpages ).done( function () {
+			$.when( dfdDiscussion, dfdSubpages ).done( () => {
 				const copyDfds = [];
 				const mainTargetPageName = me.targetTitle.getValue().replace( / /g, '_' );
 				if ( me.subpages.length > 0 ) {
-					me.subpages.forEach( function ( subpage ) {
+					me.subpages.forEach( ( subpage ) => {
 						const sourceName = subpage.replace( / /g, '_' ),
 							targetName = sourceName.replace( me.pageName, mainTargetPageName ),
 							currentCopyDfd = me.doCopy( sourceName, targetName );
@@ -84,7 +84,7 @@ StandardDialogs.ui.DuplicateDialog.prototype.makeDoneActionProcess = function ()
 					} );
 				}
 				if ( me.talkpages.length > 0 ) {
-					me.talkpages.forEach( function ( talkpage ) {
+					me.talkpages.forEach( ( talkpage ) => {
 						const sourceName = talkpage.replace( / /g, '_' ),
 							targetName = sourceName.replace( me.pageName, mainTargetPageName ),
 							currentCopyDfd = me.doCopy( sourceName, targetName );
@@ -116,10 +116,10 @@ StandardDialogs.ui.DuplicateDialog.prototype.getDiscussionPages = function ( src
 		list: 'allpages',
 		apprefix: srcPageName,
 		apnamespace: srcNamespace + 1
-	} ).done( function ( resp ) {
+	} ).done( ( resp ) => {
 		me.talkpages.push( resp.query.allpages[ 0 ].title );
 		dfd.resolve( resp );
-	} ).fail( function ( error ) {
+	} ).fail( ( error ) => {
 		dfd.reject( error );
 	} );
 	if ( me.checkSubpages.isSelected() ) {
@@ -128,12 +128,12 @@ StandardDialogs.ui.DuplicateDialog.prototype.getDiscussionPages = function ( src
 			list: 'allpages',
 			apprefix: srcPageName + '/',
 			apnamespace: srcNamespace + 1
-		} ).done( function ( resp ) {
-			resp.query.allpages.forEach( function ( page ) {
+		} ).done( ( resp ) => {
+			resp.query.allpages.forEach( ( page ) => {
 				me.talkpages.push( page.title );
 			} );
 			dfd.resolve( resp );
-		} ).fail( function ( error ) {
+		} ).fail( ( error ) => {
 			dfd.reject( error );
 		} );
 	}
@@ -162,19 +162,19 @@ StandardDialogs.ui.DuplicateDialog.prototype.doGetSubPages = function ( srcPageN
 	}
 
 	const mwApi = new mw.Api();
-	mwApi.postWithToken( 'csrf', params ).done( function ( resp ) {
-		resp.query.allpages.forEach( function ( page ) {
+	mwApi.postWithToken( 'csrf', params ).done( ( resp ) => {
+		resp.query.allpages.forEach( ( page ) => {
 			me.subpages.push( page.title );
 		} );
 		if ( resp.continue ) {
 			const recursiveCall = me.doGetSubPages( srcPageName, srcNamespace, resp.continue.apcontinue );
-			recursiveCall.done( function () {
+			recursiveCall.done( () => {
 				dfd.resolve( resp );
 			} );
 		} else {
 			dfd.resolve( resp );
 		}
-	} ).fail( function ( error ) {
+	} ).fail( ( error ) => {
 		dfd.reject( error );
 	} );
 
@@ -190,7 +190,7 @@ StandardDialogs.ui.DuplicateDialog.prototype.doCopy = function ( srcPageName, ta
 		prop: 'revisions',
 		rvprop: 'content',
 		indexpageids: ''
-	} ).done( function ( resp ) {
+	} ).done( ( resp ) => {
 		const pageId = resp.query.pageids[ 0 ];
 		const pageInfo = resp.query.pages[ pageId ];
 		if ( pageInfo.missing || !pageInfo.revisions || !pageInfo.revisions[ 0 ] ) {

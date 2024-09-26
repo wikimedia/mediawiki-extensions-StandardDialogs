@@ -15,7 +15,7 @@ StandardDialogs.ui.HistoryInformationPage.prototype.setupOutlineItem = function 
 StandardDialogs.ui.HistoryInformationPage.prototype.setup = function () {
 	const me = this;
 	const dfdData = this.getData();
-	$.when( dfdData ).done( function () {
+	$.when( dfdData ).done( () => {
 		if ( me.pageInfo !== undefined ) {
 			fieldLayout = new OO.ui.FieldsetLayout();
 			const contentTable = $( '<table>' );

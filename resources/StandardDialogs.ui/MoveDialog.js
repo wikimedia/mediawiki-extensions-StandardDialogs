@@ -74,7 +74,7 @@ StandardDialogs.ui.MoveDialog.prototype.makeDoneActionProcess = function () {
 	this.newTitle = mw.Title.newFromText( dialog.targetTitle.getValue() );
 
 	const dfd = new $.Deferred();
-	mw.loader.using( 'mediawiki.api' ).done( function () {
+	mw.loader.using( 'mediawiki.api' ).done( () => {
 		const mwApi = new mw.Api();
 		const params = {
 			action: 'move',

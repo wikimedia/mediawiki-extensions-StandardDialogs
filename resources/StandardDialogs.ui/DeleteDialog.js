@@ -65,12 +65,12 @@ StandardDialogs.ui.DeleteDialog.prototype.getFormItems = function () {
 StandardDialogs.ui.DeleteDialog.prototype.makeDoneActionProcess = function () {
 	const dialog = this;
 	const dfd = new $.Deferred();
-	mw.loader.using( 'mediawiki.api' ).done( function () {
+	mw.loader.using( 'mediawiki.api' ).done( () => {
 		const mwApi = new mw.Api();
 		const getPagesToDeletePromise = dialog.getPagesToDelete( dialog.pageName, mwApi );
-		getPagesToDeletePromise.done( function ( pages ) {
+		getPagesToDeletePromise.done( ( pages ) => {
 			if ( pages.length > 10 ) {
-				dialog.confirmMassDeletion( pages.length ).done( function () {
+				dialog.confirmMassDeletion( pages.length ).done( () => {
 					dialog.performDeletion( dfd, pages, mwApi );
 				} )
 					.fail( function () {
@@ -91,7 +91,7 @@ StandardDialogs.ui.DeleteDialog.prototype.confirmMassDeletion = function ( numbe
 	const dfd = new $.Deferred();
 	const confirmMessage = mw.message(
 		'standarddialogs-confirm-mass-deletion', numberOfPages ).text();
-	OO.ui.confirm( confirmMessage ).done( function ( confirmed ) {
+	OO.ui.confirm( confirmMessage ).done( ( confirmed ) => {
 		if ( confirmed ) {
 			dfd.resolve();
 		} else {
@@ -118,7 +118,7 @@ StandardDialogs.ui.DeleteDialog.prototype.performDeletion = function ( dfd, page
 		const deletePageApiCallPromise = mwApi.postWithToken(
 			'csrf',
 			// pass a copy of params to avoid overwriting the title
-			$.extend( {}, params )
+			Object.assign( {}, params )
 		);
 		deletePageApiCallPromises.push( deletePageApiCallPromise );
 	}
@@ -136,7 +136,7 @@ StandardDialogs.ui.DeleteDialog.prototype.getPagesToDelete = function ( pageName
 	let pagesToDelete = [ pageName ];
 	if ( this.deleteSubpagesCheckbox.isSelected() ) {
 		const getSubpagesPromise = this.getSubpages( title, mwApi );
-		getSubpagesPromise.done( function ( subpages ) {
+		getSubpagesPromise.done( ( subpages ) => {
 			pagesToDelete = pagesToDelete.concat( subpages );
 			dfd.resolve( pagesToDelete );
 		} ).fail( function () {
@@ -165,7 +165,7 @@ StandardDialogs.ui.DeleteDialog.prototype.getSubpages = function ( title, mwApi,
 	if ( contd ) {
 		params.apcontinue = contd;
 	}
-	mwApi.get( params ).done( function ( data ) {
+	mwApi.get( params ).done( ( data ) => {
 		const subpages = [];
 		if ( data.query.allpages ) {
 			for ( let i = 0; i < data.query.allpages.length; i++ ) {
@@ -174,7 +174,7 @@ StandardDialogs.ui.DeleteDialog.prototype.getSubpages = function ( title, mwApi,
 		}
 		if ( data.continue ) {
 			const getSubpagesPromise = dialog.getSubpages( title, mwApi, data.continue.apcontinue );
-			getSubpagesPromise.done( function ( subpages2 ) {
+			getSubpagesPromise.done( ( subpages2 ) => {
 				dfd.resolve( subpages.concat( subpages2 ) );
 			} ).fail( function () {
 				dfd.reject.apply( dialog, arguments );

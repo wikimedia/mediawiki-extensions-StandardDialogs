@@ -15,7 +15,7 @@ StandardDialogs.ui.BaseDialog.prototype.getDialogTitlePageName = function () {
 StandardDialogs.ui.BaseDialog.prototype.getSetupProcess = function ( data ) {
 	data = data || {};
 	const additionalData = this.makeSetupProcessData();
-	data = $.extend( data, additionalData );
+	data = Object.assign( data, additionalData );
 	return StandardDialogs.ui.BaseDialog.super.prototype.getSetupProcess.call( this, data );
 };
 
@@ -27,9 +27,7 @@ StandardDialogs.ui.BaseDialog.prototype.initialize = function () {
 	} );
 	const formItems = this.getFormItems();
 	this.content.$element.append(
-		formItems.map( function ( item ) {
-			return item.$element;
-		} )
+		formItems.map( ( item ) => item.$element )
 	);
 	this.$body.append( this.content.$element );
 };
@@ -45,7 +43,7 @@ StandardDialogs.ui.BaseDialog.prototype.getReadyProcess = function ( data ) {
 			}
 		} );
 	}
-	return new OO.ui.Process( function () {} );
+	return new OO.ui.Process( () => {} );
 };
 
 StandardDialogs.ui.BaseDialog.prototype.makeSetupProcessData = function () {
@@ -102,7 +100,7 @@ StandardDialogs.ui.BaseDialog.prototype.getActionProcess = function ( action ) {
 
 // Stub to be overwritten by subclass
 StandardDialogs.ui.BaseDialog.prototype.makeDoneActionProcess = function ( action ) {
-	return new OO.ui.Process( ( function () {} ), this );
+	return new OO.ui.Process( ( () => {} ), this );
 };
 
 // Stub to be overwritten by subclass

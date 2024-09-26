@@ -35,7 +35,7 @@ StandardDialogs.ui.RefreshDialog.prototype.makeDoneActionProcess = function () {
 	const dialog = this;
 
 	const dfd = new $.Deferred();
-	mw.loader.using( 'mediawiki.api' ).done( function () {
+	mw.loader.using( 'mediawiki.api' ).done( () => {
 		const mwApi = new mw.Api();
 		mwApi.postWithToken( 'csrf', {
 			action: 'purge',

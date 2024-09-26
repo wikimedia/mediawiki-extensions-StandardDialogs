@@ -17,7 +17,7 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.setup = function () {
 	const me = this;
 	me.pageInfo = {};
 	const dfdData = this.getData();
-	$.when( dfdData ).done( function () {
+	$.when( dfdData ).done( () => {
 		if ( me.pageInfo !== undefined ) {
 			const fieldLayout = new OO.ui.FieldsetLayout();
 			const contentTable = $( '<table>' );
@@ -73,7 +73,7 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getData = function () {
 	const dfdImages = me.doApiCall( 'images', 'im', '' );
 	me.pageInfo.extlinks = [];
 	const dfdExtLinks = me.doApiCall( 'extlinks', 'el', '' );
-	$.when( dfdTemplates, dfdCategories, dfdLinks, dfdImages, dfdExtLinks ).done( function () {
+	$.when( dfdTemplates, dfdCategories, dfdLinks, dfdImages, dfdExtLinks ).done( () => {
 		const dfds = [];
 		dfds.push( dfdTemplates );
 		dfds.push( dfdCategories );
@@ -106,7 +106,7 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.doApiCall = function ( pr
 	mwApi.postWithToken( 'csrf', params ).fail( function () {
 		dfd.reject( [ new OO.ui.Error( arguments[ 0 ], { recoverable: false } ) ] );
 	} )
-		.done( function ( resp ) {
+		.done( ( resp ) => {
 			for ( const page in resp.query.pages ) {
 				me.pageInfo[ prop ].push( resp.query.pages[ page ][ prop ] );
 			}
@@ -118,7 +118,7 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.doApiCall = function ( pr
 						continueProp,
 						resp.continue[ paramProperty ]
 					);
-					recursiveCall.done( function () {
+					recursiveCall.done( () => {
 						dfd.resolve( resp );
 					} );
 				}

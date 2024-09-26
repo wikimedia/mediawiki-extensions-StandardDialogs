@@ -37,7 +37,7 @@ StandardDialogs.ui.NewSubpageDialog.prototype.getFormItems = function () {
 
 StandardDialogs.ui.NewSubpageDialog.prototype.makeDoneActionProcess = function () {
 	this.newTitle = mw.Title.newFromText( this.pageName + '/' + this.targetTitle.getValue() );
-	return new OO.ui.Process( function () {}, this );
+	return new OO.ui.Process( ( () => {} ), this );
 };
 StandardDialogs.ui.NewSubpageDialog.prototype.getActionCompletedEventArgs = function ( action ) {
 	return [ this.newTitle ];
