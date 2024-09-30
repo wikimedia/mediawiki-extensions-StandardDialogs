@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Meeqoo",
 			"Rail"
 		]
 	},
@@ -50,5 +51,10 @@
 	"standarddialogs-purge-title": "Odśwież stronę „$1”",
 	"standarddialogs-btn-done": "Gotowe",
 	"standarddialogs-btn-cancel": "Anuluj",
-	"standarddialogs-protect-level-editor": "Dozwolone tylko dla redaktorów i administratorów"
+	"standarddialogs-protect-level-editor": "Dozwolone tylko dla redaktorów i administratorów",
+	"standarddialogs-page-info-page-no-images-label": "Strona ta nie zawiera obrazów ani plików (w tym plików audio i wideo)",
+	"standarddialogs-page-info-page-no-templates-label": "Ta strona nie zawiera szablonów",
+	"standarddialogs-page-info-page-no-categories-label": "Ta strona nie zawiera kategorii",
+	"standarddialogs-page-info-page-no-links-label": "Ta strona nie zawiera łączy",
+	"standarddialogs-page-info-page-no-extlinks-label": "Ta strona nie zawiera łączy zewnętrznych"
 }
