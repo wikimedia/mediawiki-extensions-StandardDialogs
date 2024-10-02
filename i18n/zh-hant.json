@@ -54,5 +54,10 @@
 	"standarddialogs-btn-cancel": "取消",
 	"standarddialogs-protect-level-editor": "僅允許編輯者和管理員",
 	"standarddialogs-delete-subpages": "刪除子頁面",
-	"standarddialogs-confirm-mass-deletion": "這會刪除 $1 個{{PLURAL:$1|頁面}}。您確定嗎？"
+	"standarddialogs-confirm-mass-deletion": "這會刪除 $1 個{{PLURAL:$1|頁面}}。您確定嗎？",
+	"standarddialogs-page-info-page-no-images-label": "此頁面不包含圖片或檔案（包含音訊和影片檔案）",
+	"standarddialogs-page-info-page-no-templates-label": "此頁面不包含模板",
+	"standarddialogs-page-info-page-no-categories-label": "此頁面不包含分類",
+	"standarddialogs-page-info-page-no-links-label": "此頁面不包含連結",
+	"standarddialogs-page-info-page-no-extlinks-label": "此頁面不包含外部連結"
 }
