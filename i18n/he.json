@@ -53,5 +53,10 @@
 	"standarddialogs-btn-cancel": "ביטול",
 	"standarddialogs-protect-level-editor": "לאפשר רק לעורכים ולמנהלים",
 	"standarddialogs-delete-subpages": "מחיקת דפי־משנה",
-	"standarddialogs-confirm-mass-deletion": "זה ימחק {{PLURAL:$1|דף|$1 דפים}}. באמת לעשות את זה?"
+	"standarddialogs-confirm-mass-deletion": "זה ימחק {{PLURAL:$1|דף|$1 דפים}}. באמת לעשות את זה?",
+	"standarddialogs-page-info-page-no-images-label": "בדף הזה אין תמונות או קבצים (גם לא קובצי אודיו ווידאו)",
+	"standarddialogs-page-info-page-no-templates-label": "בדף הזה אין תבניות",
+	"standarddialogs-page-info-page-no-categories-label": "בדף הזה אין קטגוריות",
+	"standarddialogs-page-info-page-no-links-label": "בדף הזה אין קישורים",
+	"standarddialogs-page-info-page-no-extlinks-label": "בדף הזה אין קישורים חיצוניים"
 }
