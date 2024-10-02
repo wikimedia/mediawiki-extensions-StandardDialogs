@@ -4,5 +4,7 @@
 			"আফতাবুজ্জামান"
 		]
 	},
-	"standarddialogs-delete-subpages": "উপপাতা মুছে ফেলুন"
+	"standarddialogs-delete-subpages": "উপপাতা মুছে ফেলুন",
+	"standarddialogs-page-info-page-no-links-label": "এই পাতায় কোনও লিঙ্ক নেই",
+	"standarddialogs-page-info-page-no-extlinks-label": "এই পাতায় কোনও বহিঃসংযোগ নেই"
 }

@@ -57,5 +57,10 @@
 	"standarddialogs-btn-cancel": "Abbrechen",
 	"standarddialogs-protect-level-editor": "Nur Bearbeitern und Administratoren erlaubt",
 	"standarddialogs-delete-subpages": "Unterseiten löschen",
-	"standarddialogs-confirm-mass-deletion": "Dadurch {{PLURAL:$1|wird eine Seite|werden $1 Seiten}} gelöscht. Bist du sicher?"
+	"standarddialogs-confirm-mass-deletion": "Dadurch {{PLURAL:$1|wird eine Seite|werden $1 Seiten}} gelöscht. Bist du sicher?",
+	"standarddialogs-page-info-page-no-images-label": "Diese Seite enthält keine Bilder oder Dateien ( inkl. Audio- und Videodateien)",
+	"standarddialogs-page-info-page-no-templates-label": "Diese Seite enthält keine Vorlagen",
+	"standarddialogs-page-info-page-no-categories-label": "Diese Seite enthält keine Kategorien",
+	"standarddialogs-page-info-page-no-links-label": "Diese Seite enthält keine internen Links",
+	"standarddialogs-page-info-page-no-extlinks-label": "Diese Seite enthält keine externen Links"
 }

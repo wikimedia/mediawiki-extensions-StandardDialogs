@@ -52,5 +52,10 @@
 	"standarddialogs-btn-cancel": "Prekliči",
 	"standarddialogs-protect-level-editor": "Dovoli samo urejevalcem in administratorjem",
 	"standarddialogs-delete-subpages": "Izbriši podstrani",
-	"standarddialogs-confirm-mass-deletion": "To bo izbrisalo $1 {{PLURAL:$1|stran|strani}}. Ste prepričani?"
+	"standarddialogs-confirm-mass-deletion": "To bo izbrisalo $1 {{PLURAL:$1|stran|strani}}. Ste prepričani?",
+	"standarddialogs-page-info-page-no-images-label": "Ta stran ne vsebuje slik ali datotek (vključno z avdio- in videodatotekami)",
+	"standarddialogs-page-info-page-no-templates-label": "Ta stran ne vsebuje predlog",
+	"standarddialogs-page-info-page-no-categories-label": "Ta stran ne vsebuje kategorij",
+	"standarddialogs-page-info-page-no-links-label": "Ta stran ne vsebuje povezav",
+	"standarddialogs-page-info-page-no-extlinks-label": "Ta stran ne vsebuje zunanjih povezav"
 }

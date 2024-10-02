@@ -52,5 +52,10 @@
 	"standarddialogs-btn-cancel": "Откажи",
 	"standarddialogs-protect-level-editor": "Дозволи само за уредници и администратори",
 	"standarddialogs-delete-subpages": "Избриши потстраници",
-	"standarddialogs-confirm-mass-deletion": "Со ова ќе се {{PLURAL:$1|избрише $1 страница|избришат $1 страници}}. Дали сте сигурни?"
+	"standarddialogs-confirm-mass-deletion": "Со ова ќе се {{PLURAL:$1|избрише $1 страница|избришат $1 страници}}. Дали сте сигурни?",
+	"standarddialogs-page-info-page-no-images-label": "Оваа страница не содржи слики или податотеки (вкл. звучни и видео)",
+	"standarddialogs-page-info-page-no-templates-label": "Оваа страница не содржи предлошки",
+	"standarddialogs-page-info-page-no-categories-label": "Оваа страница не содржи категории",
+	"standarddialogs-page-info-page-no-links-label": "Оваа страница не содржи врски",
+	"standarddialogs-page-info-page-no-extlinks-label": "Оваа страница не содржи надворешни врски"
 }
