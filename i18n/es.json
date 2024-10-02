@@ -3,6 +3,7 @@
 		"authors": [
 			"-jem-",
 			"Danniel07",
+			"EmicraftNoob",
 			"No se"
 		]
 	},
@@ -52,5 +53,8 @@
 	"standarddialogs-btn-done": "Hecho",
 	"standarddialogs-btn-cancel": "Cancelar",
 	"standarddialogs-protect-level-editor": "Solo editores y administradores",
-	"standarddialogs-delete-subpages": "Borrar subpáginas"
+	"standarddialogs-delete-subpages": "Borrar subpáginas",
+	"standarddialogs-page-info-page-no-templates-label": "Esta página no contiene plantillas",
+	"standarddialogs-page-info-page-no-categories-label": "Esta página no contiene categorías",
+	"standarddialogs-page-info-page-no-links-label": "Esta página no contiene enlaces"
 }
