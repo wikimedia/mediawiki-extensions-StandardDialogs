@@ -54,5 +54,10 @@
 	"standarddialogs-btn-done": "완료",
 	"standarddialogs-btn-cancel": "취소",
 	"standarddialogs-protect-level-editor": "편집자와 관리자만 허용",
-	"standarddialogs-delete-subpages": "하위 문서 삭제"
+	"standarddialogs-delete-subpages": "하위 문서 삭제",
+	"standarddialogs-page-info-page-no-images-label": "이 문서에는 이미지나 파일(오디오 및 비디오 파일 포함)이 없습니다",
+	"standarddialogs-page-info-page-no-templates-label": "이 문서에는 틀이 없습니다",
+	"standarddialogs-page-info-page-no-categories-label": "이 문서에는 분류가 없습니다",
+	"standarddialogs-page-info-page-no-links-label": "이 문서에는 링크가 없습니다",
+	"standarddialogs-page-info-page-no-extlinks-label": "이 문서에는 외부 링크가 없습니다"
 }
