@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bgo eiu"
+			"Bgo eiu",
+			"Cabal"
 		]
 	},
-	"standarddialogs-page-info-page-categories": "ਸ਼੍ਰੇਣੀਆਂ"
+	"standarddialogs-page-info-page-categories": "ਸ਼੍ਰੇਣੀਆਂ",
+	"standarddialogs-page-info-page-no-categories-label": "ਇਸ ਵਰਕੇ ਵਿੱਚ ਕੋਈ ਸ਼੍ਰੇਣੀਆਂ ਨਹੀਂ ਹਨ",
+	"standarddialogs-page-info-page-no-links-label": "ਇਸ ਵਰਕੇ ਵਿੱਚ ਕੋਈ ਕੜਿਆਂ ਨਹੀਂ ਹਨ",
+	"standarddialogs-page-info-page-no-extlinks-label": "ਇਸ ਵਰਕੇ ਵਿੱਚ ਕੋਈ ਬਾਹਰੀ ਕੜਿਆਂ ਨਹੀਂ ਹਨ"
 }
