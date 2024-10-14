@@ -52,5 +52,10 @@
 	"standarddialogs-btn-cancel": "Cancellar",
 	"standarddialogs-protect-level-editor": "Permitter solmente redactores e aministratores",
 	"standarddialogs-delete-subpages": "Deler subpaginas",
-	"standarddialogs-confirm-mass-deletion": "Isto delera $1 pagina{{PLURAL:$1||s}}. Es tu secur?"
+	"standarddialogs-confirm-mass-deletion": "Isto delera $1 pagina{{PLURAL:$1||s}}. Es tu secur?",
+	"standarddialogs-page-info-page-no-images-label": "Iste pagina non contine imagines o files (incl. files audio e video)",
+	"standarddialogs-page-info-page-no-templates-label": "Iste pagina non contine patronos",
+	"standarddialogs-page-info-page-no-categories-label": "Iste pagina non contine categorias",
+	"standarddialogs-page-info-page-no-links-label": "Iste pagina non contine ligamines",
+	"standarddialogs-page-info-page-no-extlinks-label": "Iste pagina non contine ligamines externe"
 }

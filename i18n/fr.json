@@ -3,7 +3,8 @@
 		"authors": [
 			"Gomoko",
 			"Verdy p",
-			"Wladek92"
+			"Wladek92",
+			"Terio legale"
 		]
 	},
 	"standarddialogs-desc": "Fournit des interfaces de dialogue utilisateur pour les actions de page commune",
@@ -54,5 +55,10 @@
 	"standarddialogs-btn-cancel": "Annuler",
 	"standarddialogs-protect-level-editor": "Autoriser uniquement les rédacteurs et les administrateurs",
 	"standarddialogs-delete-subpages": "Supprimer les sous-pages",
-	"standarddialogs-confirm-mass-deletion": "Ceci supprimera $1 page{{PLURAL:$1||s}}. En êtes-vous sûr{{GENDER:||e}} ?"
+	"standarddialogs-confirm-mass-deletion": "Ceci supprimera $1 page{{PLURAL:$1||s}}. En êtes-vous sûr{{GENDER:||e}} ?",
+	"standarddialogs-page-info-page-no-images-label": "Cette page ne contient aucune image ni aucun fichier (y compris les fichiers audio et vidéo)",
+	"standarddialogs-page-info-page-no-templates-label": "Cette page ne contient aucun modèle",
+	"standarddialogs-page-info-page-no-categories-label": "Cette page ne contient aucune catégorie",
+	"standarddialogs-page-info-page-no-links-label": "Cette page ne contient aucun lien",
+	"standarddialogs-page-info-page-no-extlinks-label": "Cette page ne contient aucun lien externe"
 }
