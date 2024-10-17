@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Bgo eiu",
-			"Cabal"
+			"Cabal",
+			"Kuldeepburjbhalaike"
 		]
 	},
 	"standarddialogs-copy-btn": "ਨਕਲ ਕਰੋ",
@@ -27,13 +28,13 @@
 	"standarddialogs-page-info-page-internal": "ਅੰਦਰੂਨੀ ਕੜੀਆਂ",
 	"standarddialogs-page-info-page-external": "ਬਾਹਰੀ ਕੜੀਆਂ",
 	"standarddialogs-page-info-page-images": "ਤਸਵੀਰਾਂ",
-	"standarddialogs-new-page-title": "ਨਵਾਂ ਵਰਕਾ ਬਣਾਓ",
-	"standarddialogs-new-page-label": "ਵਰਕੇ ਦਾ ਨਾਂ",
+	"standarddialogs-new-page-title": "ਨਵਾਂ ਸਫ਼ਾ ਬਣਾਓ",
+	"standarddialogs-new-page-label": "ਸਫ਼ੇ ਦਾ ਨਾਮ",
 	"standarddialogs-new-page-not-exist-label": "ਸਫ਼ਾ ਮੌਜੂਦ ਨਹੀਂ ਹੈ",
-	"standarddialogs-create-button-new-page-text": "ਨਵਾਂ ਵਰਕਾ",
-	"standarddialogs-create-button-new-page-title": "ਨਵਾਂ ਵਰਕਾ ਬਣਾਓ",
+	"standarddialogs-create-button-new-page-text": "ਨਵਾਂ ਸਫ਼ਾ",
+	"standarddialogs-create-button-new-page-title": "ਨਵਾਂ ਸਫ਼ਾ ਬਣਾਓ",
 	"standarddialogs-delete-btn": "ਮਿਟਾਓ",
-	"standarddialogs-delete-title": "ਵਰਕਾ \" $1 \" ਮਿਟਾਓ",
+	"standarddialogs-delete-title": "ਸਫ਼ਾ \" $1 \" ਮਿਟਾਓ",
 	"standarddialogs-move-btn": "ਥਾਂ-ਬਦਲੋ",
 	"standarddialogs-move-title": "ਸਫ਼ਾ \"$1\" ਦੀ ਥਾਂ-ਬਦਲੋ",
 	"standarddialogs-protect-btn": "ਸੁਰੱਖਿਆ",
