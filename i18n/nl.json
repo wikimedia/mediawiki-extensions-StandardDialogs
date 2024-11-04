@@ -7,6 +7,7 @@
 			"Vistaus"
 		]
 	},
+	"standarddialogs-desc": "Biedt gebruikersinterfaces met dialogen voor algemene handelingen m.b.t. pagina’s",
 	"standarddialogs-copy-btn": "Kopiëren",
 	"standarddialogs-copy-title": "Pagina \"$1\" kopiëren",
 	"standarddialogs-copy-page-legend": "Kopiëren",
@@ -53,7 +54,6 @@
 	"standarddialogs-btn-done": "Gereed",
 	"standarddialogs-btn-cancel": "Annuleren",
 	"standarddialogs-protect-level-editor": "Alleen bewerkers en beheerders toestaan",
-	"standarddialogs-desc": "Biedt gebruikersinterfaces met dialogen voor algemene handelingen m.b.t. pagina’s",
 	"standarddialogs-delete-subpages": "Subpagina’s verwijderen",
 	"standarddialogs-confirm-mass-deletion": "U staat op het punt om $1 {{PLURAL:$1|pagina|pagina's}} te verwijderen. Weet u het zeker?"
 }
