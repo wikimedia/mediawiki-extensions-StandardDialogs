@@ -3,6 +3,7 @@
 		"authors": [
 			"Mainframe98",
 			"McDutchie",
+			"Siebrand",
 			"Sjoerddebruin",
 			"Vistaus"
 		]
@@ -49,7 +50,7 @@
 	"standarddialogs-move-title": "Pagina \"$1\" hernoemen",
 	"standarddialogs-protect-btn": "Beveiligen",
 	"standarddialogs-protect-title": "Pagina \"$1\" beveiligen",
-	"standarddialogs-purge-btn": "Verversen",
+	"standarddialogs-purge-btn": "Vernieuwen",
 	"standarddialogs-purge-title": "Pagina \"$1\" verversen",
 	"standarddialogs-btn-done": "Gereed",
 	"standarddialogs-btn-cancel": "Annuleren",
