@@ -51,5 +51,6 @@
 	"standarddialogs-purge-title": "Säit \"$1\" nei lueden",
 	"standarddialogs-btn-done": "Fäerdeg",
 	"standarddialogs-btn-cancel": "Ofbriechen",
-	"standarddialogs-protect-level-editor": "Nëmme fir Editeuren an Administrateuren erlaben"
+	"standarddialogs-protect-level-editor": "Nëmme fir Editeuren an Administrateuren erlaben",
+	"standarddialogs-delete-subpages": "Ënnersäite läschen"
 }
