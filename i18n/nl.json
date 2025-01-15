@@ -3,6 +3,7 @@
 		"authors": [
 			"Mainframe98",
 			"McDutchie",
+			"Siebrand",
 			"Sjoerddebruin",
 			"Vistaus"
 		]
@@ -48,12 +49,17 @@
 	"standarddialogs-move-title": "Pagina \"$1\" hernoemen",
 	"standarddialogs-protect-btn": "Beveiligen",
 	"standarddialogs-protect-title": "Pagina \"$1\" beveiligen",
-	"standarddialogs-purge-btn": "Verversen",
+	"standarddialogs-purge-btn": "Vernieuwen",
 	"standarddialogs-purge-title": "Pagina \"$1\" verversen",
 	"standarddialogs-btn-done": "Gereed",
 	"standarddialogs-btn-cancel": "Annuleren",
 	"standarddialogs-protect-level-editor": "Alleen bewerkers en beheerders toestaan",
 	"standarddialogs-desc": "Biedt gebruikersinterfaces met dialogen voor algemene handelingen m.b.t. pagina’s",
 	"standarddialogs-delete-subpages": "Subpagina’s verwijderen",
-	"standarddialogs-confirm-mass-deletion": "U staat op het punt om $1 {{PLURAL:$1|pagina|pagina's}} te verwijderen. Weet u het zeker?"
+	"standarddialogs-confirm-mass-deletion": "U staat op het punt om $1 {{PLURAL:$1|pagina|pagina's}} te verwijderen. Weet u het zeker?",
+	"standarddialogs-page-info-page-no-images-label": "Deze pagina bevat geen afbeeldingen of bestanden (ook geen audio- en videobestanden)",
+	"standarddialogs-page-info-page-no-templates-label": "Deze pagina bevat geen sjablonen",
+	"standarddialogs-page-info-page-no-categories-label": "Deze pagina bevat geen categorieën",
+	"standarddialogs-page-info-page-no-links-label": "Deze pagina bevat geen koppelingen",
+	"standarddialogs-page-info-page-no-extlinks-label": "Deze pagina bevat geen externe koppelingen"
 }
