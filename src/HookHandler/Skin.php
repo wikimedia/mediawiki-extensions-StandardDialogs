@@ -5,8 +5,8 @@ namespace MediaWiki\Extension\StandardDialogs\HookHandler;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\Title;
-use NamespaceInfo;
 use SkinTemplate;
 
 class Skin implements SkinTemplateNavigation__UniversalHook {
