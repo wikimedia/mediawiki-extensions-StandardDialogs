@@ -21,6 +21,11 @@
 			"FilelistPluginModules": [
 				"ext.standardDialogs.filelist"
 			]
+		},
+		"CognitiveProcessDesigner": {
+			"ProcessOverviewPluginModules": [
+				"ext.standardDialogs.cpd"
+			]
 		}
 	},
 	"MessagesDirs": {
@@ -278,6 +283,15 @@
 				{
 					"name": "deleteDialogMsg.json",
 					"callback": "MediaWiki\\Extension\\StandardDialogs\\ClientConfig::makeDeleteDialogMsgJson"
+				}
+			]
+		},
+		"ext.standardDialogs.cpd": {
+			"packageFiles": [
+				"ext.standardDialogs.cpd.js",
+				{
+					"name": "pageInfoPanelModuleRegistry.json",
+					"callback": "MediaWiki\\Extension\\StandardDialogs\\ClientConfig::makePageInfoPanelModuleRegistryJson"
 				}
 			]
 		}
