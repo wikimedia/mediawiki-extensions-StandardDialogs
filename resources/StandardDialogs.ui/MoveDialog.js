@@ -9,7 +9,7 @@ OO.inheritClass( StandardDialogs.ui.MoveDialog, StandardDialogs.ui.BaseDialog );
 StandardDialogs.ui.MoveDialog.static.name = 'ext-standard-dialogs-move';
 
 StandardDialogs.ui.MoveDialog.prototype.makeSetupProcessData = function () {
-	data = StandardDialogs.ui.MoveDialog.super.prototype.makeSetupProcessData.call( this );
+	const data = StandardDialogs.ui.MoveDialog.super.prototype.makeSetupProcessData.call( this );
 	data.title = mw.message( 'standarddialogs-move-title', this.getDialogTitlePageName() ).plain();
 
 	return data;
@@ -94,7 +94,7 @@ StandardDialogs.ui.MoveDialog.prototype.makeDoneActionProcess = function () {
 		} else {
 			params.watchlist = 'unwatch';
 		}
-		mwApi.postWithToken( 'csrf', params ).done( function ( data ) {
+		mwApi.postWithToken( 'csrf', params ).done( function () {
 			dfd.resolve.apply( dialog, arguments );
 		} ).fail( function () {
 			dfd.reject.apply( dialog, [ new OO.ui.Error( arguments[ 0 ], { recoverable: false } ) ] );
@@ -106,6 +106,6 @@ StandardDialogs.ui.MoveDialog.prototype.makeDoneActionProcess = function () {
 	return new OO.ui.Process( dfd.promise(), this );
 };
 
-StandardDialogs.ui.MoveDialog.prototype.getActionCompletedEventArgs = function ( action ) {
+StandardDialogs.ui.MoveDialog.prototype.getActionCompletedEventArgs = function () {
 	return [ this.newTitle ];
 };

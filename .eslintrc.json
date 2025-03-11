@@ -3,10 +3,10 @@
 	"extends": [
 		"wikimedia/client-es6",
 		"wikimedia/jquery",
-		"wikimedia/mediawiki",
-		"wikimedia/jsduck"
+		"wikimedia/mediawiki"
 	],
 	"globals": {
+		"OOJSPlus": "readonly",
 		"ve": "readonly",
 		"VisualEditorSupportCheck": "readonly",
 		"unicodeJS": "readonly",
@@ -15,17 +15,10 @@
 		"StandardDialogs": "writable"
 	},
 	"rules": {
-		"no-jquery/variable-pattern": "warn",
-		"no-jquery/no-class-state": "warn",
-		"no-jquery/no-global-selector": "warn",
-		"new-cap": "warn",
-		"block-scoped-var": "warn",
-		"no-undef": "warn",
-		"eqeqeq": "warn",
-		"no-shadow": "warn",
-		"no-var": "warn",
-		"no-unused-vars": "warn",
-		"no-implicit-globals": "warn",
-		"es-x/no-object-values": "warn"
+		"es-x/no-object-values": "off",
+		"max-len": "off",
+		"no-jquery/no-class-state": "off",
+		"no-jquery/no-global-selector": "off",
+		"no-jquery/variable-pattern": "off"
 	}
 }

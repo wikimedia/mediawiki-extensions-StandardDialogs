@@ -32,7 +32,7 @@ StandardDialogs.ui.PageInformationDialog.prototype.getSetupProcess = function ( 
 	this.bookletLayout.addPages(
 		this.pages
 	);
-	this.bookletLayout.on( 'set', ( page ) => {
+	this.bookletLayout.on( 'set', ( page ) => { // eslint-disable-line no-shadow
 		if ( page.onInfoPanelSelect ) {
 			page.onInfoPanelSelect();
 		}

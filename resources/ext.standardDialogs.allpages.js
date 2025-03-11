@@ -1,6 +1,6 @@
 window.registryPageInformation = new OO.Registry();
 $( document ).on( 'click', '.page-tree-action-info a', ( e ) => {
-	const infoNode = $( e.currentTarget.parentNode )[0];
+	const infoNode = $( e.currentTarget.parentNode )[ 0 ];
 	if ( !infoNode.dataset.title ) {
 		return;
 	}
@@ -11,7 +11,7 @@ $( document ).on( 'click', '.page-tree-action-info a', ( e ) => {
 		mw.loader.using( rlModules ).done( () => {
 			const diag = new StandardDialogs.ui.PageInformationDialog( {
 				pageName: title,
-				panelRegistry: registryPageInformation
+				panelRegistry: registryPageInformation // eslint-disable-line no-undef
 			} );
 			diag.show();
 		} );
