@@ -16,8 +16,8 @@ StandardDialogs.ui.BasicInformationPage.prototype.setup = function () {
 	const me = this;
 	const dfdData = this.getData();
 	$.when( dfdData ).done( () => {
-		if ( me.pageInfo != undefined ) {
-			fieldLayout = new OO.ui.FieldsetLayout();
+		if ( me.pageInfo !== undefined ) {
+			const fieldLayout = new OO.ui.FieldsetLayout();
 			const contentTable = $( '<table>' );
 			contentTable.addClass( 'wikitable page-information' );
 
@@ -104,4 +104,4 @@ StandardDialogs.ui.BasicInformationPage.prototype.getRedirectLinks = function ( 
 };
 
 // register
-registryPageInformation.register( 'basic_infos', StandardDialogs.ui.BasicInformationPage );
+registryPageInformation.register( 'basic_infos', StandardDialogs.ui.BasicInformationPage ); // eslint-disable-line no-undef

@@ -9,7 +9,7 @@ OO.inheritClass( StandardDialogs.ui.NewPageDialog, StandardDialogs.ui.BaseDialog
 StandardDialogs.ui.NewPageDialog.static.name = 'ext-standard-dialogs-new-page';
 
 StandardDialogs.ui.NewPageDialog.prototype.makeSetupProcessData = function () {
-	data = StandardDialogs.ui.NewPageDialog.super.prototype.makeSetupProcessData.call( this );
+	const data = StandardDialogs.ui.NewPageDialog.super.prototype.makeSetupProcessData.call( this );
 	data.title = mw.message( 'standarddialogs-new-page-title' ).plain();
 
 	return data;
@@ -44,6 +44,6 @@ StandardDialogs.ui.NewPageDialog.prototype.makeDoneActionProcess = function () {
 	this.newTitle = mw.Title.newFromText( this.targetTitle.getValue() );
 	return new OO.ui.Process( ( () => {} ), this );
 };
-StandardDialogs.ui.NewPageDialog.prototype.getActionCompletedEventArgs = function ( action ) {
+StandardDialogs.ui.NewPageDialog.prototype.getActionCompletedEventArgs = function () {
 	return [ this.newTitle ];
 };

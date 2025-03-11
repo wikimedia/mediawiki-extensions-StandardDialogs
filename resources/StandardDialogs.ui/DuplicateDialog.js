@@ -3,7 +3,7 @@ StandardDialogs.ui = StandardDialogs.ui || {};
 
 StandardDialogs.ui.DuplicateDialog = function StandardDialogsUiDuplicateDialog( config ) {
 	StandardDialogs.ui.DuplicateDialog.super.call( this, config );
-	this.page = new mw.Title.newFromText( this.pageName );
+	this.page = new mw.Title.newFromText( this.pageName ); // eslint-disable-line new-cap
 	this.subpages = [];
 	this.talkpages = [];
 };
@@ -12,7 +12,7 @@ OO.inheritClass( StandardDialogs.ui.DuplicateDialog, StandardDialogs.ui.BaseDial
 StandardDialogs.ui.DuplicateDialog.static.name = 'ext-standard-dialogs-duplicate';
 
 StandardDialogs.ui.DuplicateDialog.prototype.makeSetupProcessData = function () {
-	data = StandardDialogs.ui.DuplicateDialog.super.prototype.makeSetupProcessData.call( this );
+	const data = StandardDialogs.ui.DuplicateDialog.super.prototype.makeSetupProcessData.call( this );
 	data.title = mw.message( 'standarddialogs-copy-title', this.getDialogTitlePageName() ).plain();
 
 	return data;
@@ -63,13 +63,14 @@ StandardDialogs.ui.DuplicateDialog.prototype.makeDoneActionProcess = function ()
 	mw.loader.using( 'mediawiki.api' ).done( () => {
 		const dfdCopy = me.doCopy( me.pageName, me.targetTitle.getValue() );
 		$.when( dfdCopy ).done( () => {
+			let dfdDiscussion, dfdSubpages;
 
 			if ( me.checkDiscussion.isSelected() ) {
-				var dfdDiscussion = me.getDiscussionPages( me.page.getName(), me.page.getNamespaceId() );
+				dfdDiscussion = me.getDiscussionPages( me.page.getName(), me.page.getNamespaceId() );
 			}
 
 			if ( me.checkSubpages.isSelected() ) {
-				var dfdSubpages = me.getSubPages( me.page.getName(), me.page.getNamespaceId() );
+				dfdSubpages = me.getSubPages( me.page.getName(), me.page.getNamespaceId() );
 			}
 
 			$.when( dfdDiscussion, dfdSubpages ).done( () => {
@@ -103,7 +104,7 @@ StandardDialogs.ui.DuplicateDialog.prototype.makeDoneActionProcess = function ()
 	return new OO.ui.Process( dfd.promise(), this );
 };
 
-StandardDialogs.ui.DuplicateDialog.prototype.getActionCompletedEventArgs = function ( action ) {
+StandardDialogs.ui.DuplicateDialog.prototype.getActionCompletedEventArgs = function () {
 	return [ this.newTitle ];
 };
 
@@ -204,13 +205,13 @@ StandardDialogs.ui.DuplicateDialog.prototype.doCopy = function ( srcPageName, ta
 		} ).fail( function () {
 			dfd.reject( [ new OO.ui.Error( arguments[ 0 ], { recoverable: false } ) ] );
 		} )
-			.done( function ( resp ) {
+			.done( function ( resp ) { // eslint-disable-line no-shadow
 				if ( !resp.edit.result || resp.edit.result.toLowerCase() !== 'success' ) {
-					dfd.reject( errResp );
+					dfd.reject( resp );
 				}
 
 				if ( resp.edit.title === undefined ) {
-					dfd.reject( errResp );
+					dfd.reject( resp );
 				}
 				dfd.resolve( arguments );
 			} );

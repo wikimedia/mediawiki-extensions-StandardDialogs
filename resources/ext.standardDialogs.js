@@ -85,7 +85,7 @@ $( document ).on( 'click', '#t-info', ( e ) => {
 			const diag = new StandardDialogs.ui.PageInformationDialog( {
 				id: 'standarddialogs-dlg-pageinformation',
 				pageName: mw.config.get( 'wgRelevantPageName' ),
-				panelRegistry: registryPageInformation
+				panelRegistry: registryPageInformation // eslint-disable-line no-undef
 			} );
 			diag.show();
 		} );

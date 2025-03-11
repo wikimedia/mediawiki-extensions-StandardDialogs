@@ -10,7 +10,7 @@ OO.inheritClass( StandardDialogs.ui.DeleteDialog, StandardDialogs.ui.BaseDialog 
 StandardDialogs.ui.DeleteDialog.static.name = 'ext-standard-dialogs-delete';
 
 StandardDialogs.ui.DeleteDialog.prototype.makeSetupProcessData = function () {
-	data = StandardDialogs.ui.DeleteDialog.super.prototype.makeSetupProcessData.call( this );
+	const data = StandardDialogs.ui.DeleteDialog.super.prototype.makeSetupProcessData.call( this );
 	data.title = mw.message( 'standarddialogs-delete-title', this.getDialogTitlePageName() ).plain();
 	data.actions[ 0 ].flags[ 1 ] = 'destructive';
 
@@ -122,7 +122,7 @@ StandardDialogs.ui.DeleteDialog.prototype.performDeletion = function ( dfd, page
 		);
 		deletePageApiCallPromises.push( deletePageApiCallPromise );
 	}
-	$.when.apply( $, deletePageApiCallPromises ).done( function ( data ) {
+	$.when.apply( $, deletePageApiCallPromises ).done( function () {
 		dfd.resolve.apply( this, arguments );
 	} ).fail( function () {
 		const error = new OO.ui.Error( arguments[ 0 ], { recoverable: false } );

@@ -10,7 +10,7 @@ $( document ).on( 'click', ' .cpd-action-info', ( e ) => {
 		mw.loader.using( rlModules ).done( () => {
 			const diag = new StandardDialogs.ui.PageInformationDialog( {
 				pageName: title,
-				panelRegistry: registryPageInformation
+				panelRegistry: registryPageInformation // eslint-disable-line no-undef
 			} );
 			diag.show();
 		} );

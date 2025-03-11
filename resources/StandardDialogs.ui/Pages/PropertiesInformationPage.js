@@ -250,4 +250,4 @@ StandardDialogs.ui.PropertiesInformationPage.prototype.getExternalLinks = functi
 };
 
 // register
-registryPageInformation.register( 'properties_infos', StandardDialogs.ui.PropertiesInformationPage );
+registryPageInformation.register( 'properties_infos', StandardDialogs.ui.PropertiesInformationPage ); // eslint-disable-line no-undef

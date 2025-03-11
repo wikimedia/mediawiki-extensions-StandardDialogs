@@ -1,6 +1,6 @@
 $( document ).on( 'click', '.bs-books-overview-action-delete', ( e ) => {
 	let target = e.target;
-	if ( target.nodeName != 'A' ) {
+	if ( target.nodeName !== 'A' ) {
 		target = $( target ).parent();
 	}
 

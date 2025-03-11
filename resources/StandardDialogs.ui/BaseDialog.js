@@ -32,7 +32,7 @@ StandardDialogs.ui.BaseDialog.prototype.initialize = function () {
 	this.$body.append( this.content.$element );
 };
 
-StandardDialogs.ui.BaseDialog.prototype.getReadyProcess = function ( data ) {
+StandardDialogs.ui.BaseDialog.prototype.getReadyProcess = function () {
 	if ( this.mainInput ) {
 		if ( this.mainInput.focus ) {
 			this.mainInput.focus();
@@ -99,7 +99,7 @@ StandardDialogs.ui.BaseDialog.prototype.getActionProcess = function ( action ) {
 };
 
 // Stub to be overwritten by subclass
-StandardDialogs.ui.BaseDialog.prototype.makeDoneActionProcess = function ( action ) {
+StandardDialogs.ui.BaseDialog.prototype.makeDoneActionProcess = function () {
 	return new OO.ui.Process( ( () => {} ), this );
 };
 
@@ -112,6 +112,6 @@ StandardDialogs.ui.BaseDialog.prototype.onActionDone = function ( action ) {
 };
 
 // Stub to be overwritten by subclass
-StandardDialogs.ui.BaseDialog.prototype.getActionCompletedEventArgs = function ( action ) {
+StandardDialogs.ui.BaseDialog.prototype.getActionCompletedEventArgs = function () {
 	return [];
 };
