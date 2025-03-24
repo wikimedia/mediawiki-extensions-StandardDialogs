@@ -4,7 +4,8 @@
 			"Dr1t jg",
 			"Suleiman the Magnificent Television",
 			"Ykhwong",
-			"렌즈"
+			"렌즈",
+			"YeBoy371"
 		]
 	},
 	"standarddialogs-desc": "공통 문서 동작을 위한 대화 상자 사용자 인터페이스를 제공합니다",
@@ -50,7 +51,7 @@
 	"standarddialogs-protect-btn": "보호",
 	"standarddialogs-protect-title": "\"$1\" 문서 보호",
 	"standarddialogs-purge-btn": "새로 고침",
-	"standarddialogs-purge-title": "\"$1\" 문서 새로고침",
+	"standarddialogs-purge-title": "\"$1\" 문서 새로 고침",
 	"standarddialogs-btn-done": "완료",
 	"standarddialogs-btn-cancel": "취소",
 	"standarddialogs-protect-level-editor": "편집자와 관리자만 허용",
