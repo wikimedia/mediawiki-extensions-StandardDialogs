@@ -3,6 +3,7 @@
 		"authors": [
 			"Dr1t jg",
 			"Suleiman the Magnificent Television",
+			"YeBoy371",
 			"Ykhwong",
 			"렌즈"
 		]
@@ -49,7 +50,7 @@
 	"standarddialogs-protect-btn": "보호",
 	"standarddialogs-protect-title": "\"$1\" 문서 보호",
 	"standarddialogs-purge-btn": "새로 고침",
-	"standarddialogs-purge-title": "\"$1\" 문서 새로고침",
+	"standarddialogs-purge-title": "\"$1\" 문서 새로 고침",
 	"standarddialogs-btn-done": "완료",
 	"standarddialogs-btn-cancel": "취소",
 	"standarddialogs-protect-level-editor": "편집자와 관리자만 허용",
