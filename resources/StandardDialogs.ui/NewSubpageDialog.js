@@ -15,21 +15,25 @@ StandardDialogs.ui.NewSubpageDialog.prototype.makeSetupProcessData = function ()
 	return data;
 };
 StandardDialogs.ui.NewSubpageDialog.prototype.getFormItems = function () {
-	this.mainInput = this.targetTitle = new OOJSPlus.ui.widget.TitleInputWidget( {
+	this.mainInput = this.targetTitle = new StandardDialogs.widgets.SubpageTitleWidget( {
 		id: this.elementId + '-tf-target',
 		$overlay: this.$overlay,
 		mustExist: false,
 		prefix: this.pageName + '/',
 		contentPagesOnly: false
 	} );
+	this.mainInput.connect( this, {
+		change: 'onTitleChange'
+	} );
+	this.mainFieldset = new OO.ui.FieldLayout( this.targetTitle, {
+		label: mw.message( 'standarddialogs-new-subpage-label' ).plain(),
+		align: 'top'
+	} );
 
 	return [
 		new OO.ui.FieldsetLayout( {
 			items: [
-				new OO.ui.FieldLayout( this.targetTitle, {
-					label: mw.message( 'standarddialogs-new-subpage-label' ).plain(),
-					align: 'top'
-				} )
+				this.mainFieldset
 			]
 		} )
 	];
@@ -41,4 +45,13 @@ StandardDialogs.ui.NewSubpageDialog.prototype.makeDoneActionProcess = function (
 };
 StandardDialogs.ui.NewSubpageDialog.prototype.getActionCompletedEventArgs = function () {
 	return [ this.newTitle ];
+};
+
+StandardDialogs.ui.NewSubpageDialog.prototype.onTitleChange = function ( value ) {
+	if ( this.typeTimeout ) {
+		clearTimeout( this.typeTimeout );
+	}
+	this.typeTimeout = setTimeout( () => {
+		this.validateTitleNotExist( this.pageName + '/' + value );
+	}, 500 );
 };

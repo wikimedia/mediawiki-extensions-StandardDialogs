@@ -95,7 +95,8 @@
 				"movepagebtn",
 				"move-subpages",
 				"standarddialogs-btn-done",
-				"standarddialogs-btn-cancel"
+				"standarddialogs-btn-cancel",
+				"standarddialogs-validation-page-exist-info-label"
 			],
 			"dependencies": [
 				"oojs-ui-windows",
@@ -167,7 +168,8 @@
 				"standarddialogs-copy-subpages",
 				"standarddialogs-copy-discussion",
 				"standarddialogs-btn-done",
-				"standarddialogs-btn-cancel"
+				"standarddialogs-btn-cancel",
+				"standarddialogs-validation-page-exist-info-label"
 			],
 			"dependencies": [
 				"oojs-ui-windows",
@@ -233,7 +235,8 @@
 				"create",
 				"standarddialogs-btn-done",
 				"standarddialogs-btn-cancel",
-				"standarddialogs-new-page-not-exist-label"
+				"standarddialogs-new-page-not-exist-label",
+				"standarddialogs-validation-page-exist-info-label"
 			],
 			"dependencies": [
 				"oojs-ui-windows",
@@ -244,6 +247,7 @@
 		"ext.standardDialogs.ui.NewSubpageDialog": {
 			"scripts": [
 				"StandardDialogs.ui/BaseDialog.js",
+				"widgets/SubpageTitleWidget.js",
 				"StandardDialogs.ui/NewSubpageDialog.js"
 			],
 			"messages": [
@@ -251,7 +255,8 @@
 				"standarddialogs-new-subpage-label",
 				"create",
 				"standarddialogs-btn-done",
-				"standarddialogs-btn-cancel"
+				"standarddialogs-btn-cancel",
+				"standarddialogs-validation-page-exist-info-label"
 			],
 			"dependencies": [
 				"oojs-ui-windows",
