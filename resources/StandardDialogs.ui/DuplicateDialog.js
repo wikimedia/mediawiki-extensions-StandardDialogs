@@ -26,6 +26,9 @@ StandardDialogs.ui.DuplicateDialog.prototype.getFormItems = function () {
 		mustExist: false,
 		contentPagesOnly: false
 	} );
+	this.mainInput.connect( this, {
+		change: 'onTitleChange'
+	} );
 	this.checkDiscussion = new OO.ui.CheckboxInputWidget( {
 		id: this.elementId + '-cb-discussion',
 		value: 'discussion',
@@ -36,13 +39,15 @@ StandardDialogs.ui.DuplicateDialog.prototype.getFormItems = function () {
 		value: 'subpages',
 		selected: false
 	} );
+
+	this.mainFieldset = new OO.ui.FieldLayout( this.mainInput, {
+		label: mw.message( 'standarddialogs-copy-page-new' ).plain(),
+		align: 'top'
+	} );
 	return [
 		new OO.ui.FieldsetLayout( {
 			items: [
-				new OO.ui.FieldLayout( this.targetTitle, {
-					label: mw.message( 'standarddialogs-copy-page-new' ).plain(),
-					align: 'top'
-				} ),
+				this.mainFieldset,
 				new OO.ui.FieldLayout( this.checkDiscussion, {
 					label: mw.message( 'standarddialogs-copy-discussion' ).plain(),
 					align: 'inline'
@@ -54,6 +59,15 @@ StandardDialogs.ui.DuplicateDialog.prototype.getFormItems = function () {
 			]
 		} )
 	];
+};
+
+StandardDialogs.ui.DuplicateDialog.prototype.onTitleChange = function ( value ) {
+	if ( this.typeTimeout ) {
+		clearTimeout( this.typeTimeout );
+	}
+	this.typeTimeout = setTimeout( () => {
+		this.validateTitleNotExist( value );
+	}, 500 );
 };
 
 StandardDialogs.ui.DuplicateDialog.prototype.makeDoneActionProcess = function () {

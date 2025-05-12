@@ -115,3 +115,54 @@ StandardDialogs.ui.BaseDialog.prototype.onActionDone = function ( action ) {
 StandardDialogs.ui.BaseDialog.prototype.getActionCompletedEventArgs = function () {
 	return [];
 };
+
+StandardDialogs.ui.BaseDialog.prototype.validateTitleNotExist = function ( value ) {
+	if ( !value ) {
+		this.actions.setAbilities( { done: false } );
+		return;
+	}
+	new mw.Api().get( {
+		action: 'query',
+		prop: 'pageprops',
+		titles: value
+	} ).done( ( data ) => {
+		// Check if there is data.query.pages.-1
+		if ( data.query && data.query.pages && data.query.pages[ -1 ] ) {
+			// eslint-disable-next-line no-prototype-builtins
+			if ( data.query.pages[ -1 ].hasOwnProperty( 'invalid' ) ) {
+				this.actions.setAbilities( { done: false } );
+				this.setError( data.query.pages[ -1 ].invalidreason );
+			} else {
+				this.actions.setAbilities( { done: true } );
+			}
+		} else {
+			this.actions.setAbilities( { done: false } );
+			this.setExistWarning();
+		}
+	} ).fail( () => {
+		// Something went wrong, let user go to the page and deal with it there
+		this.actions.setAbilities( { done: true } );
+	} );
+};
+
+StandardDialogs.ui.BaseDialog.prototype.setError = function ( error ) {
+	if ( this.mainFieldset ) {
+		this.mainFieldset.setErrors( [ error ] );
+	}
+	if ( this.mainInput.lookupMenu ) {
+		this.mainInput.lookupMenu.toggle( false );
+	}
+	this.updateSize();
+};
+
+StandardDialogs.ui.BaseDialog.prototype.clearError = function () {
+	this.mainFieldset.setWarnings( [] );
+	this.mainFieldset.setErrors( [] );
+};
+
+StandardDialogs.ui.BaseDialog.prototype.setExistWarning = function () {
+	if ( this.mainFieldset ) {
+		this.mainFieldset.setWarnings( [ mw.message( 'standarddialogs-validation-page-exist-info-label' ).text() ] );
+	}
+	this.updateSize();
+};

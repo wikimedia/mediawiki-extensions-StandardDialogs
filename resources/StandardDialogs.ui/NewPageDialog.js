@@ -57,45 +57,6 @@ StandardDialogs.ui.NewPageDialog.prototype.onTitleChange = function ( value ) {
 		clearTimeout( this.typeTimeout );
 	}
 	this.typeTimeout = setTimeout( () => {
-		this.checkValidity( value );
+		this.validateTitleNotExist( value );
 	}, 500 );
-};
-
-StandardDialogs.ui.NewPageDialog.prototype.checkValidity = function ( value ) {
-	if ( !value ) {
-		this.actions.setAbilities( { done: false } );
-		return;
-	}
-	new mw.Api().get( {
-		action: 'query',
-		prop: 'pageprops',
-		titles: value
-	} ).done( ( data ) => {
-		// Check if there is data.query.pages.-1
-		if ( data.query && data.query.pages && data.query.pages[ -1 ] ) {
-			// eslint-disable-next-line no-prototype-builtins
-			if ( data.query.pages[ -1 ].hasOwnProperty( 'invalid' ) ) {
-				this.actions.setAbilities( { done: false } );
-				this.setError( data.query.pages[ -1 ].invalidreason );
-			} else {
-				this.clearError();
-				this.actions.setAbilities( { done: true } );
-			}
-		} else {
-			this.actions.setAbilities( { done: false } );
-		}
-	} ).fail( () => {
-		// Something went wrong, let user go to the page and deal with it there
-		this.actions.setAbilities( { done: true } );
-	} );
-};
-
-StandardDialogs.ui.NewPageDialog.prototype.setError = function ( error ) {
-	this.mainFieldset.setErrors( [ error ] );
-	this.mainInput.lookupMenu.toggle( false );
-	this.updateSize();
-};
-
-StandardDialogs.ui.NewPageDialog.prototype.clearError = function () {
-	this.mainFieldset.setErrors( [] );
 };
