@@ -138,6 +138,7 @@ StandardDialogs.ui.BaseDialog.prototype.validateTitleNotExist = function ( value
 				this.actions.setAbilities( { done: false } );
 				this.setError( data.query.pages[ -1 ].invalidreason );
 			} else {
+				this.clearError();
 				this.actions.setAbilities( { done: true } );
 			}
 		} else {
