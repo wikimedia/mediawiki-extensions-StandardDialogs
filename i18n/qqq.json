@@ -61,5 +61,6 @@
 	"standarddialogs-page-info-page-no-templates-label": "Text for table cell, which is used when page contains no templates which can be listed",
 	"standarddialogs-page-info-page-no-categories-label": "Text for table cell, which is used when page contains no categories which can be listed",
 	"standarddialogs-page-info-page-no-links-label": "Text for table cell, which is used when page contains no links which can be listed",
-	"standarddialogs-page-info-page-no-extlinks-label": "Text for table cell, which is used when page contains no external links which can be listed"
+	"standarddialogs-page-info-page-no-extlinks-label": "Text for table cell, which is used when page contains no external links which can be listed",
+	"standarddialogs-validation-page-exist-info-label": "Label for validation of title input. Shown if page title already exists"
 }
