@@ -61,5 +61,6 @@
 	"standarddialogs-page-info-page-no-templates-label": "Deze pagina bevat geen sjablonen",
 	"standarddialogs-page-info-page-no-categories-label": "Deze pagina bevat geen categorieën",
 	"standarddialogs-page-info-page-no-links-label": "Deze pagina bevat geen koppelingen",
-	"standarddialogs-page-info-page-no-extlinks-label": "Deze pagina bevat geen externe koppelingen"
+	"standarddialogs-page-info-page-no-extlinks-label": "Deze pagina bevat geen externe koppelingen",
+	"standarddialogs-validation-page-exist-info-label": "Er is al een pagina met deze titel. Kies een andere naam."
 }
