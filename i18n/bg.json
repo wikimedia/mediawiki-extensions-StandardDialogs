@@ -4,5 +4,6 @@
 			"StanProg"
 		]
 	},
-	"standarddialogs-btn-cancel": "Отказ"
+	"standarddialogs-btn-cancel": "Отказ",
+	"standarddialogs-page-info-close": "Затваряне"
 }
