@@ -3,6 +3,7 @@
 		"authors": [
 			"Gomoko",
 			"JLTRY",
+			"Marphy 123",
 			"Terio legale",
 			"Verdy p",
 			"Wladek92"
@@ -62,5 +63,12 @@
 	"standarddialogs-page-info-page-no-categories-label": "Cette page ne contient aucune catégorie",
 	"standarddialogs-page-info-page-no-links-label": "Cette page ne contient aucun lien",
 	"standarddialogs-page-info-page-no-extlinks-label": "Cette page ne contient aucun lien externe",
-	"standarddialogs-validation-page-exist-info-label": "Une page avec ce nom existe déjà. Veuillez en choisir un autre."
+	"standarddialogs-validation-page-exist-info-label": "Une page avec ce nom existe déjà. Veuillez en choisir un autre.",
+	"standarddialogs-delete-btn-label": "Supprimer",
+	"standarddialogs-move-btn-label": "Se déplacer",
+	"standarddialogs-copy-btn-label": "Copie",
+	"standarddialogs-new-page-btn-label": "Créer",
+	"standarddialogs-new-subpage-btn-label": "Créer",
+	"standarddialogs-protect-btn-label": "Protéger",
+	"standarddialogs-purge-btn-label": "Rafraîchir"
 }
