@@ -4,7 +4,8 @@
 			"Alshamiri1",
 			"Asma",
 			"XIDME",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"Mohammed Qays"
 		]
 	},
 	"standarddialogs-copy-page-new": "اسم الصفحة الجديدة",
@@ -20,5 +21,12 @@
 	"standarddialogs-protect-title": "حماية صفحة «$1»",
 	"standarddialogs-btn-cancel": "إلغاء",
 	"standarddialogs-delete-subpages": "حذف الصفحات الفرعية",
-	"standarddialogs-confirm-mass-deletion": "سيؤدي هذا إلى حذف $1 {{PLURAL:$1|page|pages}}. هل أنت متأكد؟"
+	"standarddialogs-confirm-mass-deletion": "سيؤدي هذا إلى حذف $1 {{PLURAL:$1|page|pages}}. هل أنت متأكد؟",
+	"standarddialogs-delete-btn-label": "حذف",
+	"standarddialogs-move-btn-label": "نقل",
+	"standarddialogs-copy-btn-label": "نسخ",
+	"standarddialogs-new-page-btn-label": "أنشئ",
+	"standarddialogs-new-subpage-btn-label": "أنشئ",
+	"standarddialogs-protect-btn-label": "حماية",
+	"standarddialogs-purge-btn-label": "تحديث"
 }
