@@ -5,7 +5,8 @@
 			"Miriam Schlindwein",
 			"Patric Wirth",
 			"Robby",
-			"Verdy p"
+			"Verdy p",
+			"McDutchie"
 		]
 	},
 	"standarddialogs-desc": "{{desc|name=StandardDialogs}}",
@@ -64,7 +65,7 @@
 	"standarddialogs-page-info-page-no-extlinks-label": "Text for table cell, which is used when page contains no external links which can be listed",
 	"standarddialogs-validation-page-exist-info-label": "Label for validation of title input. Shown if page title already exists",
 	"standarddialogs-delete-btn-label": "Label for primary action button of delete dialog.\n{{Identical|Delete}}",
-	"standarddialogs-move-btn-label": "Label for primary action button of move dialog.\n{{Identical|Move}}",
+	"standarddialogs-move-btn-label": "Label for primary action button of move dialog. Refers to moving (i.e. renaming) a wiki page.\n{{Identical|Move}}",
 	"standarddialogs-copy-btn-label": "Label for primary action button of copy dialog.\n{{Identical|Copy}}",
 	"standarddialogs-new-page-btn-label": "Label for primary action button of new page dialog.\n{{Identical|Create}}",
 	"standarddialogs-new-subpage-btn-label": "Label for primary action button of new page dialog.\n{{Identical|Create}}",
