@@ -5,9 +5,6 @@
 			"बडा काजी"
 		]
 	},
-	"standarddialogs-delete-btn": "मेटाउनुहोस्",
-	"standarddialogs-move-btn": "सार्नुहोस्",
-	"standarddialogs-protect-btn": "सुरक्षित",
 	"standarddialogs-copy-btn": "प्रतिलिपि गर्नुहोस्",
 	"standarddialogs-copy-title": "\" $1 \" पृष्ठ प्रतिलिपि गर्नुहोस्",
 	"standarddialogs-copy-page-legend": "प्रतिलिपि गर्नुहोस्",
@@ -43,8 +40,11 @@
 	"standarddialogs-create-button-new-page-title": "नयाँ पृष्ठ बनाउनुहोस्",
 	"standarddialogs-create-button-new-subpage-text": "नयाँ उपपृष्ठ",
 	"standarddialogs-create-button-new-subpage-title": "नयाँ उपपृष्ठ सिर्जना गर्नुहोस्",
+	"standarddialogs-delete-btn": "मेटाउनुहोस्",
 	"standarddialogs-delete-title": "पृष्ठ \"$1\" हटाउनुहोस्",
+	"standarddialogs-move-btn": "सार्नुहोस्",
 	"standarddialogs-move-title": "पृष्ठ \"$1\" सार्नुहोस्",
+	"standarddialogs-protect-btn": "सुरक्षित",
 	"standarddialogs-protect-title": "\"$1\" पृष्ठ सुरक्षित गर्नुहोस्",
 	"standarddialogs-purge-btn": "ताजा गर्नुहोस्",
 	"standarddialogs-purge-title": "\"$1\" पृष्ठ ताजा गर्नुहोस्",
