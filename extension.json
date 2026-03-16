@@ -48,7 +48,7 @@
 				}
 			],
 			"dependencies": [
-				"oojs"
+				"oojs-ui"
 			]
 		},
 		"ext.standardDialogs.ui.DeleteDialog": {
@@ -306,6 +306,21 @@
 					"callback": "MediaWiki\\Extension\\StandardDialogs\\ClientConfig::makePageInfoPanelModuleRegistryJson"
 				}
 			]
+		},
+		"ext.standardDialogs.page-actions": {
+			"packageFiles": [
+				"ext.standardDialogs.page-actions.js"
+			],
+			"styles": [
+				"stylesheets/page-actions.css"
+			],
+			"messages": [
+				"standarddialogs-create-subpage-btn-label",
+				"standarddialogs-create-subpage-btn-title"
+			],
+			"dependencies": [
+				"oojs-ui"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -322,12 +337,17 @@
 		},
 		"bs-books-overview-page-actions": {
 			"class": "\\MediaWiki\\Extension\\StandardDialogs\\HookHandler\\BookshelfDeleteAction"
+		},
+		"page-actions": {
+			"class": "\\MediaWiki\\Extension\\StandardDialogs\\HookHandler\\BeforePageDisplay",
+			"services": [ "PermissionManager" ]
 		}
 	},
 	"Hooks": {
 		"SkinTemplateNavigation::Universal": "skin",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
-		"BSBookshelfBooksOverviewBeforeSetBookActions": "bs-books-overview-page-actions"
+		"BSBookshelfBooksOverviewBeforeSetBookActions": "bs-books-overview-page-actions",
+		"BeforePageDisplay": "page-actions"
 	},
 	"manifest_version": 2
 }
