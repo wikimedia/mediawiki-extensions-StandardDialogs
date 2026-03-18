@@ -112,7 +112,7 @@ $( document ).on( 'input', '#standarddialogs-dlg-new-page-tf-target input', ( e 
 	} );
 } );
 
-$( document ).on( 'click', '#ca-new-page, #new-content', ( e ) => {
+$( document ).on( 'click', '#ca-new-page, #new-content, .ca-new-page', ( e ) => {
 	mw.loader.using( [ 'ext.standardDialogs.ui.NewPageDialog' ] ).done( () => {
 		const diag = new StandardDialogs.ui.NewPageDialog( {
 			id: 'standarddialogs-dlg-new-page',
