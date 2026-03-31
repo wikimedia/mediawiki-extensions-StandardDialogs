@@ -2,6 +2,7 @@ StandardDialogs = StandardDialogs || {};
 StandardDialogs.ui = StandardDialogs.ui || {};
 
 StandardDialogs.ui.NewPageDialog = function StandardDialogsUiNewPageDialog( config ) {
+	this.namespaceId = config.namespaceId || -1;
 	StandardDialogs.ui.NewPageDialog.super.call( this, config );
 };
 
@@ -21,8 +22,11 @@ StandardDialogs.ui.NewPageDialog.prototype.getPrimaryActionLabel = function () {
 };
 
 StandardDialogs.ui.NewPageDialog.prototype.getFormItems = function () {
-	const title = new mw.Title( this.pageName );
 	let prefix = '';
+	let title = new mw.Title( this.pageName );
+	if ( this.namespaceId >= 0 ) {
+		title = new mw.Title( 'Dummy', this.namespaceId );
+	}
 	if ( title.getNamespaceId() > 0 ) {
 		prefix = title.getNamespacePrefix();
 	}
