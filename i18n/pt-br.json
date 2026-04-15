@@ -57,5 +57,6 @@
 	"standarddialogs-new-subpage-btn-label": "Criar",
 	"standarddialogs-protect-btn-label": "Proteger",
 	"standarddialogs-purge-btn-label": "Atualizar",
-	"standarddialogs-create-subpage-btn-title": "Criar subpágina de $1"
+	"standarddialogs-create-subpage-btn-title": "Criar subpágina de $1",
+	"standarddialogs-page-info-page-watch": "Número de vigilantes da página"
 }
