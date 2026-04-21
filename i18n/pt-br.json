@@ -21,6 +21,7 @@
 	"standarddialogs-page-info-page-id": "ID da página",
 	"standarddialogs-page-info-page-language": "Idioma",
 	"standarddialogs-page-info-page-model": "Modelo de conteúdo",
+	"standarddialogs-page-info-page-watch": "Número de vigilantes da página",
 	"standarddialogs-page-info-page-redirects": "Redirecionamentos",
 	"standarddialogs-page-info-page-contributors": "Colaboradores",
 	"standarddialogs-page-info-page-last-edit": "Última edição",
@@ -57,6 +58,5 @@
 	"standarddialogs-new-subpage-btn-label": "Criar",
 	"standarddialogs-protect-btn-label": "Proteger",
 	"standarddialogs-purge-btn-label": "Atualizar",
-	"standarddialogs-create-subpage-btn-title": "Criar subpágina de $1",
-	"standarddialogs-page-info-page-watch": "Número de vigilantes da página"
+	"standarddialogs-create-subpage-btn-title": "Criar subpágina de $1"
 }
