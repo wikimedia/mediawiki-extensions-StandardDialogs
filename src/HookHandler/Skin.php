@@ -69,8 +69,8 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 
 		if ( isset( $links['namespaces']['new-page'] ) ) {
 			$links['namespaces']['new-page'] = [
-				'text' => $sktemplate->msg( 'standarddialogs-create-button-new-page-text' ),
-				'title' => $sktemplate->msg( 'standarddialogs-create-button-new-page-title' ),
+				'text' => $sktemplate->msg( 'standarddialogs-create-button-new-page-text' )->text(),
+				'title' => $sktemplate->msg( 'standarddialogs-create-button-new-page-title' )->text(),
 				'href' => '',
 				'class' => 'new-page'
 			];
@@ -78,8 +78,8 @@ class Skin implements SkinTemplateNavigation__UniversalHook {
 
 		if ( $userCanCreatePages && $this->namespaceInfo->hasSubpages( $title->getNamespace() ) ) {
 			$links['namespaces']['new-subpage'] = [
-				'text' => $sktemplate->msg( 'standarddialogs-create-button-new-subpage-text' ),
-				'title' => $sktemplate->msg( 'standarddialogs-create-button-new-subpage-title' ),
+				'text' => $sktemplate->msg( 'standarddialogs-create-button-new-subpage-text' )->text(),
+				'title' => $sktemplate->msg( 'standarddialogs-create-button-new-subpage-title' )->text(),
 				'href' => '',
 				'class' => 'new-subpage'
 			];
