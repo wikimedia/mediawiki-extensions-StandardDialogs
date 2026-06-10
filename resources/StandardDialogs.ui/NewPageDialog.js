@@ -34,9 +34,10 @@ StandardDialogs.ui.NewPageDialog.prototype.getFormItems = function () {
 		id: this.elementId + '-tf-target',
 		value: prefix,
 		$overlay: this.$overlay,
-		mustExist: false,
+		mustExist: true,
 		contentPagesOnly: false
 	} );
+	this.mainInput.validationOverride = true;
 	this.mainInput.connect( this, {
 		change: 'onTitleChange'
 	} );
@@ -63,6 +64,7 @@ StandardDialogs.ui.NewPageDialog.prototype.getActionCompletedEventArgs = functio
 };
 
 StandardDialogs.ui.NewPageDialog.prototype.onTitleChange = function ( value ) {
+	this.mainInput.validationOverride = true;
 	if ( this.typeTimeout ) {
 		clearTimeout( this.typeTimeout );
 	}
