@@ -1,6 +1,8 @@
 [
 	{
 		"resourceModule": "ext.standardDialogs.page-actions",
-		"maxSize": "2 kB"
+		"maxSize": "2 kB",
+		"@note": "Ignore oojs-ui*",
+		"ignoreDependencies": true
 	}
 ]
