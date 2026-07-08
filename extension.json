@@ -312,17 +312,15 @@
 		},
 		"ext.standardDialogs.page-actions": {
 			"packageFiles": [
-				"ext.standardDialogs.page-actions.js"
-			],
-			"styles": [
-				"stylesheets/page-actions.css"
+				"actions/SubpageItemAction.js"
 			],
 			"messages": [
 				"standarddialogs-create-subpage-btn-label",
 				"standarddialogs-create-subpage-btn-title"
 			],
 			"dependencies": [
-				"oojs-ui"
+				"oojs-ui",
+				"ext.oOJSPlus.data"
 			]
 		}
 	},
