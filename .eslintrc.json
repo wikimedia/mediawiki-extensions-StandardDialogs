@@ -5,13 +5,11 @@
 		"wikimedia/jquery",
 		"wikimedia/mediawiki"
 	],
+	"parserOptions": {
+		"sourceType": "commonjs"
+	},
 	"globals": {
 		"OOJSPlus": "readonly",
-		"ve": "readonly",
-		"VisualEditorSupportCheck": "readonly",
-		"unicodeJS": "readonly",
-		"RangeFix": "readonly",
-		"Papa": "readonly",
 		"StandardDialogs": "writable"
 	},
 	"rules": {
