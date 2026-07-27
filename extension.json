@@ -26,6 +26,14 @@
 			"ProcessOverviewPluginModules": [
 				"ext.standardDialogs.cpd"
 			]
+		},
+		"StandardTags": {
+			"PageListPluginModules": {
+				"pages": [
+					"ext.standardDialogs.page-actions",
+					"ext.standardDialogs"
+				]
+			}
 		}
 	},
 	"MessagesDirs": {
