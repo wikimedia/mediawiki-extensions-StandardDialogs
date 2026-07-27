@@ -145,3 +145,9 @@ $( document ).on( 'click', '#ca-new-subpage', ( e ) => {
 	e.defaultPrevented = true;
 	return false;
 } );
+
+mw.hook( 'ext.standardTags.pageList' ).add( ( context, registeredHandlers ) => {
+	registeredHandlers.push( ( pageListContext ) => {
+		pageListContext.tree.setItemActions( [ new StandardDialogs.ui.AddSubPageItemAction() ] );
+	} );
+} );
