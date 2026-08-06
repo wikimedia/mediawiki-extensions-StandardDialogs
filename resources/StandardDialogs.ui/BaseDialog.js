@@ -3,7 +3,7 @@ StandardDialogs.ui = StandardDialogs.ui || {};
 
 StandardDialogs.ui.BaseDialog = function StandardDialogsUiBaseDialog( config ) {
 	StandardDialogs.ui.BaseDialog.super.call( this, config );
-	this.pageName = config.pageName;
+	this.pageName = config.pageName || '';
 	this.mainInput = null;
 };
 OO.inheritClass( StandardDialogs.ui.BaseDialog, OO.ui.ProcessDialog );

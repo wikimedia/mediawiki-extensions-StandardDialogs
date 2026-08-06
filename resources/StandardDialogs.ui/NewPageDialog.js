@@ -23,13 +23,16 @@ StandardDialogs.ui.NewPageDialog.prototype.getPrimaryActionLabel = function () {
 
 StandardDialogs.ui.NewPageDialog.prototype.getFormItems = function () {
 	let prefix = '';
-	let title = new mw.Title( this.pageName );
-	if ( this.namespaceId >= 0 ) {
-		title = new mw.Title( 'Dummy', this.namespaceId );
+	if ( this.pageName ) {
+		let title = new mw.Title( this.pageName );
+		if ( this.namespaceId >= 0 ) {
+			title = new mw.Title( 'Dummy', this.namespaceId );
+		}
+		if ( title.getNamespaceId() > 0 ) {
+			prefix = title.getNamespacePrefix();
+		}
 	}
-	if ( title.getNamespaceId() > 0 ) {
-		prefix = title.getNamespacePrefix();
-	}
+
 	this.mainInput = this.targetTitle = new OOJSPlus.ui.widget.TitleInputWidget( {
 		id: this.elementId + '-tf-target',
 		value: prefix,
