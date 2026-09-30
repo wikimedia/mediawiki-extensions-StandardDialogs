@@ -13,6 +13,7 @@
 		"StandardDialogs": "writable"
 	},
 	"rules": {
+		"es-x/no-object-hasown": "off",
 		"es-x/no-object-values": "off",
 		"max-len": "off",
 		"no-jquery/no-class-state": "off",
