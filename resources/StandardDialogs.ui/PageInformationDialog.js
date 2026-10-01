@@ -60,7 +60,10 @@ StandardDialogs.ui.PageInformationDialog.prototype.getBodyHeight = function () {
 	if ( !this.$errors.hasClass( 'oo-ui-element-hidden' ) ) {
 		return this.$element.find( '.oo-ui-processDialog-errors' )[ 0 ].scrollHeight;
 	}
-	return 450;
+
+	const page = this.bookletLayout.getCurrentPage();
+	const contentHeight = page ? page.$element[ 0 ].scrollHeight : 450;
+	return contentHeight > 450 ? contentHeight : 450;
 };
 
 StandardDialogs.ui.PageInformationDialog.prototype.getActionProcess = function ( action ) {
